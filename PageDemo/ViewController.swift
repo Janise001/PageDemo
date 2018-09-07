@@ -16,6 +16,7 @@ class ViewController: UIViewController,UIScrollViewDelegate {
 //    var currentPage:Int = 0
 //    var count:Int = 3
     
+    
     //滚动控件
     let scrollView:UIScrollView = UIScrollView()
     //分页控件
