@@ -72,6 +72,19 @@ open class PageControl: UIControl {
             self.pageLayer.setNeedsDisplay()
         }
     }
+    open var currentPageIndicatorSize:CGSize = CGSize(width: 7, height: 7) {
+        didSet{
+            self.pageLayer.currentPageIndicatorSize = self.currentPageIndicatorSize
+            self.pageLayer.setNeedsDisplay()
+        }
+    }
+    open var pageIndicatorSize:CGSize = CGSize(width: 7, height: 7) {
+        didSet{
+            self.pageLayer.pageIndicatorSize = self.pageIndicatorSize
+            self.pageLayer.setNeedsDisplay()
+        }
+    }
+    //实现当页数为1的时候更新控件的显示和隐藏
     func update() {
         self.pageLayer.count = self.numberOfPages
         if self.numberOfPages == 1 && self.hidesForSinglePage == true {
@@ -85,9 +98,30 @@ open class PageControl: UIControl {
 extension PageControl {
     //返回控件的宽高数值
     open func size(forNumberOfPages pageCount:Int) -> CGSize {
-        var size:CGSize = CGSize(width: 0, height: 10)
+        var size:CGSize = CGSize(width: 0, height: 0)
         size.width = CGFloat(20*pageCount+8)
+        size.height = max(self.currentPageIndicatorSize.height,self.pageIndicatorSize.height)
         return size
     }
+    //返回某个点的尺寸
+    open func sizeOfIndex(_ index:Int) -> CGSize {
+        if self.currentPage == index {
+            return self.currentPageIndicatorSize
+        }
+        return self.pageIndicatorSize
+    }
+    //返回当前页面所在点的尺寸
+    open func sizeOfCurrentIndex() -> CGSize {
+        var result:CGSize = CGSize(width: 0, height: 0)
+        result = self.sizeOfIndex(self.currentPage)
+        return result
+    }
     
+    func max(_ param1:CGFloat,_ param2:CGFloat) -> CGFloat {
+        
+        if param1 > param2 {
+            return param1
+        }
+        return param2
+    }
 }
