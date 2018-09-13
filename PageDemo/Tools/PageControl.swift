@@ -18,26 +18,6 @@ open class PageControl: UIControl {
     open override class var layerClass: AnyClass {
         return PageLayer.self
     }
-    
-//    public required override init(frame: CGRect) {
-//        self.layer.addSublayer(self.pageLayer)
-//        self.pageLayer.frame = frame
-//    }
-    
-    //    open override func draw(_ rect: CGRect) {required
-//
-//    }
-//    open override func draw(_ layer: CALayer, in ctx: CGContext) {
-//        <#code#>
-//    }
-    
-    
-//        open var numberOfPages: Int = 0 { get }
-//    open var currentPage: Int = 0  { get }
-//    open var hidesForSinglePage: Bool { get }
-//    open func size(forNumberOfPages pageCount: Int) -> CGSize
-//    open var pageIndicatorTintColor: UIColor? { get }
-//    open var currentPageIndicatorTintColor: UIColor? { get }
     open var numberOfPages:Int = 0 {
         didSet {
             update()
@@ -54,21 +34,15 @@ open class PageControl: UIControl {
             update()
         }
     }
-    open var pageIndicatorTintColor:UIColor? {
+    open var pageIndicatorTintColor:UIColor = UIColor.gray {
         didSet {
-            guard let color = self.pageIndicatorTintColor else {
-                return
-            }
-             self.pageLayer.pageIndicatorTintColor = color
+            self.pageLayer.pageIndicatorTintColor = self.pageIndicatorTintColor
             self.pageLayer.setNeedsDisplay()
         }
     }
-    open var currentPageIndicatorTintColor:UIColor? {
+    open var currentPageIndicatorTintColor:UIColor = UIColor.blue {
         didSet {
-            guard let color = self.currentPageIndicatorTintColor else {
-                return
-            }
-            self.pageLayer.currentPageIndicatorTintColor = color
+            self.pageLayer.currentPageIndicatorTintColor = self.currentPageIndicatorTintColor
             self.pageLayer.setNeedsDisplay()
         }
     }
@@ -84,10 +58,10 @@ open class PageControl: UIControl {
             self.pageLayer.setNeedsDisplay()
         }
     }
-    //实现当页数为1的时候更新控件的显示和隐藏
+    //实现当页数为1的时候更新控件的显示和隐藏(防止出现页数为0的情况)
     func update() {
         self.pageLayer.count = self.numberOfPages
-        if self.numberOfPages == 1 && self.hidesForSinglePage == true {
+        if (self.numberOfPages == 1 || self.numberOfPages == 0) && self.hidesForSinglePage == true {
             self.pageLayer.isHidden = true
         }else {
             self.pageLayer.isHidden = false
