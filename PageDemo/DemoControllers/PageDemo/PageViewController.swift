@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  PageViewController.swift
 //  PageDemo
 //
 //  Created by Janise·Wu on 2018/8/7.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController,UIScrollViewDelegate {
+class PageViewController: UIViewController,UIScrollViewDelegate {
 //    let pageControl:PageLayer = PageLayer()
 //    let scrollView:UIScrollView = UIScrollView()
 //    

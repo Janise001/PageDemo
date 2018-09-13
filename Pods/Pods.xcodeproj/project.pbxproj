@@ -1,0 +1,1243 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		000000000430 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 000000000420 /* Foundation.framework */; };
+		000000000440 /* AFError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0000000000D0 /* AFError.swift */; };
+		000000000450 /* Alamofire.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0000000000E0 /* Alamofire.swift */; };
+		000000000460 /* DispatchQueue+Alamofire.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0000000000F0 /* DispatchQueue+Alamofire.swift */; };
+		000000000470 /* MultipartFormData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000100 /* MultipartFormData.swift */; };
+		000000000480 /* NetworkReachabilityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000110 /* NetworkReachabilityManager.swift */; };
+		000000000490 /* Notifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000120 /* Notifications.swift */; };
+		0000000004A0 /* ParameterEncoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000130 /* ParameterEncoding.swift */; };
+		0000000004B0 /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000140 /* Request.swift */; };
+		0000000004C0 /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000150 /* Response.swift */; };
+		0000000004D0 /* ResponseSerialization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000160 /* ResponseSerialization.swift */; };
+		0000000004E0 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000170 /* Result.swift */; };
+		0000000004F0 /* ServerTrustPolicy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000180 /* ServerTrustPolicy.swift */; };
+		000000000500 /* SessionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000190 /* SessionDelegate.swift */; };
+		000000000510 /* SessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0000000001A0 /* SessionManager.swift */; };
+		000000000520 /* TaskDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0000000001B0 /* TaskDelegate.swift */; };
+		000000000530 /* Timeline.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0000000001C0 /* Timeline.swift */; };
+		000000000540 /* Validation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0000000001D0 /* Validation.swift */; };
+		0000000005A0 /* Alamofire-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 000000000580 /* Alamofire-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0000000005E0 /* Alamofire-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 0000000005D0 /* Alamofire-dummy.m */; };
+		000000000660 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 000000000420 /* Foundation.framework */; };
+		000000000670 /* FlexLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0000000001E0 /* FlexLayout.swift */; settings = {COMPILER_FLAGS = "-fno-omit-frame-pointer -fexceptions -Wall -Werror -std=c++1y -fPIC"; }; };
+		000000000680 /* FlexLayout+Enum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0000000001F0 /* FlexLayout+Enum.swift */; settings = {COMPILER_FLAGS = "-fno-omit-frame-pointer -fexceptions -Wall -Werror -std=c++1y -fPIC"; }; };
+		000000000690 /* FlexLayout+Private.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000200 /* FlexLayout+Private.swift */; settings = {COMPILER_FLAGS = "-fno-omit-frame-pointer -fexceptions -Wall -Werror -std=c++1y -fPIC"; }; };
+		0000000006A0 /* UIView+FlexLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000210 /* UIView+FlexLayout.swift */; settings = {COMPILER_FLAGS = "-fno-omit-frame-pointer -fexceptions -Wall -Werror -std=c++1y -fPIC"; }; };
+		0000000006B0 /* Percent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000220 /* Percent.swift */; settings = {COMPILER_FLAGS = "-fno-omit-frame-pointer -fexceptions -Wall -Werror -std=c++1y -fPIC"; }; };
+		0000000006C0 /* Utils.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 000000000240 /* Utils.cpp */; settings = {COMPILER_FLAGS = "-fno-omit-frame-pointer -fexceptions -Wall -Werror -std=c++1y -fPIC"; }; };
+		0000000006D0 /* YGEnums.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 000000000260 /* YGEnums.cpp */; settings = {COMPILER_FLAGS = "-fno-omit-frame-pointer -fexceptions -Wall -Werror -std=c++1y -fPIC"; }; };
+		0000000006E0 /* YGLayout.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 000000000280 /* YGLayout.cpp */; settings = {COMPILER_FLAGS = "-fno-omit-frame-pointer -fexceptions -Wall -Werror -std=c++1y -fPIC"; }; };
+		0000000006F0 /* YGNode.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0000000002B0 /* YGNode.cpp */; settings = {COMPILER_FLAGS = "-fno-omit-frame-pointer -fexceptions -Wall -Werror -std=c++1y -fPIC"; }; };
+		000000000700 /* YGNodePrint.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0000000002D0 /* YGNodePrint.cpp */; settings = {COMPILER_FLAGS = "-fno-omit-frame-pointer -fexceptions -Wall -Werror -std=c++1y -fPIC"; }; };
+		000000000710 /* YGStyle.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0000000002F0 /* YGStyle.cpp */; settings = {COMPILER_FLAGS = "-fno-omit-frame-pointer -fexceptions -Wall -Werror -std=c++1y -fPIC"; }; };
+		000000000720 /* Yoga.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 000000000320 /* Yoga.cpp */; settings = {COMPILER_FLAGS = "-fno-omit-frame-pointer -fexceptions -Wall -Werror -std=c++1y -fPIC"; }; };
+		000000000730 /* UIView+Yoga.mm in Sources */ = {isa = PBXBuildFile; fileRef = 000000000350 /* UIView+Yoga.mm */; settings = {COMPILER_FLAGS = "-fno-omit-frame-pointer -fexceptions -Wall -Werror -std=c++1y -fPIC"; }; };
+		000000000740 /* YGLayout.mm in Sources */ = {isa = PBXBuildFile; fileRef = 000000000380 /* YGLayout.mm */; settings = {COMPILER_FLAGS = "-fno-omit-frame-pointer -fexceptions -Wall -Werror -std=c++1y -fPIC"; }; };
+		000000000750 /* YGLayoutExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000390 /* YGLayoutExtensions.swift */; settings = {COMPILER_FLAGS = "-fno-omit-frame-pointer -fexceptions -Wall -Werror -std=c++1y -fPIC"; }; };
+		000000000770 /* FlexLayout.h in Headers */ = {isa = PBXBuildFile; fileRef = 000000000230 /* FlexLayout.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		000000000780 /* Utils.h in Headers */ = {isa = PBXBuildFile; fileRef = 000000000250 /* Utils.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		000000000790 /* YGEnums.h in Headers */ = {isa = PBXBuildFile; fileRef = 000000000270 /* YGEnums.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0000000007A0 /* YGLayout.h in Headers */ = {isa = PBXBuildFile; fileRef = 000000000290 /* YGLayout.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		0000000007B0 /* YGMacros.h in Headers */ = {isa = PBXBuildFile; fileRef = 0000000002A0 /* YGMacros.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0000000007C0 /* YGNode.h in Headers */ = {isa = PBXBuildFile; fileRef = 0000000002C0 /* YGNode.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		0000000007D0 /* YGNodePrint.h in Headers */ = {isa = PBXBuildFile; fileRef = 0000000002E0 /* YGNodePrint.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		0000000007E0 /* YGStyle.h in Headers */ = {isa = PBXBuildFile; fileRef = 000000000300 /* YGStyle.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		0000000007F0 /* Yoga-internal.h in Headers */ = {isa = PBXBuildFile; fileRef = 000000000310 /* Yoga-internal.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		000000000800 /* Yoga.h in Headers */ = {isa = PBXBuildFile; fileRef = 000000000330 /* Yoga.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		000000000810 /* UIView+Yoga.h in Headers */ = {isa = PBXBuildFile; fileRef = 000000000340 /* UIView+Yoga.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		000000000820 /* YGLayout+Private.h in Headers */ = {isa = PBXBuildFile; fileRef = 000000000360 /* YGLayout+Private.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		000000000830 /* YGLayout.h in Headers */ = {isa = PBXBuildFile; fileRef = 000000000370 /* YGLayout.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		000000000880 /* FlexLayout-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 000000000870 /* FlexLayout-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0000000008C0 /* FlexLayout-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 0000000008B0 /* FlexLayout-dummy.m */; };
+		000000000940 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 000000000420 /* Foundation.framework */; };
+		0000000009C0 /* Pods-PageDemo-PageDemo-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 0000000009A0 /* Pods-PageDemo-PageDemo-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		000000000A20 /* Pods-PageDemo-PageDemo-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 000000000A10 /* Pods-PageDemo-PageDemo-dummy.m */; };
+		000000000AA0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 000000000420 /* Foundation.framework */; };
+		000000000B20 /* Pods-PageDemoTests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 000000000B00 /* Pods-PageDemoTests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		000000000B80 /* Pods-PageDemoTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 000000000B70 /* Pods-PageDemoTests-dummy.m */; };
+		000000000C00 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 000000000420 /* Foundation.framework */; };
+		000000000C80 /* Pods-PageDemoUITests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 000000000C60 /* Pods-PageDemoUITests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		000000000CE0 /* Pods-PageDemoUITests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 000000000CD0 /* Pods-PageDemoUITests-dummy.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		000000000CF0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 000000000000 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0000000003A0;
+			remoteInfo = Alamofire;
+		};
+		000000000D10 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 000000000000 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0000000005F0;
+			remoteInfo = FlexLayout;
+		};
+		000000000D30 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 000000000000 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0000000008D0;
+			remoteInfo = "Pods-PageDemo-PageDemo";
+		};
+		000000000D50 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 000000000000 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0000000008D0;
+			remoteInfo = "Pods-PageDemo-PageDemo";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0000000000C0 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		0000000000D0 /* AFError.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AFError.swift; path = Source/AFError.swift; sourceTree = "<group>"; };
+		0000000000E0 /* Alamofire.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Alamofire.swift; path = Source/Alamofire.swift; sourceTree = "<group>"; };
+		0000000000F0 /* DispatchQueue+Alamofire.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "DispatchQueue+Alamofire.swift"; path = "Source/DispatchQueue+Alamofire.swift"; sourceTree = "<group>"; };
+		000000000100 /* MultipartFormData.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MultipartFormData.swift; path = Source/MultipartFormData.swift; sourceTree = "<group>"; };
+		000000000110 /* NetworkReachabilityManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NetworkReachabilityManager.swift; path = Source/NetworkReachabilityManager.swift; sourceTree = "<group>"; };
+		000000000120 /* Notifications.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Notifications.swift; path = Source/Notifications.swift; sourceTree = "<group>"; };
+		000000000130 /* ParameterEncoding.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ParameterEncoding.swift; path = Source/ParameterEncoding.swift; sourceTree = "<group>"; };
+		000000000140 /* Request.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Request.swift; path = Source/Request.swift; sourceTree = "<group>"; };
+		000000000150 /* Response.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Response.swift; path = Source/Response.swift; sourceTree = "<group>"; };
+		000000000160 /* ResponseSerialization.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ResponseSerialization.swift; path = Source/ResponseSerialization.swift; sourceTree = "<group>"; };
+		000000000170 /* Result.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Result.swift; path = Source/Result.swift; sourceTree = "<group>"; };
+		000000000180 /* ServerTrustPolicy.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ServerTrustPolicy.swift; path = Source/ServerTrustPolicy.swift; sourceTree = "<group>"; };
+		000000000190 /* SessionDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SessionDelegate.swift; path = Source/SessionDelegate.swift; sourceTree = "<group>"; };
+		0000000001A0 /* SessionManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SessionManager.swift; path = Source/SessionManager.swift; sourceTree = "<group>"; };
+		0000000001B0 /* TaskDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TaskDelegate.swift; path = Source/TaskDelegate.swift; sourceTree = "<group>"; };
+		0000000001C0 /* Timeline.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Timeline.swift; path = Source/Timeline.swift; sourceTree = "<group>"; };
+		0000000001D0 /* Validation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Validation.swift; path = Source/Validation.swift; sourceTree = "<group>"; };
+		0000000001E0 /* FlexLayout.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FlexLayout.swift; path = Sources/FlexLayout.swift; sourceTree = "<group>"; };
+		0000000001F0 /* FlexLayout+Enum.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "FlexLayout+Enum.swift"; path = "Sources/Impl/FlexLayout+Enum.swift"; sourceTree = "<group>"; };
+		000000000200 /* FlexLayout+Private.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "FlexLayout+Private.swift"; path = "Sources/Impl/FlexLayout+Private.swift"; sourceTree = "<group>"; };
+		000000000210 /* UIView+FlexLayout.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIView+FlexLayout.swift"; path = "Sources/Impl/UIView+FlexLayout.swift"; sourceTree = "<group>"; };
+		000000000220 /* Percent.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Percent.swift; path = Sources/Percent.swift; sourceTree = "<group>"; };
+		000000000230 /* FlexLayout.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FlexLayout.h; path = Sources/SupportingFiles/FlexLayout.h; sourceTree = "<group>"; };
+		000000000240 /* Utils.cpp */ = {isa = PBXFileReference; includeInIndex = 1; name = Utils.cpp; path = Sources/yoga/Utils.cpp; sourceTree = "<group>"; };
+		000000000250 /* Utils.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Utils.h; path = Sources/yoga/Utils.h; sourceTree = "<group>"; };
+		000000000260 /* YGEnums.cpp */ = {isa = PBXFileReference; includeInIndex = 1; name = YGEnums.cpp; path = Sources/yoga/YGEnums.cpp; sourceTree = "<group>"; };
+		000000000270 /* YGEnums.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = YGEnums.h; path = Sources/yoga/YGEnums.h; sourceTree = "<group>"; };
+		000000000280 /* YGLayout.cpp */ = {isa = PBXFileReference; includeInIndex = 1; name = YGLayout.cpp; path = Sources/yoga/YGLayout.cpp; sourceTree = "<group>"; };
+		000000000290 /* YGLayout.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = YGLayout.h; path = Sources/yoga/YGLayout.h; sourceTree = "<group>"; };
+		0000000002A0 /* YGMacros.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = YGMacros.h; path = Sources/yoga/YGMacros.h; sourceTree = "<group>"; };
+		0000000002B0 /* YGNode.cpp */ = {isa = PBXFileReference; includeInIndex = 1; name = YGNode.cpp; path = Sources/yoga/YGNode.cpp; sourceTree = "<group>"; };
+		0000000002C0 /* YGNode.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = YGNode.h; path = Sources/yoga/YGNode.h; sourceTree = "<group>"; };
+		0000000002D0 /* YGNodePrint.cpp */ = {isa = PBXFileReference; includeInIndex = 1; name = YGNodePrint.cpp; path = Sources/yoga/YGNodePrint.cpp; sourceTree = "<group>"; };
+		0000000002E0 /* YGNodePrint.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = YGNodePrint.h; path = Sources/yoga/YGNodePrint.h; sourceTree = "<group>"; };
+		0000000002F0 /* YGStyle.cpp */ = {isa = PBXFileReference; includeInIndex = 1; name = YGStyle.cpp; path = Sources/yoga/YGStyle.cpp; sourceTree = "<group>"; };
+		000000000300 /* YGStyle.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = YGStyle.h; path = Sources/yoga/YGStyle.h; sourceTree = "<group>"; };
+		000000000310 /* Yoga-internal.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "Yoga-internal.h"; path = "Sources/yoga/Yoga-internal.h"; sourceTree = "<group>"; };
+		000000000320 /* Yoga.cpp */ = {isa = PBXFileReference; includeInIndex = 1; name = Yoga.cpp; path = Sources/yoga/Yoga.cpp; sourceTree = "<group>"; };
+		000000000330 /* Yoga.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Yoga.h; path = Sources/yoga/Yoga.h; sourceTree = "<group>"; };
+		000000000340 /* UIView+Yoga.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIView+Yoga.h"; path = "Sources/YogaKit/UIView+Yoga.h"; sourceTree = "<group>"; };
+		000000000350 /* UIView+Yoga.mm */ = {isa = PBXFileReference; includeInIndex = 1; name = "UIView+Yoga.mm"; path = "Sources/YogaKit/UIView+Yoga.mm"; sourceTree = "<group>"; };
+		000000000360 /* YGLayout+Private.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "YGLayout+Private.h"; path = "Sources/YogaKit/YGLayout+Private.h"; sourceTree = "<group>"; };
+		000000000370 /* YGLayout.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = YGLayout.h; path = Sources/YogaKit/YGLayout.h; sourceTree = "<group>"; };
+		000000000380 /* YGLayout.mm */ = {isa = PBXFileReference; includeInIndex = 1; name = YGLayout.mm; path = Sources/YogaKit/YGLayout.mm; sourceTree = "<group>"; };
+		000000000390 /* YGLayoutExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = YGLayoutExtensions.swift; path = Sources/YogaKit/YGLayoutExtensions.swift; sourceTree = "<group>"; };
+		0000000003E0 /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Alamofire.framework; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		000000000420 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		000000000560 /* Alamofire.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Alamofire.xcconfig; sourceTree = "<group>"; };
+		000000000570 /* Alamofire.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = Alamofire.modulemap; sourceTree = "<group>"; };
+		000000000580 /* Alamofire-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Alamofire-umbrella.h"; sourceTree = "<group>"; };
+		0000000005B0 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0000000005C0 /* Alamofire-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Alamofire-prefix.pch"; sourceTree = "<group>"; };
+		0000000005D0 /* Alamofire-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Alamofire-dummy.m"; sourceTree = "<group>"; };
+		000000000630 /* FlexLayout.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = FlexLayout.framework; path = FlexLayout.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		000000000850 /* FlexLayout.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = FlexLayout.xcconfig; sourceTree = "<group>"; };
+		000000000860 /* FlexLayout.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = FlexLayout.modulemap; sourceTree = "<group>"; };
+		000000000870 /* FlexLayout-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "FlexLayout-umbrella.h"; sourceTree = "<group>"; };
+		000000000890 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0000000008A0 /* FlexLayout-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "FlexLayout-prefix.pch"; sourceTree = "<group>"; };
+		0000000008B0 /* FlexLayout-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "FlexLayout-dummy.m"; sourceTree = "<group>"; };
+		000000000910 /* Pods_PageDemo_PageDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_PageDemo_PageDemo.framework; path = "Pods-PageDemo-PageDemo.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		000000000960 /* Pods-PageDemo-PageDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-PageDemo-PageDemo.release.xcconfig"; sourceTree = "<group>"; };
+		000000000970 /* Pods-PageDemo-PageDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-PageDemo-PageDemo.debug.xcconfig"; sourceTree = "<group>"; };
+		000000000980 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		000000000990 /* Pods-PageDemo-PageDemo.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-PageDemo-PageDemo.modulemap"; sourceTree = "<group>"; };
+		0000000009A0 /* Pods-PageDemo-PageDemo-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-PageDemo-PageDemo-umbrella.h"; sourceTree = "<group>"; };
+		0000000009D0 /* Pods-PageDemo-PageDemo-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-PageDemo-PageDemo-frameworks.sh"; sourceTree = "<group>"; };
+		0000000009E0 /* Pods-PageDemo-PageDemo-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-PageDemo-PageDemo-resources.sh"; sourceTree = "<group>"; };
+		0000000009F0 /* Pods-PageDemo-PageDemo-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-PageDemo-PageDemo-acknowledgements.plist"; sourceTree = "<group>"; };
+		000000000A00 /* Pods-PageDemo-PageDemo-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-PageDemo-PageDemo-acknowledgements.markdown"; sourceTree = "<group>"; };
+		000000000A10 /* Pods-PageDemo-PageDemo-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-PageDemo-PageDemo-dummy.m"; sourceTree = "<group>"; };
+		000000000A70 /* Pods_PageDemoTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_PageDemoTests.framework; path = "Pods-PageDemoTests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		000000000AC0 /* Pods-PageDemoTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-PageDemoTests.release.xcconfig"; sourceTree = "<group>"; };
+		000000000AD0 /* Pods-PageDemoTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-PageDemoTests.debug.xcconfig"; sourceTree = "<group>"; };
+		000000000AE0 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		000000000AF0 /* Pods-PageDemoTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-PageDemoTests.modulemap"; sourceTree = "<group>"; };
+		000000000B00 /* Pods-PageDemoTests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-PageDemoTests-umbrella.h"; sourceTree = "<group>"; };
+		000000000B30 /* Pods-PageDemoTests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-PageDemoTests-frameworks.sh"; sourceTree = "<group>"; };
+		000000000B40 /* Pods-PageDemoTests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-PageDemoTests-resources.sh"; sourceTree = "<group>"; };
+		000000000B50 /* Pods-PageDemoTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-PageDemoTests-acknowledgements.plist"; sourceTree = "<group>"; };
+		000000000B60 /* Pods-PageDemoTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-PageDemoTests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		000000000B70 /* Pods-PageDemoTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-PageDemoTests-dummy.m"; sourceTree = "<group>"; };
+		000000000BD0 /* Pods_PageDemoUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_PageDemoUITests.framework; path = "Pods-PageDemoUITests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		000000000C20 /* Pods-PageDemoUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-PageDemoUITests.release.xcconfig"; sourceTree = "<group>"; };
+		000000000C30 /* Pods-PageDemoUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-PageDemoUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		000000000C40 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		000000000C50 /* Pods-PageDemoUITests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-PageDemoUITests.modulemap"; sourceTree = "<group>"; };
+		000000000C60 /* Pods-PageDemoUITests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-PageDemoUITests-umbrella.h"; sourceTree = "<group>"; };
+		000000000C90 /* Pods-PageDemoUITests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-PageDemoUITests-frameworks.sh"; sourceTree = "<group>"; };
+		000000000CA0 /* Pods-PageDemoUITests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-PageDemoUITests-resources.sh"; sourceTree = "<group>"; };
+		000000000CB0 /* Pods-PageDemoUITests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-PageDemoUITests-acknowledgements.plist"; sourceTree = "<group>"; };
+		000000000CC0 /* Pods-PageDemoUITests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-PageDemoUITests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		000000000CD0 /* Pods-PageDemoUITests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-PageDemoUITests-dummy.m"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		000000000400 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				000000000430 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		000000000650 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				000000000660 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		000000000930 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				000000000940 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		000000000A90 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				000000000AA0 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		000000000BF0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				000000000C00 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		000000000010 = {
+			isa = PBXGroup;
+			children = (
+				0000000000C0 /* Podfile */,
+				000000000060 /* Frameworks */,
+				000000000080 /* Pods */,
+				000000000020 /* Products */,
+				000000000070 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		000000000020 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				0000000003E0 /* Alamofire.framework */,
+				000000000630 /* FlexLayout.framework */,
+				000000000910 /* Pods_PageDemo_PageDemo.framework */,
+				000000000A70 /* Pods_PageDemoTests.framework */,
+				000000000BD0 /* Pods_PageDemoUITests.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		000000000060 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				000000000410 /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		000000000070 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				000000000950 /* Pods-PageDemo-PageDemo */,
+				000000000AB0 /* Pods-PageDemoTests */,
+				000000000C10 /* Pods-PageDemoUITests */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		000000000080 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				0000000000A0 /* Alamofire */,
+				0000000000B0 /* FlexLayout */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		0000000000A0 /* Alamofire */ = {
+			isa = PBXGroup;
+			children = (
+				0000000000D0 /* AFError.swift */,
+				0000000000E0 /* Alamofire.swift */,
+				0000000000F0 /* DispatchQueue+Alamofire.swift */,
+				000000000100 /* MultipartFormData.swift */,
+				000000000110 /* NetworkReachabilityManager.swift */,
+				000000000120 /* Notifications.swift */,
+				000000000130 /* ParameterEncoding.swift */,
+				000000000140 /* Request.swift */,
+				000000000150 /* Response.swift */,
+				000000000160 /* ResponseSerialization.swift */,
+				000000000170 /* Result.swift */,
+				000000000180 /* ServerTrustPolicy.swift */,
+				000000000190 /* SessionDelegate.swift */,
+				0000000001A0 /* SessionManager.swift */,
+				0000000001B0 /* TaskDelegate.swift */,
+				0000000001C0 /* Timeline.swift */,
+				0000000001D0 /* Validation.swift */,
+				000000000550 /* Support Files */,
+			);
+			name = Alamofire;
+			path = Alamofire;
+			sourceTree = "<group>";
+		};
+		0000000000B0 /* FlexLayout */ = {
+			isa = PBXGroup;
+			children = (
+				000000000230 /* FlexLayout.h */,
+				0000000001E0 /* FlexLayout.swift */,
+				0000000001F0 /* FlexLayout+Enum.swift */,
+				000000000200 /* FlexLayout+Private.swift */,
+				000000000220 /* Percent.swift */,
+				000000000210 /* UIView+FlexLayout.swift */,
+				000000000340 /* UIView+Yoga.h */,
+				000000000350 /* UIView+Yoga.mm */,
+				000000000240 /* Utils.cpp */,
+				000000000250 /* Utils.h */,
+				000000000260 /* YGEnums.cpp */,
+				000000000270 /* YGEnums.h */,
+				000000000280 /* YGLayout.cpp */,
+				000000000370 /* YGLayout.h */,
+				000000000290 /* YGLayout.h */,
+				000000000380 /* YGLayout.mm */,
+				000000000360 /* YGLayout+Private.h */,
+				000000000390 /* YGLayoutExtensions.swift */,
+				0000000002A0 /* YGMacros.h */,
+				0000000002B0 /* YGNode.cpp */,
+				0000000002C0 /* YGNode.h */,
+				0000000002D0 /* YGNodePrint.cpp */,
+				0000000002E0 /* YGNodePrint.h */,
+				0000000002F0 /* YGStyle.cpp */,
+				000000000300 /* YGStyle.h */,
+				000000000320 /* Yoga.cpp */,
+				000000000330 /* Yoga.h */,
+				000000000310 /* Yoga-internal.h */,
+				000000000840 /* Support Files */,
+			);
+			name = FlexLayout;
+			path = FlexLayout;
+			sourceTree = "<group>";
+		};
+		000000000410 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				000000000420 /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		000000000550 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				000000000570 /* Alamofire.modulemap */,
+				000000000560 /* Alamofire.xcconfig */,
+				0000000005D0 /* Alamofire-dummy.m */,
+				0000000005C0 /* Alamofire-prefix.pch */,
+				000000000580 /* Alamofire-umbrella.h */,
+				0000000005B0 /* Info.plist */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/Alamofire";
+			sourceTree = "<group>";
+		};
+		000000000840 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				000000000860 /* FlexLayout.modulemap */,
+				000000000850 /* FlexLayout.xcconfig */,
+				0000000008B0 /* FlexLayout-dummy.m */,
+				0000000008A0 /* FlexLayout-prefix.pch */,
+				000000000870 /* FlexLayout-umbrella.h */,
+				000000000890 /* Info.plist */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/FlexLayout";
+			sourceTree = "<group>";
+		};
+		000000000950 /* Pods-PageDemo-PageDemo */ = {
+			isa = PBXGroup;
+			children = (
+				000000000980 /* Info.plist */,
+				000000000990 /* Pods-PageDemo-PageDemo.modulemap */,
+				000000000A00 /* Pods-PageDemo-PageDemo-acknowledgements.markdown */,
+				0000000009F0 /* Pods-PageDemo-PageDemo-acknowledgements.plist */,
+				000000000A10 /* Pods-PageDemo-PageDemo-dummy.m */,
+				0000000009D0 /* Pods-PageDemo-PageDemo-frameworks.sh */,
+				0000000009E0 /* Pods-PageDemo-PageDemo-resources.sh */,
+				0000000009A0 /* Pods-PageDemo-PageDemo-umbrella.h */,
+				000000000970 /* Pods-PageDemo-PageDemo.debug.xcconfig */,
+				000000000960 /* Pods-PageDemo-PageDemo.release.xcconfig */,
+			);
+			name = "Pods-PageDemo-PageDemo";
+			path = "Target Support Files/Pods-PageDemo-PageDemo";
+			sourceTree = "<group>";
+		};
+		000000000AB0 /* Pods-PageDemoTests */ = {
+			isa = PBXGroup;
+			children = (
+				000000000AE0 /* Info.plist */,
+				000000000AF0 /* Pods-PageDemoTests.modulemap */,
+				000000000B60 /* Pods-PageDemoTests-acknowledgements.markdown */,
+				000000000B50 /* Pods-PageDemoTests-acknowledgements.plist */,
+				000000000B70 /* Pods-PageDemoTests-dummy.m */,
+				000000000B30 /* Pods-PageDemoTests-frameworks.sh */,
+				000000000B40 /* Pods-PageDemoTests-resources.sh */,
+				000000000B00 /* Pods-PageDemoTests-umbrella.h */,
+				000000000AD0 /* Pods-PageDemoTests.debug.xcconfig */,
+				000000000AC0 /* Pods-PageDemoTests.release.xcconfig */,
+			);
+			name = "Pods-PageDemoTests";
+			path = "Target Support Files/Pods-PageDemoTests";
+			sourceTree = "<group>";
+		};
+		000000000C10 /* Pods-PageDemoUITests */ = {
+			isa = PBXGroup;
+			children = (
+				000000000C40 /* Info.plist */,
+				000000000C50 /* Pods-PageDemoUITests.modulemap */,
+				000000000CC0 /* Pods-PageDemoUITests-acknowledgements.markdown */,
+				000000000CB0 /* Pods-PageDemoUITests-acknowledgements.plist */,
+				000000000CD0 /* Pods-PageDemoUITests-dummy.m */,
+				000000000C90 /* Pods-PageDemoUITests-frameworks.sh */,
+				000000000CA0 /* Pods-PageDemoUITests-resources.sh */,
+				000000000C60 /* Pods-PageDemoUITests-umbrella.h */,
+				000000000C30 /* Pods-PageDemoUITests.debug.xcconfig */,
+				000000000C20 /* Pods-PageDemoUITests.release.xcconfig */,
+			);
+			name = "Pods-PageDemoUITests";
+			path = "Target Support Files/Pods-PageDemoUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		000000000590 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0000000005A0 /* Alamofire-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		000000000760 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				000000000880 /* FlexLayout-umbrella.h in Headers */,
+				000000000770 /* FlexLayout.h in Headers */,
+				000000000810 /* UIView+Yoga.h in Headers */,
+				000000000780 /* Utils.h in Headers */,
+				000000000790 /* YGEnums.h in Headers */,
+				000000000820 /* YGLayout+Private.h in Headers */,
+				0000000007A0 /* YGLayout.h in Headers */,
+				000000000830 /* YGLayout.h in Headers */,
+				0000000007B0 /* YGMacros.h in Headers */,
+				0000000007C0 /* YGNode.h in Headers */,
+				0000000007D0 /* YGNodePrint.h in Headers */,
+				0000000007E0 /* YGStyle.h in Headers */,
+				0000000007F0 /* Yoga-internal.h in Headers */,
+				000000000800 /* Yoga.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0000000009B0 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0000000009C0 /* Pods-PageDemo-PageDemo-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		000000000B10 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				000000000B20 /* Pods-PageDemoTests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		000000000C70 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				000000000C80 /* Pods-PageDemoUITests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		0000000003A0 /* Alamofire */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0000000003B0 /* Build configuration list for PBXNativeTarget "Alamofire" */;
+			buildPhases = (
+				0000000003F0 /* Sources */,
+				000000000400 /* Frameworks */,
+				000000000590 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Alamofire;
+			productName = Alamofire;
+			productReference = 0000000003E0 /* Alamofire.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		0000000005F0 /* FlexLayout */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 000000000600 /* Build configuration list for PBXNativeTarget "FlexLayout" */;
+			buildPhases = (
+				000000000640 /* Sources */,
+				000000000650 /* Frameworks */,
+				000000000760 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FlexLayout;
+			productName = FlexLayout;
+			productReference = 000000000630 /* FlexLayout.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		0000000008D0 /* Pods-PageDemo-PageDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0000000008E0 /* Build configuration list for PBXNativeTarget "Pods-PageDemo-PageDemo" */;
+			buildPhases = (
+				000000000920 /* Sources */,
+				000000000930 /* Frameworks */,
+				0000000009B0 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				000000000D00 /* PBXTargetDependency */,
+				000000000D20 /* PBXTargetDependency */,
+			);
+			name = "Pods-PageDemo-PageDemo";
+			productName = "Pods-PageDemo-PageDemo";
+			productReference = 000000000910 /* Pods_PageDemo_PageDemo.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		000000000A30 /* Pods-PageDemoTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 000000000A40 /* Build configuration list for PBXNativeTarget "Pods-PageDemoTests" */;
+			buildPhases = (
+				000000000A80 /* Sources */,
+				000000000A90 /* Frameworks */,
+				000000000B10 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				000000000D60 /* PBXTargetDependency */,
+			);
+			name = "Pods-PageDemoTests";
+			productName = "Pods-PageDemoTests";
+			productReference = 000000000A70 /* Pods_PageDemoTests.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		000000000B90 /* Pods-PageDemoUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 000000000BA0 /* Build configuration list for PBXNativeTarget "Pods-PageDemoUITests" */;
+			buildPhases = (
+				000000000BE0 /* Sources */,
+				000000000BF0 /* Frameworks */,
+				000000000C70 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				000000000D40 /* PBXTargetDependency */,
+			);
+			name = "Pods-PageDemoUITests";
+			productName = "Pods-PageDemoUITests";
+			productReference = 000000000BD0 /* Pods_PageDemoUITests.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		000000000000 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0930;
+				LastUpgradeCheck = 0930;
+			};
+			buildConfigurationList = 000000000030 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 000000000010;
+			productRefGroup = 000000000020 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				0000000003A0 /* Alamofire */,
+				0000000005F0 /* FlexLayout */,
+				0000000008D0 /* Pods-PageDemo-PageDemo */,
+				000000000A30 /* Pods-PageDemoTests */,
+				000000000B90 /* Pods-PageDemoUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		0000000003F0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				000000000440 /* AFError.swift in Sources */,
+				0000000005E0 /* Alamofire-dummy.m in Sources */,
+				000000000450 /* Alamofire.swift in Sources */,
+				000000000460 /* DispatchQueue+Alamofire.swift in Sources */,
+				000000000470 /* MultipartFormData.swift in Sources */,
+				000000000480 /* NetworkReachabilityManager.swift in Sources */,
+				000000000490 /* Notifications.swift in Sources */,
+				0000000004A0 /* ParameterEncoding.swift in Sources */,
+				0000000004B0 /* Request.swift in Sources */,
+				0000000004C0 /* Response.swift in Sources */,
+				0000000004D0 /* ResponseSerialization.swift in Sources */,
+				0000000004E0 /* Result.swift in Sources */,
+				0000000004F0 /* ServerTrustPolicy.swift in Sources */,
+				000000000500 /* SessionDelegate.swift in Sources */,
+				000000000510 /* SessionManager.swift in Sources */,
+				000000000520 /* TaskDelegate.swift in Sources */,
+				000000000530 /* Timeline.swift in Sources */,
+				000000000540 /* Validation.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		000000000640 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				000000000680 /* FlexLayout+Enum.swift in Sources */,
+				000000000690 /* FlexLayout+Private.swift in Sources */,
+				0000000008C0 /* FlexLayout-dummy.m in Sources */,
+				000000000670 /* FlexLayout.swift in Sources */,
+				0000000006B0 /* Percent.swift in Sources */,
+				0000000006A0 /* UIView+FlexLayout.swift in Sources */,
+				000000000730 /* UIView+Yoga.mm in Sources */,
+				0000000006C0 /* Utils.cpp in Sources */,
+				0000000006D0 /* YGEnums.cpp in Sources */,
+				0000000006E0 /* YGLayout.cpp in Sources */,
+				000000000740 /* YGLayout.mm in Sources */,
+				000000000750 /* YGLayoutExtensions.swift in Sources */,
+				0000000006F0 /* YGNode.cpp in Sources */,
+				000000000700 /* YGNodePrint.cpp in Sources */,
+				000000000710 /* YGStyle.cpp in Sources */,
+				000000000720 /* Yoga.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		000000000920 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				000000000A20 /* Pods-PageDemo-PageDemo-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		000000000A80 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				000000000B80 /* Pods-PageDemoTests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		000000000BE0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				000000000CE0 /* Pods-PageDemoUITests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		000000000D00 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Alamofire;
+			target = 0000000003A0 /* Alamofire */;
+			targetProxy = 000000000CF0 /* PBXContainerItemProxy */;
+		};
+		000000000D20 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = FlexLayout;
+			target = 0000000005F0 /* FlexLayout */;
+			targetProxy = 000000000D10 /* PBXContainerItemProxy */;
+		};
+		000000000D40 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-PageDemo-PageDemo";
+			target = 0000000008D0 /* Pods-PageDemo-PageDemo */;
+			targetProxy = 000000000D30 /* PBXContainerItemProxy */;
+		};
+		000000000D60 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-PageDemo-PageDemo";
+			target = 0000000008D0 /* Pods-PageDemo-PageDemo */;
+			targetProxy = 000000000D50 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		000000000040 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_ALLOWED = NO;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		000000000050 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_ALLOWED = NO;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Release;
+		};
+		0000000003C0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 000000000560 /* Alamofire.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/Alamofire/Alamofire-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Alamofire/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Alamofire/Alamofire.modulemap";
+				PRODUCT_MODULE_NAME = Alamofire;
+				PRODUCT_NAME = Alamofire;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		0000000003D0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 000000000560 /* Alamofire.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/Alamofire/Alamofire-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Alamofire/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Alamofire/Alamofire.modulemap";
+				PRODUCT_MODULE_NAME = Alamofire;
+				PRODUCT_NAME = Alamofire;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		000000000610 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 000000000850 /* FlexLayout.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/FlexLayout/FlexLayout-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/FlexLayout/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/FlexLayout/FlexLayout.modulemap";
+				PRODUCT_MODULE_NAME = FlexLayout;
+				PRODUCT_NAME = FlexLayout;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		000000000620 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 000000000850 /* FlexLayout.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/FlexLayout/FlexLayout-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/FlexLayout/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/FlexLayout/FlexLayout.modulemap";
+				PRODUCT_MODULE_NAME = FlexLayout;
+				PRODUCT_NAME = FlexLayout;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		0000000008F0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 000000000960 /* Pods-PageDemo-PageDemo.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-PageDemo-PageDemo/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-PageDemo-PageDemo/Pods-PageDemo-PageDemo.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		000000000900 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 000000000970 /* Pods-PageDemo-PageDemo.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-PageDemo-PageDemo/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-PageDemo-PageDemo/Pods-PageDemo-PageDemo.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		000000000A50 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 000000000AC0 /* Pods-PageDemoTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-PageDemoTests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-PageDemoTests/Pods-PageDemoTests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		000000000A60 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 000000000AD0 /* Pods-PageDemoTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-PageDemoTests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-PageDemoTests/Pods-PageDemoTests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		000000000BB0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 000000000C20 /* Pods-PageDemoUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-PageDemoUITests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-PageDemoUITests/Pods-PageDemoUITests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		000000000BC0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 000000000C30 /* Pods-PageDemoUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-PageDemoUITests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-PageDemoUITests/Pods-PageDemoUITests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		000000000030 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				000000000040 /* Debug */,
+				000000000050 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0000000003B0 /* Build configuration list for PBXNativeTarget "Alamofire" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0000000003D0 /* Debug */,
+				0000000003C0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		000000000600 /* Build configuration list for PBXNativeTarget "FlexLayout" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				000000000620 /* Debug */,
+				000000000610 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0000000008E0 /* Build configuration list for PBXNativeTarget "Pods-PageDemo-PageDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				000000000900 /* Debug */,
+				0000000008F0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		000000000A40 /* Build configuration list for PBXNativeTarget "Pods-PageDemoTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				000000000A60 /* Debug */,
+				000000000A50 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		000000000BA0 /* Build configuration list for PBXNativeTarget "Pods-PageDemoUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				000000000BC0 /* Debug */,
+				000000000BB0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 000000000000 /* Project object */;
+}

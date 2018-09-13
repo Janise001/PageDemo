@@ -16,37 +16,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
-        //调用指纹安全验证
-        verify()
+        configWindows()
         return true
     }
-    func verify(){
-        
-        TouchIDSafeControl.userFigerprintAuthenticationTipStr(withtips:"验证指纹") { (result:TouchIDSafeControl.XWCheckResult) in
-            switch result{
-            case .success://情况没写全，需要的自己去看，我都列出来了
-                print("用户解锁成功")
-                break
-            case .failed:
-                print("用户解锁失败")
-                break
-            case .passwordNotSet:
-                print("未设置密码")
-                break
-            case .touchidNotSet:
-                print("未设置指纹")
-                break
-            case .touchidNotAvailable:
-                print("系统不支持")
-                break
-            default:
-                break
-                
-            }
-            
-        }
-        
-    }
+
     func applicationWillResignActive(_ application: UIApplication) {
         // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
         // Use this method to pause ongoing tasks, disable timers, and invalidate graphics rendering callbacks. Games should use this method to pause the game.
