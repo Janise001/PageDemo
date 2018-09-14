@@ -9,7 +9,7 @@
 import UIKit
 
 public struct Color {
-    public static var tinColor = UIColor(red: 255/255, green: 78/255, blue: 0/255, alpha: 1)
+    public static var tinColor = UIColor(red: 128/255, green: 162/255, blue: 231/255, alpha: 1)
 
     public static var viewColor = UIColor(red: 235/255, green: 235/255, blue: 235/255, alpha: 1)
     

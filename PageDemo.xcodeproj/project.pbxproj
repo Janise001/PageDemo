@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		103E86E2214B4B0100337825 /* Banner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 103E86E1214B4B0100337825 /* Banner.swift */; };
+		103E86E4214B4B1600337825 /* BannerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 103E86E3214B4B1600337825 /* BannerViewController.swift */; };
 		104154B0214A66E500FD793B /* AppDelegate+WindowsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 104154AF214A66E500FD793B /* AppDelegate+WindowsViewController.swift */; };
 		104154B4214A677400FD793B /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 104154B3214A677400FD793B /* HomeViewController.swift */; };
 		104154B6214A6A5300FD793B /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 104154B5214A6A5300FD793B /* Color.swift */; };
@@ -46,6 +48,8 @@
 /* Begin PBXFileReference section */
 		0366CF6855167E9A8A759570 /* Pods-PageDemoUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PageDemoUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-PageDemoUITests/Pods-PageDemoUITests.release.xcconfig"; sourceTree = "<group>"; };
 		0CEB24418747485AE5AF4B6A /* Pods_PageDemo_PageDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PageDemo_PageDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		103E86E1214B4B0100337825 /* Banner.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Banner.swift; sourceTree = "<group>"; };
+		103E86E3214B4B1600337825 /* BannerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BannerViewController.swift; sourceTree = "<group>"; };
 		104154AF214A66E500FD793B /* AppDelegate+WindowsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppDelegate+WindowsViewController.swift"; sourceTree = "<group>"; };
 		104154B3214A677400FD793B /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		104154B5214A6A5300FD793B /* Color.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
@@ -104,6 +108,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		103E86DF214B4AD700337825 /* BannerDemo */ = {
+			isa = PBXGroup;
+			children = (
+				103E86E3214B4B1600337825 /* BannerViewController.swift */,
+				103E86E0214B4AE800337825 /* Kit */,
+			);
+			path = BannerDemo;
+			sourceTree = "<group>";
+		};
+		103E86E0214B4AE800337825 /* Kit */ = {
+			isa = PBXGroup;
+			children = (
+				103E86E1214B4B0100337825 /* Banner.swift */,
+			);
+			path = Kit;
+			sourceTree = "<group>";
+		};
 		104154AE214A668500FD793B /* Kit */ = {
 			isa = PBXGroup;
 			children = (
@@ -133,6 +154,7 @@
 		104154B7214A6B2600FD793B /* DemoControllers */ = {
 			isa = PBXGroup;
 			children = (
+				103E86DF214B4AD700337825 /* BannerDemo */,
 				104154B8214A6B6700FD793B /* PageDemo */,
 			);
 			path = DemoControllers;
@@ -455,8 +477,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				103E86E4214B4B1600337825 /* BannerViewController.swift in Sources */,
 				3D47BCC1211924D10093147F /* PageLayer.swift in Sources */,
 				3D47BC94211924750093147F /* PageViewController.swift in Sources */,
+				103E86E2214B4B0100337825 /* Banner.swift in Sources */,
 				104154BB214A6D0F00FD793B /* ContentView.swift in Sources */,
 				104154B6214A6A5300FD793B /* Color.swift in Sources */,
 				106F9C45213CCA7900BADE5F /* PageControl.swift in Sources */,

@@ -10,19 +10,19 @@ import UIKit
 
 class ContentView: UIView {
 
-    var titleStr:String = ""
+   
     let button:UIButton = {
        let button = UIButton()
         button.setTitleColor(Color.white, for: .normal)
-        button.backgroundColor = Color.blue
+        button.backgroundColor = Color.tinColor
+        button.titleLabel?.textAlignment = .left
         button.layer.cornerRadius = 5.0
         return button
     }()
     override init(frame: CGRect) {
         super.init(frame: frame)
-        self.button.setTitle(self.titleStr, for: .normal)
         self.addSubview(self.button)
-        self.button.frame = self.bounds
+        self.button.frame = CGRect(x: 0, y: 0, width: frame.width, height: frame.height)
     }
     
     required init?(coder aDecoder: NSCoder) {
