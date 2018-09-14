@@ -72,7 +72,7 @@ class Banner: UIView,UIScrollViewDelegate {
                 let data = try! Data(contentsOf: url!)
                 let image = UIImage(data: data)
                 imageView.image = image
-                imageView.frame = CGRect(x: CGFloat(i)*self.imageWidth, y: 0, width: self.imageWidth, height: self.bounds.height)
+                imageView.frame = CGRect(x: CGFloat(i)*self.imageWidth, y: 0, width: self.bounds.width, height: self.bounds.height)
                 self.scrollView.addSubview(imageView)
             }
         }
