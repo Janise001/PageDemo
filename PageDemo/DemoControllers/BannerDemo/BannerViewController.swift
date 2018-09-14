@@ -31,9 +31,9 @@ class BannerViewController: UIViewController {
         super.viewDidLoad()
         banner.imgUrlArrs = []
         banner = Banner(frame: CGRect(x: 0, y: 100, width: self.view.bounds.width, height: 500))
-//        banner.imgUrlArrs = ["http://www.4gbizhi.com/uploads/allimg/150316/144Ha0M-0.jpg",
-//                             "http://b-ssl.duitang.com/uploads/item/201506/23/20150623184608_kj45n.jpeg",
-//                             "http://img3.duitang.com/uploads/item/201504/06/20150406H2227_nTYsK.thumb.700_0.jpeg"]
+        banner.imgUrlArrs = ["http://www.4gbizhi.com/uploads/allimg/150316/144Ha0M-0.jpg",
+                             "http://b-ssl.duitang.com/uploads/item/201506/23/20150623184608_kj45n.jpeg",
+                             "http://img3.duitang.com/uploads/item/201504/06/20150406H2227_nTYsK.thumb.700_0.jpeg"]
         self.view.addSubview(self.banner)
         self.view.addSubview(self.textField)
         self.view.addSubview(self.submitButton)

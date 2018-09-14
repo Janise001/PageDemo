@@ -39,6 +39,7 @@ class Banner: UIView,UIScrollViewDelegate {
     override init(frame: CGRect) {
         super.init(frame: frame)
         self.addSubview(self.scrollView)
+        self.scrollView.delegate = self
         self.scrollView.frame = CGRect(x: 0, y: 0, width: frame.width, height: frame.height)
         self.pageControl.frame = CGRect(x: 100, y: 400, width: 0, height: 0)
         self.pageControl.sizeToFit()
