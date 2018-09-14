@@ -15,7 +15,7 @@ class Banner: UIView,UIScrollViewDelegate {
             for view in self.scrollView.subviews {
                 view.removeFromSuperview()
             }
-            self.scrollView.contentSize.width = self.imageWidth * CGFloat(self.imgUrlArrs.count)
+            self.scrollView.contentSize.width = self.bounds.width * CGFloat(self.imgUrlArrs.count)
             self.addImagesToScrollView()
             self.pageControl.numberOfPages = self.imgUrlArrs.count
         }
@@ -36,8 +36,6 @@ class Banner: UIView,UIScrollViewDelegate {
         view.currentPageIndicatorTintColor = Color.lightGray
         return view
     }()
-    //图片宽度
-    var imageWidth:CGFloat = 0
     override init(frame: CGRect) {
         super.init(frame: frame)
         self.addSubview(self.scrollView)
@@ -56,7 +54,7 @@ class Banner: UIView,UIScrollViewDelegate {
     func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
         if scrollView == self.scrollView {
             let offSetX = scrollView.contentOffset.x
-            self.pageControl.currentPage = Int(offSetX/self.imageWidth)
+            self.pageControl.currentPage = Int(offSetX/self.bounds.width)
         }
     }
     //添加图片到滚动视图中
@@ -72,7 +70,7 @@ class Banner: UIView,UIScrollViewDelegate {
                 let data = try! Data(contentsOf: url!)
                 let image = UIImage(data: data)
                 imageView.image = image
-                imageView.frame = CGRect(x: CGFloat(i)*self.imageWidth, y: 0, width: self.bounds.width, height: self.bounds.height)
+                imageView.frame = CGRect(x: CGFloat(i)*self.bounds.width, y: 0, width: self.bounds.width, height: self.bounds.height)
                 self.scrollView.addSubview(imageView)
             }
         }
