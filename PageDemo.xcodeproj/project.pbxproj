@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		103E86E2214B4B0100337825 /* Banner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 103E86E1214B4B0100337825 /* Banner.swift */; };
 		103E86E4214B4B1600337825 /* BannerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 103E86E3214B4B1600337825 /* BannerViewController.swift */; };
+		103E86E6214B5F6800337825 /* Kingfisher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 103E86E5214B5F6800337825 /* Kingfisher.framework */; };
 		104154B0214A66E500FD793B /* AppDelegate+WindowsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 104154AF214A66E500FD793B /* AppDelegate+WindowsViewController.swift */; };
 		104154B4214A677400FD793B /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 104154B3214A677400FD793B /* HomeViewController.swift */; };
 		104154B6214A6A5300FD793B /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 104154B5214A6A5300FD793B /* Color.swift */; };
@@ -50,6 +51,7 @@
 		0CEB24418747485AE5AF4B6A /* Pods_PageDemo_PageDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PageDemo_PageDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		103E86E1214B4B0100337825 /* Banner.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Banner.swift; sourceTree = "<group>"; };
 		103E86E3214B4B1600337825 /* BannerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BannerViewController.swift; sourceTree = "<group>"; };
+		103E86E5214B5F6800337825 /* Kingfisher.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Kingfisher.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		104154AF214A66E500FD793B /* AppDelegate+WindowsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppDelegate+WindowsViewController.swift"; sourceTree = "<group>"; };
 		104154B3214A677400FD793B /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		104154B5214A6A5300FD793B /* Color.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
@@ -84,6 +86,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				103E86E6214B5F6800337825 /* Kingfisher.framework in Frameworks */,
 				106F9C48213CCF0800BADE5F /* LocalAuthentication.framework in Frameworks */,
 				780DCE59BD24098E428BCF35 /* Pods_PageDemo_PageDemo.framework in Frameworks */,
 			);
@@ -180,6 +183,7 @@
 		106F9C46213CCF0800BADE5F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				103E86E5214B5F6800337825 /* Kingfisher.framework */,
 				106F9C47213CCF0800BADE5F /* LocalAuthentication.framework */,
 				0CEB24418747485AE5AF4B6A /* Pods_PageDemo_PageDemo.framework */,
 				A4FD2DF914B9FFF5A8FFA849 /* Pods_PageDemoTests.framework */,
@@ -441,11 +445,13 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-PageDemo-PageDemo/Pods-PageDemo-PageDemo-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/FlexLayout/FlexLayout.framework",
+				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FlexLayout.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;

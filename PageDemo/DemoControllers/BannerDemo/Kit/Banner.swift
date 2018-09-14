@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+import Kingfisher
 class Banner: UIView,UIScrollViewDelegate {
     //图片地址数组
     var imgUrlArrs = [String](){
@@ -68,9 +68,7 @@ class Banner: UIView,UIScrollViewDelegate {
                     return view
                 }()
                 let url = URL(string: self.imgUrlArrs[i])
-                let data = try! Data(contentsOf: url!)
-                let image = UIImage(data: data)
-                imageView.image = image
+                imageView.kf.setImage(with: url)
                 imageView.frame = CGRect(x: CGFloat(i)*self.bounds.width, y: 0, width: self.bounds.width, height: self.bounds.height)
                 self.scrollView.addSubview(imageView)
             }

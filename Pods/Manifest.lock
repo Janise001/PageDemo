@@ -1,20 +1,32 @@
 PODS:
   - Alamofire (4.7.2)
   - FlexLayout (1.3.9)
+  - Kingfisher (4.9.0)
 
 DEPENDENCIES:
   - Alamofire
   - FlexLayout
+  - Kingfisher (from `https://github.com/onevcat/Kingfisher`)
 
 SPEC REPOS:
   https://github.com/CocoaPods/Specs.git:
     - Alamofire
     - FlexLayout
 
+EXTERNAL SOURCES:
+  Kingfisher:
+    :git: https://github.com/onevcat/Kingfisher
+
+CHECKOUT OPTIONS:
+  Kingfisher:
+    :commit: b6d83f8520a81996738b40d3cbfdad939ceab2b3
+    :git: https://github.com/onevcat/Kingfisher
+
 SPEC CHECKSUMS:
   Alamofire: e4fa87002c137ba2d8d634d2c51fabcda0d5c223
   FlexLayout: dbe4b2da72ee63d7145cf32bb5bfba375aeeb9e6
+  Kingfisher: 64539b51826b778206daa6ed815d12653caa69dd
 
-PODFILE CHECKSUM: 6f2a980d72d254ce6e75b59d88dbc92dbd69fa55
+PODFILE CHECKSUM: b2c2879795b384f30d008070be3b93d5559d34ff
 
 COCOAPODS: 1.5.0

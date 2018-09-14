@@ -7,234 +7,310 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		000000000430 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 000000000420 /* Foundation.framework */; };
-		000000000440 /* AFError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0000000000D0 /* AFError.swift */; };
-		000000000450 /* Alamofire.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0000000000E0 /* Alamofire.swift */; };
-		000000000460 /* DispatchQueue+Alamofire.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0000000000F0 /* DispatchQueue+Alamofire.swift */; };
-		000000000470 /* MultipartFormData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000100 /* MultipartFormData.swift */; };
-		000000000480 /* NetworkReachabilityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000110 /* NetworkReachabilityManager.swift */; };
-		000000000490 /* Notifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000120 /* Notifications.swift */; };
-		0000000004A0 /* ParameterEncoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000130 /* ParameterEncoding.swift */; };
-		0000000004B0 /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000140 /* Request.swift */; };
-		0000000004C0 /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000150 /* Response.swift */; };
-		0000000004D0 /* ResponseSerialization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000160 /* ResponseSerialization.swift */; };
-		0000000004E0 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000170 /* Result.swift */; };
-		0000000004F0 /* ServerTrustPolicy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000180 /* ServerTrustPolicy.swift */; };
-		000000000500 /* SessionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000190 /* SessionDelegate.swift */; };
-		000000000510 /* SessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0000000001A0 /* SessionManager.swift */; };
-		000000000520 /* TaskDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0000000001B0 /* TaskDelegate.swift */; };
-		000000000530 /* Timeline.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0000000001C0 /* Timeline.swift */; };
-		000000000540 /* Validation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0000000001D0 /* Validation.swift */; };
-		0000000005A0 /* Alamofire-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 000000000580 /* Alamofire-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		0000000005E0 /* Alamofire-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 0000000005D0 /* Alamofire-dummy.m */; };
-		000000000660 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 000000000420 /* Foundation.framework */; };
-		000000000670 /* FlexLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0000000001E0 /* FlexLayout.swift */; settings = {COMPILER_FLAGS = "-fno-omit-frame-pointer -fexceptions -Wall -Werror -std=c++1y -fPIC"; }; };
-		000000000680 /* FlexLayout+Enum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0000000001F0 /* FlexLayout+Enum.swift */; settings = {COMPILER_FLAGS = "-fno-omit-frame-pointer -fexceptions -Wall -Werror -std=c++1y -fPIC"; }; };
-		000000000690 /* FlexLayout+Private.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000200 /* FlexLayout+Private.swift */; settings = {COMPILER_FLAGS = "-fno-omit-frame-pointer -fexceptions -Wall -Werror -std=c++1y -fPIC"; }; };
-		0000000006A0 /* UIView+FlexLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000210 /* UIView+FlexLayout.swift */; settings = {COMPILER_FLAGS = "-fno-omit-frame-pointer -fexceptions -Wall -Werror -std=c++1y -fPIC"; }; };
-		0000000006B0 /* Percent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000220 /* Percent.swift */; settings = {COMPILER_FLAGS = "-fno-omit-frame-pointer -fexceptions -Wall -Werror -std=c++1y -fPIC"; }; };
-		0000000006C0 /* Utils.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 000000000240 /* Utils.cpp */; settings = {COMPILER_FLAGS = "-fno-omit-frame-pointer -fexceptions -Wall -Werror -std=c++1y -fPIC"; }; };
-		0000000006D0 /* YGEnums.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 000000000260 /* YGEnums.cpp */; settings = {COMPILER_FLAGS = "-fno-omit-frame-pointer -fexceptions -Wall -Werror -std=c++1y -fPIC"; }; };
-		0000000006E0 /* YGLayout.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 000000000280 /* YGLayout.cpp */; settings = {COMPILER_FLAGS = "-fno-omit-frame-pointer -fexceptions -Wall -Werror -std=c++1y -fPIC"; }; };
-		0000000006F0 /* YGNode.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0000000002B0 /* YGNode.cpp */; settings = {COMPILER_FLAGS = "-fno-omit-frame-pointer -fexceptions -Wall -Werror -std=c++1y -fPIC"; }; };
-		000000000700 /* YGNodePrint.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0000000002D0 /* YGNodePrint.cpp */; settings = {COMPILER_FLAGS = "-fno-omit-frame-pointer -fexceptions -Wall -Werror -std=c++1y -fPIC"; }; };
-		000000000710 /* YGStyle.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0000000002F0 /* YGStyle.cpp */; settings = {COMPILER_FLAGS = "-fno-omit-frame-pointer -fexceptions -Wall -Werror -std=c++1y -fPIC"; }; };
-		000000000720 /* Yoga.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 000000000320 /* Yoga.cpp */; settings = {COMPILER_FLAGS = "-fno-omit-frame-pointer -fexceptions -Wall -Werror -std=c++1y -fPIC"; }; };
-		000000000730 /* UIView+Yoga.mm in Sources */ = {isa = PBXBuildFile; fileRef = 000000000350 /* UIView+Yoga.mm */; settings = {COMPILER_FLAGS = "-fno-omit-frame-pointer -fexceptions -Wall -Werror -std=c++1y -fPIC"; }; };
-		000000000740 /* YGLayout.mm in Sources */ = {isa = PBXBuildFile; fileRef = 000000000380 /* YGLayout.mm */; settings = {COMPILER_FLAGS = "-fno-omit-frame-pointer -fexceptions -Wall -Werror -std=c++1y -fPIC"; }; };
-		000000000750 /* YGLayoutExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000390 /* YGLayoutExtensions.swift */; settings = {COMPILER_FLAGS = "-fno-omit-frame-pointer -fexceptions -Wall -Werror -std=c++1y -fPIC"; }; };
-		000000000770 /* FlexLayout.h in Headers */ = {isa = PBXBuildFile; fileRef = 000000000230 /* FlexLayout.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		000000000780 /* Utils.h in Headers */ = {isa = PBXBuildFile; fileRef = 000000000250 /* Utils.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		000000000790 /* YGEnums.h in Headers */ = {isa = PBXBuildFile; fileRef = 000000000270 /* YGEnums.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		0000000007A0 /* YGLayout.h in Headers */ = {isa = PBXBuildFile; fileRef = 000000000290 /* YGLayout.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		0000000007B0 /* YGMacros.h in Headers */ = {isa = PBXBuildFile; fileRef = 0000000002A0 /* YGMacros.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		0000000007C0 /* YGNode.h in Headers */ = {isa = PBXBuildFile; fileRef = 0000000002C0 /* YGNode.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		0000000007D0 /* YGNodePrint.h in Headers */ = {isa = PBXBuildFile; fileRef = 0000000002E0 /* YGNodePrint.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		0000000007E0 /* YGStyle.h in Headers */ = {isa = PBXBuildFile; fileRef = 000000000300 /* YGStyle.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		0000000007F0 /* Yoga-internal.h in Headers */ = {isa = PBXBuildFile; fileRef = 000000000310 /* Yoga-internal.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		000000000800 /* Yoga.h in Headers */ = {isa = PBXBuildFile; fileRef = 000000000330 /* Yoga.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		000000000810 /* UIView+Yoga.h in Headers */ = {isa = PBXBuildFile; fileRef = 000000000340 /* UIView+Yoga.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		000000000820 /* YGLayout+Private.h in Headers */ = {isa = PBXBuildFile; fileRef = 000000000360 /* YGLayout+Private.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		000000000830 /* YGLayout.h in Headers */ = {isa = PBXBuildFile; fileRef = 000000000370 /* YGLayout.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		000000000880 /* FlexLayout-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 000000000870 /* FlexLayout-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		0000000008C0 /* FlexLayout-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 0000000008B0 /* FlexLayout-dummy.m */; };
-		000000000940 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 000000000420 /* Foundation.framework */; };
-		0000000009C0 /* Pods-PageDemo-PageDemo-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 0000000009A0 /* Pods-PageDemo-PageDemo-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		000000000A20 /* Pods-PageDemo-PageDemo-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 000000000A10 /* Pods-PageDemo-PageDemo-dummy.m */; };
-		000000000AA0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 000000000420 /* Foundation.framework */; };
-		000000000B20 /* Pods-PageDemoTests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 000000000B00 /* Pods-PageDemoTests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		000000000B80 /* Pods-PageDemoTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 000000000B70 /* Pods-PageDemoTests-dummy.m */; };
-		000000000C00 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 000000000420 /* Foundation.framework */; };
-		000000000C80 /* Pods-PageDemoUITests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 000000000C60 /* Pods-PageDemoUITests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		000000000CE0 /* Pods-PageDemoUITests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 000000000CD0 /* Pods-PageDemoUITests-dummy.m */; };
+		0000000005C0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0000000005B0 /* Foundation.framework */; };
+		0000000005D0 /* AFError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0000000000E0 /* AFError.swift */; };
+		0000000005E0 /* Alamofire.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0000000000F0 /* Alamofire.swift */; };
+		0000000005F0 /* DispatchQueue+Alamofire.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000100 /* DispatchQueue+Alamofire.swift */; };
+		000000000600 /* MultipartFormData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000110 /* MultipartFormData.swift */; };
+		000000000610 /* NetworkReachabilityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000120 /* NetworkReachabilityManager.swift */; };
+		000000000620 /* Notifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000130 /* Notifications.swift */; };
+		000000000630 /* ParameterEncoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000140 /* ParameterEncoding.swift */; };
+		000000000640 /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000150 /* Request.swift */; };
+		000000000650 /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000160 /* Response.swift */; };
+		000000000660 /* ResponseSerialization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000170 /* ResponseSerialization.swift */; };
+		000000000670 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000180 /* Result.swift */; };
+		000000000680 /* ServerTrustPolicy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000190 /* ServerTrustPolicy.swift */; };
+		000000000690 /* SessionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0000000001A0 /* SessionDelegate.swift */; };
+		0000000006A0 /* SessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0000000001B0 /* SessionManager.swift */; };
+		0000000006B0 /* TaskDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0000000001C0 /* TaskDelegate.swift */; };
+		0000000006C0 /* Timeline.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0000000001D0 /* Timeline.swift */; };
+		0000000006D0 /* Validation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0000000001E0 /* Validation.swift */; };
+		000000000730 /* Alamofire-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 000000000710 /* Alamofire-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		000000000770 /* Alamofire-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 000000000760 /* Alamofire-dummy.m */; };
+		0000000007F0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0000000005B0 /* Foundation.framework */; };
+		000000000800 /* FlexLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0000000001F0 /* FlexLayout.swift */; settings = {COMPILER_FLAGS = "-fno-omit-frame-pointer -fexceptions -Wall -Werror -std=c++1y -fPIC"; }; };
+		000000000810 /* FlexLayout+Enum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000200 /* FlexLayout+Enum.swift */; settings = {COMPILER_FLAGS = "-fno-omit-frame-pointer -fexceptions -Wall -Werror -std=c++1y -fPIC"; }; };
+		000000000820 /* FlexLayout+Private.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000210 /* FlexLayout+Private.swift */; settings = {COMPILER_FLAGS = "-fno-omit-frame-pointer -fexceptions -Wall -Werror -std=c++1y -fPIC"; }; };
+		000000000830 /* UIView+FlexLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000220 /* UIView+FlexLayout.swift */; settings = {COMPILER_FLAGS = "-fno-omit-frame-pointer -fexceptions -Wall -Werror -std=c++1y -fPIC"; }; };
+		000000000840 /* Percent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000230 /* Percent.swift */; settings = {COMPILER_FLAGS = "-fno-omit-frame-pointer -fexceptions -Wall -Werror -std=c++1y -fPIC"; }; };
+		000000000850 /* Utils.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 000000000250 /* Utils.cpp */; settings = {COMPILER_FLAGS = "-fno-omit-frame-pointer -fexceptions -Wall -Werror -std=c++1y -fPIC"; }; };
+		000000000860 /* YGEnums.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 000000000270 /* YGEnums.cpp */; settings = {COMPILER_FLAGS = "-fno-omit-frame-pointer -fexceptions -Wall -Werror -std=c++1y -fPIC"; }; };
+		000000000870 /* YGLayout.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 000000000290 /* YGLayout.cpp */; settings = {COMPILER_FLAGS = "-fno-omit-frame-pointer -fexceptions -Wall -Werror -std=c++1y -fPIC"; }; };
+		000000000880 /* YGNode.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0000000002C0 /* YGNode.cpp */; settings = {COMPILER_FLAGS = "-fno-omit-frame-pointer -fexceptions -Wall -Werror -std=c++1y -fPIC"; }; };
+		000000000890 /* YGNodePrint.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0000000002E0 /* YGNodePrint.cpp */; settings = {COMPILER_FLAGS = "-fno-omit-frame-pointer -fexceptions -Wall -Werror -std=c++1y -fPIC"; }; };
+		0000000008A0 /* YGStyle.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 000000000300 /* YGStyle.cpp */; settings = {COMPILER_FLAGS = "-fno-omit-frame-pointer -fexceptions -Wall -Werror -std=c++1y -fPIC"; }; };
+		0000000008B0 /* Yoga.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 000000000330 /* Yoga.cpp */; settings = {COMPILER_FLAGS = "-fno-omit-frame-pointer -fexceptions -Wall -Werror -std=c++1y -fPIC"; }; };
+		0000000008C0 /* UIView+Yoga.mm in Sources */ = {isa = PBXBuildFile; fileRef = 000000000360 /* UIView+Yoga.mm */; settings = {COMPILER_FLAGS = "-fno-omit-frame-pointer -fexceptions -Wall -Werror -std=c++1y -fPIC"; }; };
+		0000000008D0 /* YGLayout.mm in Sources */ = {isa = PBXBuildFile; fileRef = 000000000390 /* YGLayout.mm */; settings = {COMPILER_FLAGS = "-fno-omit-frame-pointer -fexceptions -Wall -Werror -std=c++1y -fPIC"; }; };
+		0000000008E0 /* YGLayoutExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0000000003A0 /* YGLayoutExtensions.swift */; settings = {COMPILER_FLAGS = "-fno-omit-frame-pointer -fexceptions -Wall -Werror -std=c++1y -fPIC"; }; };
+		000000000900 /* FlexLayout.h in Headers */ = {isa = PBXBuildFile; fileRef = 000000000240 /* FlexLayout.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		000000000910 /* Utils.h in Headers */ = {isa = PBXBuildFile; fileRef = 000000000260 /* Utils.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		000000000920 /* YGEnums.h in Headers */ = {isa = PBXBuildFile; fileRef = 000000000280 /* YGEnums.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		000000000930 /* YGLayout.h in Headers */ = {isa = PBXBuildFile; fileRef = 0000000002A0 /* YGLayout.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		000000000940 /* YGMacros.h in Headers */ = {isa = PBXBuildFile; fileRef = 0000000002B0 /* YGMacros.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		000000000950 /* YGNode.h in Headers */ = {isa = PBXBuildFile; fileRef = 0000000002D0 /* YGNode.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		000000000960 /* YGNodePrint.h in Headers */ = {isa = PBXBuildFile; fileRef = 0000000002F0 /* YGNodePrint.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		000000000970 /* YGStyle.h in Headers */ = {isa = PBXBuildFile; fileRef = 000000000310 /* YGStyle.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		000000000980 /* Yoga-internal.h in Headers */ = {isa = PBXBuildFile; fileRef = 000000000320 /* Yoga-internal.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		000000000990 /* Yoga.h in Headers */ = {isa = PBXBuildFile; fileRef = 000000000340 /* Yoga.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0000000009A0 /* UIView+Yoga.h in Headers */ = {isa = PBXBuildFile; fileRef = 000000000350 /* UIView+Yoga.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0000000009B0 /* YGLayout+Private.h in Headers */ = {isa = PBXBuildFile; fileRef = 000000000370 /* YGLayout+Private.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		0000000009C0 /* YGLayout.h in Headers */ = {isa = PBXBuildFile; fileRef = 000000000380 /* YGLayout.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		000000000A10 /* FlexLayout-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 000000000A00 /* FlexLayout-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		000000000A50 /* FlexLayout-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 000000000A40 /* FlexLayout-dummy.m */; };
+		000000000AD0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0000000005B0 /* Foundation.framework */; };
+		000000000AE0 /* AnimatedImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0000000003B0 /* AnimatedImageView.swift */; };
+		000000000AF0 /* Box.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0000000003C0 /* Box.swift */; };
+		000000000B00 /* CacheSerializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0000000003D0 /* CacheSerializer.swift */; };
+		000000000B10 /* Filter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0000000003E0 /* Filter.swift */; };
+		000000000B20 /* FormatIndicatedCacheSerializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0000000003F0 /* FormatIndicatedCacheSerializer.swift */; };
+		000000000B30 /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000400 /* Image.swift */; };
+		000000000B40 /* ImageCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000410 /* ImageCache.swift */; };
+		000000000B50 /* ImageDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000420 /* ImageDownloader.swift */; };
+		000000000B60 /* ImageModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000430 /* ImageModifier.swift */; };
+		000000000B70 /* ImagePrefetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000440 /* ImagePrefetcher.swift */; };
+		000000000B80 /* ImageProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000450 /* ImageProcessor.swift */; };
+		000000000B90 /* ImageTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000460 /* ImageTransition.swift */; };
+		000000000BA0 /* ImageView+Kingfisher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000470 /* ImageView+Kingfisher.swift */; };
+		000000000BB0 /* Indicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000480 /* Indicator.swift */; };
+		000000000BC0 /* Kingfisher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000490 /* Kingfisher.swift */; };
+		000000000BD0 /* KingfisherManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0000000004A0 /* KingfisherManager.swift */; };
+		000000000BE0 /* KingfisherOptionsInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0000000004B0 /* KingfisherOptionsInfo.swift */; };
+		000000000BF0 /* Placeholder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0000000004C0 /* Placeholder.swift */; };
+		000000000C00 /* RequestModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0000000004D0 /* RequestModifier.swift */; };
+		000000000C10 /* Resource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0000000004E0 /* Resource.swift */; };
+		000000000C20 /* String+MD5.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0000000004F0 /* String+MD5.swift */; };
+		000000000C30 /* ThreadHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000500 /* ThreadHelper.swift */; };
+		000000000C40 /* UIButton+Kingfisher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000510 /* UIButton+Kingfisher.swift */; };
+		000000000C60 /* Kingfisher.h in Headers */ = {isa = PBXBuildFile; fileRef = 000000000520 /* Kingfisher.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		000000000CB0 /* Kingfisher-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 000000000CA0 /* Kingfisher-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		000000000CF0 /* Kingfisher-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 000000000CE0 /* Kingfisher-dummy.m */; };
+		000000000D70 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0000000005B0 /* Foundation.framework */; };
+		000000000DF0 /* Pods-PageDemo-PageDemo-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 000000000DD0 /* Pods-PageDemo-PageDemo-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		000000000E50 /* Pods-PageDemo-PageDemo-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 000000000E40 /* Pods-PageDemo-PageDemo-dummy.m */; };
+		000000000ED0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0000000005B0 /* Foundation.framework */; };
+		000000000F50 /* Pods-PageDemoTests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 000000000F30 /* Pods-PageDemoTests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		000000000FB0 /* Pods-PageDemoTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 000000000FA0 /* Pods-PageDemoTests-dummy.m */; };
+		000000001030 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0000000005B0 /* Foundation.framework */; };
+		0000000010B0 /* Pods-PageDemoUITests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 000000001090 /* Pods-PageDemoUITests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		000000001110 /* Pods-PageDemoUITests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 000000001100 /* Pods-PageDemoUITests-dummy.m */; };
+		000000001130 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 000000001120 /* CFNetwork.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		000000000CF0 /* PBXContainerItemProxy */ = {
+		000000001140 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 000000000000 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 0000000003A0;
+			remoteGlobalIDString = 000000000530;
 			remoteInfo = Alamofire;
 		};
-		000000000D10 /* PBXContainerItemProxy */ = {
+		000000001160 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 000000000000 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 0000000005F0;
+			remoteGlobalIDString = 000000000780;
 			remoteInfo = FlexLayout;
 		};
-		000000000D30 /* PBXContainerItemProxy */ = {
+		000000001180 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 000000000000 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 0000000008D0;
+			remoteGlobalIDString = 000000000A60;
+			remoteInfo = Kingfisher;
+		};
+		0000000011A0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 000000000000 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 000000000D00;
 			remoteInfo = "Pods-PageDemo-PageDemo";
 		};
-		000000000D50 /* PBXContainerItemProxy */ = {
+		0000000011C0 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 000000000000 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 0000000008D0;
+			remoteGlobalIDString = 000000000D00;
 			remoteInfo = "Pods-PageDemo-PageDemo";
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0000000000C0 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		0000000000D0 /* AFError.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AFError.swift; path = Source/AFError.swift; sourceTree = "<group>"; };
-		0000000000E0 /* Alamofire.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Alamofire.swift; path = Source/Alamofire.swift; sourceTree = "<group>"; };
-		0000000000F0 /* DispatchQueue+Alamofire.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "DispatchQueue+Alamofire.swift"; path = "Source/DispatchQueue+Alamofire.swift"; sourceTree = "<group>"; };
-		000000000100 /* MultipartFormData.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MultipartFormData.swift; path = Source/MultipartFormData.swift; sourceTree = "<group>"; };
-		000000000110 /* NetworkReachabilityManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NetworkReachabilityManager.swift; path = Source/NetworkReachabilityManager.swift; sourceTree = "<group>"; };
-		000000000120 /* Notifications.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Notifications.swift; path = Source/Notifications.swift; sourceTree = "<group>"; };
-		000000000130 /* ParameterEncoding.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ParameterEncoding.swift; path = Source/ParameterEncoding.swift; sourceTree = "<group>"; };
-		000000000140 /* Request.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Request.swift; path = Source/Request.swift; sourceTree = "<group>"; };
-		000000000150 /* Response.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Response.swift; path = Source/Response.swift; sourceTree = "<group>"; };
-		000000000160 /* ResponseSerialization.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ResponseSerialization.swift; path = Source/ResponseSerialization.swift; sourceTree = "<group>"; };
-		000000000170 /* Result.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Result.swift; path = Source/Result.swift; sourceTree = "<group>"; };
-		000000000180 /* ServerTrustPolicy.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ServerTrustPolicy.swift; path = Source/ServerTrustPolicy.swift; sourceTree = "<group>"; };
-		000000000190 /* SessionDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SessionDelegate.swift; path = Source/SessionDelegate.swift; sourceTree = "<group>"; };
-		0000000001A0 /* SessionManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SessionManager.swift; path = Source/SessionManager.swift; sourceTree = "<group>"; };
-		0000000001B0 /* TaskDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TaskDelegate.swift; path = Source/TaskDelegate.swift; sourceTree = "<group>"; };
-		0000000001C0 /* Timeline.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Timeline.swift; path = Source/Timeline.swift; sourceTree = "<group>"; };
-		0000000001D0 /* Validation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Validation.swift; path = Source/Validation.swift; sourceTree = "<group>"; };
-		0000000001E0 /* FlexLayout.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FlexLayout.swift; path = Sources/FlexLayout.swift; sourceTree = "<group>"; };
-		0000000001F0 /* FlexLayout+Enum.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "FlexLayout+Enum.swift"; path = "Sources/Impl/FlexLayout+Enum.swift"; sourceTree = "<group>"; };
-		000000000200 /* FlexLayout+Private.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "FlexLayout+Private.swift"; path = "Sources/Impl/FlexLayout+Private.swift"; sourceTree = "<group>"; };
-		000000000210 /* UIView+FlexLayout.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIView+FlexLayout.swift"; path = "Sources/Impl/UIView+FlexLayout.swift"; sourceTree = "<group>"; };
-		000000000220 /* Percent.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Percent.swift; path = Sources/Percent.swift; sourceTree = "<group>"; };
-		000000000230 /* FlexLayout.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FlexLayout.h; path = Sources/SupportingFiles/FlexLayout.h; sourceTree = "<group>"; };
-		000000000240 /* Utils.cpp */ = {isa = PBXFileReference; includeInIndex = 1; name = Utils.cpp; path = Sources/yoga/Utils.cpp; sourceTree = "<group>"; };
-		000000000250 /* Utils.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Utils.h; path = Sources/yoga/Utils.h; sourceTree = "<group>"; };
-		000000000260 /* YGEnums.cpp */ = {isa = PBXFileReference; includeInIndex = 1; name = YGEnums.cpp; path = Sources/yoga/YGEnums.cpp; sourceTree = "<group>"; };
-		000000000270 /* YGEnums.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = YGEnums.h; path = Sources/yoga/YGEnums.h; sourceTree = "<group>"; };
-		000000000280 /* YGLayout.cpp */ = {isa = PBXFileReference; includeInIndex = 1; name = YGLayout.cpp; path = Sources/yoga/YGLayout.cpp; sourceTree = "<group>"; };
-		000000000290 /* YGLayout.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = YGLayout.h; path = Sources/yoga/YGLayout.h; sourceTree = "<group>"; };
-		0000000002A0 /* YGMacros.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = YGMacros.h; path = Sources/yoga/YGMacros.h; sourceTree = "<group>"; };
-		0000000002B0 /* YGNode.cpp */ = {isa = PBXFileReference; includeInIndex = 1; name = YGNode.cpp; path = Sources/yoga/YGNode.cpp; sourceTree = "<group>"; };
-		0000000002C0 /* YGNode.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = YGNode.h; path = Sources/yoga/YGNode.h; sourceTree = "<group>"; };
-		0000000002D0 /* YGNodePrint.cpp */ = {isa = PBXFileReference; includeInIndex = 1; name = YGNodePrint.cpp; path = Sources/yoga/YGNodePrint.cpp; sourceTree = "<group>"; };
-		0000000002E0 /* YGNodePrint.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = YGNodePrint.h; path = Sources/yoga/YGNodePrint.h; sourceTree = "<group>"; };
-		0000000002F0 /* YGStyle.cpp */ = {isa = PBXFileReference; includeInIndex = 1; name = YGStyle.cpp; path = Sources/yoga/YGStyle.cpp; sourceTree = "<group>"; };
-		000000000300 /* YGStyle.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = YGStyle.h; path = Sources/yoga/YGStyle.h; sourceTree = "<group>"; };
-		000000000310 /* Yoga-internal.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "Yoga-internal.h"; path = "Sources/yoga/Yoga-internal.h"; sourceTree = "<group>"; };
-		000000000320 /* Yoga.cpp */ = {isa = PBXFileReference; includeInIndex = 1; name = Yoga.cpp; path = Sources/yoga/Yoga.cpp; sourceTree = "<group>"; };
-		000000000330 /* Yoga.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Yoga.h; path = Sources/yoga/Yoga.h; sourceTree = "<group>"; };
-		000000000340 /* UIView+Yoga.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIView+Yoga.h"; path = "Sources/YogaKit/UIView+Yoga.h"; sourceTree = "<group>"; };
-		000000000350 /* UIView+Yoga.mm */ = {isa = PBXFileReference; includeInIndex = 1; name = "UIView+Yoga.mm"; path = "Sources/YogaKit/UIView+Yoga.mm"; sourceTree = "<group>"; };
-		000000000360 /* YGLayout+Private.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "YGLayout+Private.h"; path = "Sources/YogaKit/YGLayout+Private.h"; sourceTree = "<group>"; };
-		000000000370 /* YGLayout.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = YGLayout.h; path = Sources/YogaKit/YGLayout.h; sourceTree = "<group>"; };
-		000000000380 /* YGLayout.mm */ = {isa = PBXFileReference; includeInIndex = 1; name = YGLayout.mm; path = Sources/YogaKit/YGLayout.mm; sourceTree = "<group>"; };
-		000000000390 /* YGLayoutExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = YGLayoutExtensions.swift; path = Sources/YogaKit/YGLayoutExtensions.swift; sourceTree = "<group>"; };
-		0000000003E0 /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Alamofire.framework; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		000000000420 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		000000000560 /* Alamofire.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Alamofire.xcconfig; sourceTree = "<group>"; };
-		000000000570 /* Alamofire.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = Alamofire.modulemap; sourceTree = "<group>"; };
-		000000000580 /* Alamofire-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Alamofire-umbrella.h"; sourceTree = "<group>"; };
-		0000000005B0 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		0000000005C0 /* Alamofire-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Alamofire-prefix.pch"; sourceTree = "<group>"; };
-		0000000005D0 /* Alamofire-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Alamofire-dummy.m"; sourceTree = "<group>"; };
-		000000000630 /* FlexLayout.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = FlexLayout.framework; path = FlexLayout.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		000000000850 /* FlexLayout.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = FlexLayout.xcconfig; sourceTree = "<group>"; };
-		000000000860 /* FlexLayout.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = FlexLayout.modulemap; sourceTree = "<group>"; };
-		000000000870 /* FlexLayout-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "FlexLayout-umbrella.h"; sourceTree = "<group>"; };
-		000000000890 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		0000000008A0 /* FlexLayout-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "FlexLayout-prefix.pch"; sourceTree = "<group>"; };
-		0000000008B0 /* FlexLayout-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "FlexLayout-dummy.m"; sourceTree = "<group>"; };
-		000000000910 /* Pods_PageDemo_PageDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_PageDemo_PageDemo.framework; path = "Pods-PageDemo-PageDemo.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		000000000960 /* Pods-PageDemo-PageDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-PageDemo-PageDemo.release.xcconfig"; sourceTree = "<group>"; };
-		000000000970 /* Pods-PageDemo-PageDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-PageDemo-PageDemo.debug.xcconfig"; sourceTree = "<group>"; };
-		000000000980 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		000000000990 /* Pods-PageDemo-PageDemo.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-PageDemo-PageDemo.modulemap"; sourceTree = "<group>"; };
-		0000000009A0 /* Pods-PageDemo-PageDemo-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-PageDemo-PageDemo-umbrella.h"; sourceTree = "<group>"; };
-		0000000009D0 /* Pods-PageDemo-PageDemo-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-PageDemo-PageDemo-frameworks.sh"; sourceTree = "<group>"; };
-		0000000009E0 /* Pods-PageDemo-PageDemo-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-PageDemo-PageDemo-resources.sh"; sourceTree = "<group>"; };
-		0000000009F0 /* Pods-PageDemo-PageDemo-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-PageDemo-PageDemo-acknowledgements.plist"; sourceTree = "<group>"; };
-		000000000A00 /* Pods-PageDemo-PageDemo-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-PageDemo-PageDemo-acknowledgements.markdown"; sourceTree = "<group>"; };
-		000000000A10 /* Pods-PageDemo-PageDemo-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-PageDemo-PageDemo-dummy.m"; sourceTree = "<group>"; };
-		000000000A70 /* Pods_PageDemoTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_PageDemoTests.framework; path = "Pods-PageDemoTests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		000000000AC0 /* Pods-PageDemoTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-PageDemoTests.release.xcconfig"; sourceTree = "<group>"; };
-		000000000AD0 /* Pods-PageDemoTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-PageDemoTests.debug.xcconfig"; sourceTree = "<group>"; };
-		000000000AE0 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		000000000AF0 /* Pods-PageDemoTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-PageDemoTests.modulemap"; sourceTree = "<group>"; };
-		000000000B00 /* Pods-PageDemoTests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-PageDemoTests-umbrella.h"; sourceTree = "<group>"; };
-		000000000B30 /* Pods-PageDemoTests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-PageDemoTests-frameworks.sh"; sourceTree = "<group>"; };
-		000000000B40 /* Pods-PageDemoTests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-PageDemoTests-resources.sh"; sourceTree = "<group>"; };
-		000000000B50 /* Pods-PageDemoTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-PageDemoTests-acknowledgements.plist"; sourceTree = "<group>"; };
-		000000000B60 /* Pods-PageDemoTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-PageDemoTests-acknowledgements.markdown"; sourceTree = "<group>"; };
-		000000000B70 /* Pods-PageDemoTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-PageDemoTests-dummy.m"; sourceTree = "<group>"; };
-		000000000BD0 /* Pods_PageDemoUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_PageDemoUITests.framework; path = "Pods-PageDemoUITests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		000000000C20 /* Pods-PageDemoUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-PageDemoUITests.release.xcconfig"; sourceTree = "<group>"; };
-		000000000C30 /* Pods-PageDemoUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-PageDemoUITests.debug.xcconfig"; sourceTree = "<group>"; };
-		000000000C40 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		000000000C50 /* Pods-PageDemoUITests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-PageDemoUITests.modulemap"; sourceTree = "<group>"; };
-		000000000C60 /* Pods-PageDemoUITests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-PageDemoUITests-umbrella.h"; sourceTree = "<group>"; };
-		000000000C90 /* Pods-PageDemoUITests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-PageDemoUITests-frameworks.sh"; sourceTree = "<group>"; };
-		000000000CA0 /* Pods-PageDemoUITests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-PageDemoUITests-resources.sh"; sourceTree = "<group>"; };
-		000000000CB0 /* Pods-PageDemoUITests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-PageDemoUITests-acknowledgements.plist"; sourceTree = "<group>"; };
-		000000000CC0 /* Pods-PageDemoUITests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-PageDemoUITests-acknowledgements.markdown"; sourceTree = "<group>"; };
-		000000000CD0 /* Pods-PageDemoUITests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-PageDemoUITests-dummy.m"; sourceTree = "<group>"; };
+		0000000000D0 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		0000000000E0 /* AFError.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AFError.swift; path = Source/AFError.swift; sourceTree = "<group>"; };
+		0000000000F0 /* Alamofire.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Alamofire.swift; path = Source/Alamofire.swift; sourceTree = "<group>"; };
+		000000000100 /* DispatchQueue+Alamofire.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "DispatchQueue+Alamofire.swift"; path = "Source/DispatchQueue+Alamofire.swift"; sourceTree = "<group>"; };
+		000000000110 /* MultipartFormData.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MultipartFormData.swift; path = Source/MultipartFormData.swift; sourceTree = "<group>"; };
+		000000000120 /* NetworkReachabilityManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NetworkReachabilityManager.swift; path = Source/NetworkReachabilityManager.swift; sourceTree = "<group>"; };
+		000000000130 /* Notifications.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Notifications.swift; path = Source/Notifications.swift; sourceTree = "<group>"; };
+		000000000140 /* ParameterEncoding.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ParameterEncoding.swift; path = Source/ParameterEncoding.swift; sourceTree = "<group>"; };
+		000000000150 /* Request.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Request.swift; path = Source/Request.swift; sourceTree = "<group>"; };
+		000000000160 /* Response.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Response.swift; path = Source/Response.swift; sourceTree = "<group>"; };
+		000000000170 /* ResponseSerialization.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ResponseSerialization.swift; path = Source/ResponseSerialization.swift; sourceTree = "<group>"; };
+		000000000180 /* Result.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Result.swift; path = Source/Result.swift; sourceTree = "<group>"; };
+		000000000190 /* ServerTrustPolicy.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ServerTrustPolicy.swift; path = Source/ServerTrustPolicy.swift; sourceTree = "<group>"; };
+		0000000001A0 /* SessionDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SessionDelegate.swift; path = Source/SessionDelegate.swift; sourceTree = "<group>"; };
+		0000000001B0 /* SessionManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SessionManager.swift; path = Source/SessionManager.swift; sourceTree = "<group>"; };
+		0000000001C0 /* TaskDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TaskDelegate.swift; path = Source/TaskDelegate.swift; sourceTree = "<group>"; };
+		0000000001D0 /* Timeline.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Timeline.swift; path = Source/Timeline.swift; sourceTree = "<group>"; };
+		0000000001E0 /* Validation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Validation.swift; path = Source/Validation.swift; sourceTree = "<group>"; };
+		0000000001F0 /* FlexLayout.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FlexLayout.swift; path = Sources/FlexLayout.swift; sourceTree = "<group>"; };
+		000000000200 /* FlexLayout+Enum.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "FlexLayout+Enum.swift"; path = "Sources/Impl/FlexLayout+Enum.swift"; sourceTree = "<group>"; };
+		000000000210 /* FlexLayout+Private.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "FlexLayout+Private.swift"; path = "Sources/Impl/FlexLayout+Private.swift"; sourceTree = "<group>"; };
+		000000000220 /* UIView+FlexLayout.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIView+FlexLayout.swift"; path = "Sources/Impl/UIView+FlexLayout.swift"; sourceTree = "<group>"; };
+		000000000230 /* Percent.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Percent.swift; path = Sources/Percent.swift; sourceTree = "<group>"; };
+		000000000240 /* FlexLayout.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FlexLayout.h; path = Sources/SupportingFiles/FlexLayout.h; sourceTree = "<group>"; };
+		000000000250 /* Utils.cpp */ = {isa = PBXFileReference; includeInIndex = 1; name = Utils.cpp; path = Sources/yoga/Utils.cpp; sourceTree = "<group>"; };
+		000000000260 /* Utils.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Utils.h; path = Sources/yoga/Utils.h; sourceTree = "<group>"; };
+		000000000270 /* YGEnums.cpp */ = {isa = PBXFileReference; includeInIndex = 1; name = YGEnums.cpp; path = Sources/yoga/YGEnums.cpp; sourceTree = "<group>"; };
+		000000000280 /* YGEnums.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = YGEnums.h; path = Sources/yoga/YGEnums.h; sourceTree = "<group>"; };
+		000000000290 /* YGLayout.cpp */ = {isa = PBXFileReference; includeInIndex = 1; name = YGLayout.cpp; path = Sources/yoga/YGLayout.cpp; sourceTree = "<group>"; };
+		0000000002A0 /* YGLayout.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = YGLayout.h; path = Sources/yoga/YGLayout.h; sourceTree = "<group>"; };
+		0000000002B0 /* YGMacros.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = YGMacros.h; path = Sources/yoga/YGMacros.h; sourceTree = "<group>"; };
+		0000000002C0 /* YGNode.cpp */ = {isa = PBXFileReference; includeInIndex = 1; name = YGNode.cpp; path = Sources/yoga/YGNode.cpp; sourceTree = "<group>"; };
+		0000000002D0 /* YGNode.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = YGNode.h; path = Sources/yoga/YGNode.h; sourceTree = "<group>"; };
+		0000000002E0 /* YGNodePrint.cpp */ = {isa = PBXFileReference; includeInIndex = 1; name = YGNodePrint.cpp; path = Sources/yoga/YGNodePrint.cpp; sourceTree = "<group>"; };
+		0000000002F0 /* YGNodePrint.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = YGNodePrint.h; path = Sources/yoga/YGNodePrint.h; sourceTree = "<group>"; };
+		000000000300 /* YGStyle.cpp */ = {isa = PBXFileReference; includeInIndex = 1; name = YGStyle.cpp; path = Sources/yoga/YGStyle.cpp; sourceTree = "<group>"; };
+		000000000310 /* YGStyle.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = YGStyle.h; path = Sources/yoga/YGStyle.h; sourceTree = "<group>"; };
+		000000000320 /* Yoga-internal.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "Yoga-internal.h"; path = "Sources/yoga/Yoga-internal.h"; sourceTree = "<group>"; };
+		000000000330 /* Yoga.cpp */ = {isa = PBXFileReference; includeInIndex = 1; name = Yoga.cpp; path = Sources/yoga/Yoga.cpp; sourceTree = "<group>"; };
+		000000000340 /* Yoga.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Yoga.h; path = Sources/yoga/Yoga.h; sourceTree = "<group>"; };
+		000000000350 /* UIView+Yoga.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIView+Yoga.h"; path = "Sources/YogaKit/UIView+Yoga.h"; sourceTree = "<group>"; };
+		000000000360 /* UIView+Yoga.mm */ = {isa = PBXFileReference; includeInIndex = 1; name = "UIView+Yoga.mm"; path = "Sources/YogaKit/UIView+Yoga.mm"; sourceTree = "<group>"; };
+		000000000370 /* YGLayout+Private.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "YGLayout+Private.h"; path = "Sources/YogaKit/YGLayout+Private.h"; sourceTree = "<group>"; };
+		000000000380 /* YGLayout.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = YGLayout.h; path = Sources/YogaKit/YGLayout.h; sourceTree = "<group>"; };
+		000000000390 /* YGLayout.mm */ = {isa = PBXFileReference; includeInIndex = 1; name = YGLayout.mm; path = Sources/YogaKit/YGLayout.mm; sourceTree = "<group>"; };
+		0000000003A0 /* YGLayoutExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = YGLayoutExtensions.swift; path = Sources/YogaKit/YGLayoutExtensions.swift; sourceTree = "<group>"; };
+		0000000003B0 /* AnimatedImageView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AnimatedImageView.swift; path = Sources/AnimatedImageView.swift; sourceTree = "<group>"; };
+		0000000003C0 /* Box.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Box.swift; path = Sources/Box.swift; sourceTree = "<group>"; };
+		0000000003D0 /* CacheSerializer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CacheSerializer.swift; path = Sources/CacheSerializer.swift; sourceTree = "<group>"; };
+		0000000003E0 /* Filter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Filter.swift; path = Sources/Filter.swift; sourceTree = "<group>"; };
+		0000000003F0 /* FormatIndicatedCacheSerializer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FormatIndicatedCacheSerializer.swift; path = Sources/FormatIndicatedCacheSerializer.swift; sourceTree = "<group>"; };
+		000000000400 /* Image.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Image.swift; path = Sources/Image.swift; sourceTree = "<group>"; };
+		000000000410 /* ImageCache.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ImageCache.swift; path = Sources/ImageCache.swift; sourceTree = "<group>"; };
+		000000000420 /* ImageDownloader.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ImageDownloader.swift; path = Sources/ImageDownloader.swift; sourceTree = "<group>"; };
+		000000000430 /* ImageModifier.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ImageModifier.swift; path = Sources/ImageModifier.swift; sourceTree = "<group>"; };
+		000000000440 /* ImagePrefetcher.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ImagePrefetcher.swift; path = Sources/ImagePrefetcher.swift; sourceTree = "<group>"; };
+		000000000450 /* ImageProcessor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ImageProcessor.swift; path = Sources/ImageProcessor.swift; sourceTree = "<group>"; };
+		000000000460 /* ImageTransition.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ImageTransition.swift; path = Sources/ImageTransition.swift; sourceTree = "<group>"; };
+		000000000470 /* ImageView+Kingfisher.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "ImageView+Kingfisher.swift"; path = "Sources/ImageView+Kingfisher.swift"; sourceTree = "<group>"; };
+		000000000480 /* Indicator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Indicator.swift; path = Sources/Indicator.swift; sourceTree = "<group>"; };
+		000000000490 /* Kingfisher.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Kingfisher.swift; path = Sources/Kingfisher.swift; sourceTree = "<group>"; };
+		0000000004A0 /* KingfisherManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = KingfisherManager.swift; path = Sources/KingfisherManager.swift; sourceTree = "<group>"; };
+		0000000004B0 /* KingfisherOptionsInfo.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = KingfisherOptionsInfo.swift; path = Sources/KingfisherOptionsInfo.swift; sourceTree = "<group>"; };
+		0000000004C0 /* Placeholder.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Placeholder.swift; path = Sources/Placeholder.swift; sourceTree = "<group>"; };
+		0000000004D0 /* RequestModifier.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RequestModifier.swift; path = Sources/RequestModifier.swift; sourceTree = "<group>"; };
+		0000000004E0 /* Resource.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Resource.swift; path = Sources/Resource.swift; sourceTree = "<group>"; };
+		0000000004F0 /* String+MD5.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "String+MD5.swift"; path = "Sources/String+MD5.swift"; sourceTree = "<group>"; };
+		000000000500 /* ThreadHelper.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ThreadHelper.swift; path = Sources/ThreadHelper.swift; sourceTree = "<group>"; };
+		000000000510 /* UIButton+Kingfisher.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIButton+Kingfisher.swift"; path = "Sources/UIButton+Kingfisher.swift"; sourceTree = "<group>"; };
+		000000000520 /* Kingfisher.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Kingfisher.h; path = Sources/Kingfisher.h; sourceTree = "<group>"; };
+		000000000570 /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Alamofire.framework; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0000000005B0 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		0000000006F0 /* Alamofire.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Alamofire.xcconfig; sourceTree = "<group>"; };
+		000000000700 /* Alamofire.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = Alamofire.modulemap; sourceTree = "<group>"; };
+		000000000710 /* Alamofire-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Alamofire-umbrella.h"; sourceTree = "<group>"; };
+		000000000740 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		000000000750 /* Alamofire-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Alamofire-prefix.pch"; sourceTree = "<group>"; };
+		000000000760 /* Alamofire-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Alamofire-dummy.m"; sourceTree = "<group>"; };
+		0000000007C0 /* FlexLayout.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = FlexLayout.framework; path = FlexLayout.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0000000009E0 /* FlexLayout.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = FlexLayout.xcconfig; sourceTree = "<group>"; };
+		0000000009F0 /* FlexLayout.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = FlexLayout.modulemap; sourceTree = "<group>"; };
+		000000000A00 /* FlexLayout-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "FlexLayout-umbrella.h"; sourceTree = "<group>"; };
+		000000000A20 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		000000000A30 /* FlexLayout-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "FlexLayout-prefix.pch"; sourceTree = "<group>"; };
+		000000000A40 /* FlexLayout-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "FlexLayout-dummy.m"; sourceTree = "<group>"; };
+		000000000AA0 /* Kingfisher.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Kingfisher.framework; path = Kingfisher.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		000000000C80 /* Kingfisher.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Kingfisher.xcconfig; sourceTree = "<group>"; };
+		000000000C90 /* Kingfisher.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = Kingfisher.modulemap; sourceTree = "<group>"; };
+		000000000CA0 /* Kingfisher-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Kingfisher-umbrella.h"; sourceTree = "<group>"; };
+		000000000CC0 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		000000000CD0 /* Kingfisher-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Kingfisher-prefix.pch"; sourceTree = "<group>"; };
+		000000000CE0 /* Kingfisher-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Kingfisher-dummy.m"; sourceTree = "<group>"; };
+		000000000D40 /* Pods_PageDemo_PageDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_PageDemo_PageDemo.framework; path = "Pods-PageDemo-PageDemo.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		000000000D90 /* Pods-PageDemo-PageDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-PageDemo-PageDemo.release.xcconfig"; sourceTree = "<group>"; };
+		000000000DA0 /* Pods-PageDemo-PageDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-PageDemo-PageDemo.debug.xcconfig"; sourceTree = "<group>"; };
+		000000000DB0 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		000000000DC0 /* Pods-PageDemo-PageDemo.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-PageDemo-PageDemo.modulemap"; sourceTree = "<group>"; };
+		000000000DD0 /* Pods-PageDemo-PageDemo-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-PageDemo-PageDemo-umbrella.h"; sourceTree = "<group>"; };
+		000000000E00 /* Pods-PageDemo-PageDemo-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-PageDemo-PageDemo-frameworks.sh"; sourceTree = "<group>"; };
+		000000000E10 /* Pods-PageDemo-PageDemo-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-PageDemo-PageDemo-resources.sh"; sourceTree = "<group>"; };
+		000000000E20 /* Pods-PageDemo-PageDemo-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-PageDemo-PageDemo-acknowledgements.plist"; sourceTree = "<group>"; };
+		000000000E30 /* Pods-PageDemo-PageDemo-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-PageDemo-PageDemo-acknowledgements.markdown"; sourceTree = "<group>"; };
+		000000000E40 /* Pods-PageDemo-PageDemo-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-PageDemo-PageDemo-dummy.m"; sourceTree = "<group>"; };
+		000000000EA0 /* Pods_PageDemoTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_PageDemoTests.framework; path = "Pods-PageDemoTests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		000000000EF0 /* Pods-PageDemoTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-PageDemoTests.release.xcconfig"; sourceTree = "<group>"; };
+		000000000F00 /* Pods-PageDemoTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-PageDemoTests.debug.xcconfig"; sourceTree = "<group>"; };
+		000000000F10 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		000000000F20 /* Pods-PageDemoTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-PageDemoTests.modulemap"; sourceTree = "<group>"; };
+		000000000F30 /* Pods-PageDemoTests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-PageDemoTests-umbrella.h"; sourceTree = "<group>"; };
+		000000000F60 /* Pods-PageDemoTests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-PageDemoTests-frameworks.sh"; sourceTree = "<group>"; };
+		000000000F70 /* Pods-PageDemoTests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-PageDemoTests-resources.sh"; sourceTree = "<group>"; };
+		000000000F80 /* Pods-PageDemoTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-PageDemoTests-acknowledgements.plist"; sourceTree = "<group>"; };
+		000000000F90 /* Pods-PageDemoTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-PageDemoTests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		000000000FA0 /* Pods-PageDemoTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-PageDemoTests-dummy.m"; sourceTree = "<group>"; };
+		000000001000 /* Pods_PageDemoUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_PageDemoUITests.framework; path = "Pods-PageDemoUITests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		000000001050 /* Pods-PageDemoUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-PageDemoUITests.release.xcconfig"; sourceTree = "<group>"; };
+		000000001060 /* Pods-PageDemoUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-PageDemoUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		000000001070 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		000000001080 /* Pods-PageDemoUITests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-PageDemoUITests.modulemap"; sourceTree = "<group>"; };
+		000000001090 /* Pods-PageDemoUITests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-PageDemoUITests-umbrella.h"; sourceTree = "<group>"; };
+		0000000010C0 /* Pods-PageDemoUITests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-PageDemoUITests-frameworks.sh"; sourceTree = "<group>"; };
+		0000000010D0 /* Pods-PageDemoUITests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-PageDemoUITests-resources.sh"; sourceTree = "<group>"; };
+		0000000010E0 /* Pods-PageDemoUITests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-PageDemoUITests-acknowledgements.plist"; sourceTree = "<group>"; };
+		0000000010F0 /* Pods-PageDemoUITests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-PageDemoUITests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		000000001100 /* Pods-PageDemoUITests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-PageDemoUITests-dummy.m"; sourceTree = "<group>"; };
+		000000001120 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/CFNetwork.framework; sourceTree = DEVELOPER_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		000000000400 /* Frameworks */ = {
+		000000000590 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				000000000430 /* Foundation.framework in Frameworks */,
+				0000000005C0 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		000000000650 /* Frameworks */ = {
+		0000000007E0 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				000000000660 /* Foundation.framework in Frameworks */,
+				0000000007F0 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		000000000930 /* Frameworks */ = {
+		000000000AC0 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				000000000940 /* Foundation.framework in Frameworks */,
+				000000001130 /* CFNetwork.framework in Frameworks */,
+				000000000AD0 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		000000000A90 /* Frameworks */ = {
+		000000000D60 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				000000000AA0 /* Foundation.framework in Frameworks */,
+				000000000D70 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		000000000BF0 /* Frameworks */ = {
+		000000000EC0 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				000000000C00 /* Foundation.framework in Frameworks */,
+				000000000ED0 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		000000001020 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				000000001030 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -244,7 +320,7 @@
 		000000000010 = {
 			isa = PBXGroup;
 			children = (
-				0000000000C0 /* Podfile */,
+				0000000000D0 /* Podfile */,
 				000000000060 /* Frameworks */,
 				000000000080 /* Pods */,
 				000000000020 /* Products */,
@@ -255,11 +331,12 @@
 		000000000020 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				0000000003E0 /* Alamofire.framework */,
-				000000000630 /* FlexLayout.framework */,
-				000000000910 /* Pods_PageDemo_PageDemo.framework */,
-				000000000A70 /* Pods_PageDemoTests.framework */,
-				000000000BD0 /* Pods_PageDemoUITests.framework */,
+				000000000570 /* Alamofire.framework */,
+				0000000007C0 /* FlexLayout.framework */,
+				000000000AA0 /* Kingfisher.framework */,
+				000000000D40 /* Pods_PageDemo_PageDemo.framework */,
+				000000000EA0 /* Pods_PageDemoTests.framework */,
+				000000001000 /* Pods_PageDemoUITests.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -267,7 +344,7 @@
 		000000000060 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				000000000410 /* iOS */,
+				0000000005A0 /* iOS */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -275,9 +352,9 @@
 		000000000070 /* Targets Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				000000000950 /* Pods-PageDemo-PageDemo */,
-				000000000AB0 /* Pods-PageDemoTests */,
-				000000000C10 /* Pods-PageDemoUITests */,
+				000000000D80 /* Pods-PageDemo-PageDemo */,
+				000000000EE0 /* Pods-PageDemoTests */,
+				000000001040 /* Pods-PageDemoUITests */,
 			);
 			name = "Targets Support Files";
 			sourceTree = "<group>";
@@ -287,6 +364,7 @@
 			children = (
 				0000000000A0 /* Alamofire */,
 				0000000000B0 /* FlexLayout */,
+				0000000000C0 /* Kingfisher */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -294,24 +372,24 @@
 		0000000000A0 /* Alamofire */ = {
 			isa = PBXGroup;
 			children = (
-				0000000000D0 /* AFError.swift */,
-				0000000000E0 /* Alamofire.swift */,
-				0000000000F0 /* DispatchQueue+Alamofire.swift */,
-				000000000100 /* MultipartFormData.swift */,
-				000000000110 /* NetworkReachabilityManager.swift */,
-				000000000120 /* Notifications.swift */,
-				000000000130 /* ParameterEncoding.swift */,
-				000000000140 /* Request.swift */,
-				000000000150 /* Response.swift */,
-				000000000160 /* ResponseSerialization.swift */,
-				000000000170 /* Result.swift */,
-				000000000180 /* ServerTrustPolicy.swift */,
-				000000000190 /* SessionDelegate.swift */,
-				0000000001A0 /* SessionManager.swift */,
-				0000000001B0 /* TaskDelegate.swift */,
-				0000000001C0 /* Timeline.swift */,
-				0000000001D0 /* Validation.swift */,
-				000000000550 /* Support Files */,
+				0000000000E0 /* AFError.swift */,
+				0000000000F0 /* Alamofire.swift */,
+				000000000100 /* DispatchQueue+Alamofire.swift */,
+				000000000110 /* MultipartFormData.swift */,
+				000000000120 /* NetworkReachabilityManager.swift */,
+				000000000130 /* Notifications.swift */,
+				000000000140 /* ParameterEncoding.swift */,
+				000000000150 /* Request.swift */,
+				000000000160 /* Response.swift */,
+				000000000170 /* ResponseSerialization.swift */,
+				000000000180 /* Result.swift */,
+				000000000190 /* ServerTrustPolicy.swift */,
+				0000000001A0 /* SessionDelegate.swift */,
+				0000000001B0 /* SessionManager.swift */,
+				0000000001C0 /* TaskDelegate.swift */,
+				0000000001D0 /* Timeline.swift */,
+				0000000001E0 /* Validation.swift */,
+				0000000006E0 /* Support Files */,
 			);
 			name = Alamofire;
 			path = Alamofire;
@@ -320,125 +398,173 @@
 		0000000000B0 /* FlexLayout */ = {
 			isa = PBXGroup;
 			children = (
-				000000000230 /* FlexLayout.h */,
-				0000000001E0 /* FlexLayout.swift */,
-				0000000001F0 /* FlexLayout+Enum.swift */,
-				000000000200 /* FlexLayout+Private.swift */,
-				000000000220 /* Percent.swift */,
-				000000000210 /* UIView+FlexLayout.swift */,
-				000000000340 /* UIView+Yoga.h */,
-				000000000350 /* UIView+Yoga.mm */,
-				000000000240 /* Utils.cpp */,
-				000000000250 /* Utils.h */,
-				000000000260 /* YGEnums.cpp */,
-				000000000270 /* YGEnums.h */,
-				000000000280 /* YGLayout.cpp */,
-				000000000370 /* YGLayout.h */,
-				000000000290 /* YGLayout.h */,
-				000000000380 /* YGLayout.mm */,
-				000000000360 /* YGLayout+Private.h */,
-				000000000390 /* YGLayoutExtensions.swift */,
-				0000000002A0 /* YGMacros.h */,
-				0000000002B0 /* YGNode.cpp */,
-				0000000002C0 /* YGNode.h */,
-				0000000002D0 /* YGNodePrint.cpp */,
-				0000000002E0 /* YGNodePrint.h */,
-				0000000002F0 /* YGStyle.cpp */,
-				000000000300 /* YGStyle.h */,
-				000000000320 /* Yoga.cpp */,
-				000000000330 /* Yoga.h */,
-				000000000310 /* Yoga-internal.h */,
-				000000000840 /* Support Files */,
+				000000000240 /* FlexLayout.h */,
+				0000000001F0 /* FlexLayout.swift */,
+				000000000200 /* FlexLayout+Enum.swift */,
+				000000000210 /* FlexLayout+Private.swift */,
+				000000000230 /* Percent.swift */,
+				000000000220 /* UIView+FlexLayout.swift */,
+				000000000350 /* UIView+Yoga.h */,
+				000000000360 /* UIView+Yoga.mm */,
+				000000000250 /* Utils.cpp */,
+				000000000260 /* Utils.h */,
+				000000000270 /* YGEnums.cpp */,
+				000000000280 /* YGEnums.h */,
+				000000000290 /* YGLayout.cpp */,
+				000000000380 /* YGLayout.h */,
+				0000000002A0 /* YGLayout.h */,
+				000000000390 /* YGLayout.mm */,
+				000000000370 /* YGLayout+Private.h */,
+				0000000003A0 /* YGLayoutExtensions.swift */,
+				0000000002B0 /* YGMacros.h */,
+				0000000002C0 /* YGNode.cpp */,
+				0000000002D0 /* YGNode.h */,
+				0000000002E0 /* YGNodePrint.cpp */,
+				0000000002F0 /* YGNodePrint.h */,
+				000000000300 /* YGStyle.cpp */,
+				000000000310 /* YGStyle.h */,
+				000000000330 /* Yoga.cpp */,
+				000000000340 /* Yoga.h */,
+				000000000320 /* Yoga-internal.h */,
+				0000000009D0 /* Support Files */,
 			);
 			name = FlexLayout;
 			path = FlexLayout;
 			sourceTree = "<group>";
 		};
-		000000000410 /* iOS */ = {
+		0000000000C0 /* Kingfisher */ = {
 			isa = PBXGroup;
 			children = (
-				000000000420 /* Foundation.framework */,
+				0000000003B0 /* AnimatedImageView.swift */,
+				0000000003C0 /* Box.swift */,
+				0000000003D0 /* CacheSerializer.swift */,
+				0000000003E0 /* Filter.swift */,
+				0000000003F0 /* FormatIndicatedCacheSerializer.swift */,
+				000000000400 /* Image.swift */,
+				000000000410 /* ImageCache.swift */,
+				000000000420 /* ImageDownloader.swift */,
+				000000000430 /* ImageModifier.swift */,
+				000000000440 /* ImagePrefetcher.swift */,
+				000000000450 /* ImageProcessor.swift */,
+				000000000460 /* ImageTransition.swift */,
+				000000000470 /* ImageView+Kingfisher.swift */,
+				000000000480 /* Indicator.swift */,
+				000000000520 /* Kingfisher.h */,
+				000000000490 /* Kingfisher.swift */,
+				0000000004A0 /* KingfisherManager.swift */,
+				0000000004B0 /* KingfisherOptionsInfo.swift */,
+				0000000004C0 /* Placeholder.swift */,
+				0000000004D0 /* RequestModifier.swift */,
+				0000000004E0 /* Resource.swift */,
+				0000000004F0 /* String+MD5.swift */,
+				000000000500 /* ThreadHelper.swift */,
+				000000000510 /* UIButton+Kingfisher.swift */,
+				000000000C70 /* Support Files */,
+			);
+			name = Kingfisher;
+			path = Kingfisher;
+			sourceTree = "<group>";
+		};
+		0000000005A0 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				000000001120 /* CFNetwork.framework */,
+				0000000005B0 /* Foundation.framework */,
 			);
 			name = iOS;
 			sourceTree = "<group>";
 		};
-		000000000550 /* Support Files */ = {
+		0000000006E0 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				000000000570 /* Alamofire.modulemap */,
-				000000000560 /* Alamofire.xcconfig */,
-				0000000005D0 /* Alamofire-dummy.m */,
-				0000000005C0 /* Alamofire-prefix.pch */,
-				000000000580 /* Alamofire-umbrella.h */,
-				0000000005B0 /* Info.plist */,
+				000000000700 /* Alamofire.modulemap */,
+				0000000006F0 /* Alamofire.xcconfig */,
+				000000000760 /* Alamofire-dummy.m */,
+				000000000750 /* Alamofire-prefix.pch */,
+				000000000710 /* Alamofire-umbrella.h */,
+				000000000740 /* Info.plist */,
 			);
 			name = "Support Files";
 			path = "../Target Support Files/Alamofire";
 			sourceTree = "<group>";
 		};
-		000000000840 /* Support Files */ = {
+		0000000009D0 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				000000000860 /* FlexLayout.modulemap */,
-				000000000850 /* FlexLayout.xcconfig */,
-				0000000008B0 /* FlexLayout-dummy.m */,
-				0000000008A0 /* FlexLayout-prefix.pch */,
-				000000000870 /* FlexLayout-umbrella.h */,
-				000000000890 /* Info.plist */,
+				0000000009F0 /* FlexLayout.modulemap */,
+				0000000009E0 /* FlexLayout.xcconfig */,
+				000000000A40 /* FlexLayout-dummy.m */,
+				000000000A30 /* FlexLayout-prefix.pch */,
+				000000000A00 /* FlexLayout-umbrella.h */,
+				000000000A20 /* Info.plist */,
 			);
 			name = "Support Files";
 			path = "../Target Support Files/FlexLayout";
 			sourceTree = "<group>";
 		};
-		000000000950 /* Pods-PageDemo-PageDemo */ = {
+		000000000C70 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				000000000980 /* Info.plist */,
-				000000000990 /* Pods-PageDemo-PageDemo.modulemap */,
-				000000000A00 /* Pods-PageDemo-PageDemo-acknowledgements.markdown */,
-				0000000009F0 /* Pods-PageDemo-PageDemo-acknowledgements.plist */,
-				000000000A10 /* Pods-PageDemo-PageDemo-dummy.m */,
-				0000000009D0 /* Pods-PageDemo-PageDemo-frameworks.sh */,
-				0000000009E0 /* Pods-PageDemo-PageDemo-resources.sh */,
-				0000000009A0 /* Pods-PageDemo-PageDemo-umbrella.h */,
-				000000000970 /* Pods-PageDemo-PageDemo.debug.xcconfig */,
-				000000000960 /* Pods-PageDemo-PageDemo.release.xcconfig */,
+				000000000CC0 /* Info.plist */,
+				000000000C90 /* Kingfisher.modulemap */,
+				000000000C80 /* Kingfisher.xcconfig */,
+				000000000CE0 /* Kingfisher-dummy.m */,
+				000000000CD0 /* Kingfisher-prefix.pch */,
+				000000000CA0 /* Kingfisher-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/Kingfisher";
+			sourceTree = "<group>";
+		};
+		000000000D80 /* Pods-PageDemo-PageDemo */ = {
+			isa = PBXGroup;
+			children = (
+				000000000DB0 /* Info.plist */,
+				000000000DC0 /* Pods-PageDemo-PageDemo.modulemap */,
+				000000000E30 /* Pods-PageDemo-PageDemo-acknowledgements.markdown */,
+				000000000E20 /* Pods-PageDemo-PageDemo-acknowledgements.plist */,
+				000000000E40 /* Pods-PageDemo-PageDemo-dummy.m */,
+				000000000E00 /* Pods-PageDemo-PageDemo-frameworks.sh */,
+				000000000E10 /* Pods-PageDemo-PageDemo-resources.sh */,
+				000000000DD0 /* Pods-PageDemo-PageDemo-umbrella.h */,
+				000000000DA0 /* Pods-PageDemo-PageDemo.debug.xcconfig */,
+				000000000D90 /* Pods-PageDemo-PageDemo.release.xcconfig */,
 			);
 			name = "Pods-PageDemo-PageDemo";
 			path = "Target Support Files/Pods-PageDemo-PageDemo";
 			sourceTree = "<group>";
 		};
-		000000000AB0 /* Pods-PageDemoTests */ = {
+		000000000EE0 /* Pods-PageDemoTests */ = {
 			isa = PBXGroup;
 			children = (
-				000000000AE0 /* Info.plist */,
-				000000000AF0 /* Pods-PageDemoTests.modulemap */,
-				000000000B60 /* Pods-PageDemoTests-acknowledgements.markdown */,
-				000000000B50 /* Pods-PageDemoTests-acknowledgements.plist */,
-				000000000B70 /* Pods-PageDemoTests-dummy.m */,
-				000000000B30 /* Pods-PageDemoTests-frameworks.sh */,
-				000000000B40 /* Pods-PageDemoTests-resources.sh */,
-				000000000B00 /* Pods-PageDemoTests-umbrella.h */,
-				000000000AD0 /* Pods-PageDemoTests.debug.xcconfig */,
-				000000000AC0 /* Pods-PageDemoTests.release.xcconfig */,
+				000000000F10 /* Info.plist */,
+				000000000F20 /* Pods-PageDemoTests.modulemap */,
+				000000000F90 /* Pods-PageDemoTests-acknowledgements.markdown */,
+				000000000F80 /* Pods-PageDemoTests-acknowledgements.plist */,
+				000000000FA0 /* Pods-PageDemoTests-dummy.m */,
+				000000000F60 /* Pods-PageDemoTests-frameworks.sh */,
+				000000000F70 /* Pods-PageDemoTests-resources.sh */,
+				000000000F30 /* Pods-PageDemoTests-umbrella.h */,
+				000000000F00 /* Pods-PageDemoTests.debug.xcconfig */,
+				000000000EF0 /* Pods-PageDemoTests.release.xcconfig */,
 			);
 			name = "Pods-PageDemoTests";
 			path = "Target Support Files/Pods-PageDemoTests";
 			sourceTree = "<group>";
 		};
-		000000000C10 /* Pods-PageDemoUITests */ = {
+		000000001040 /* Pods-PageDemoUITests */ = {
 			isa = PBXGroup;
 			children = (
-				000000000C40 /* Info.plist */,
-				000000000C50 /* Pods-PageDemoUITests.modulemap */,
-				000000000CC0 /* Pods-PageDemoUITests-acknowledgements.markdown */,
-				000000000CB0 /* Pods-PageDemoUITests-acknowledgements.plist */,
-				000000000CD0 /* Pods-PageDemoUITests-dummy.m */,
-				000000000C90 /* Pods-PageDemoUITests-frameworks.sh */,
-				000000000CA0 /* Pods-PageDemoUITests-resources.sh */,
-				000000000C60 /* Pods-PageDemoUITests-umbrella.h */,
-				000000000C30 /* Pods-PageDemoUITests.debug.xcconfig */,
-				000000000C20 /* Pods-PageDemoUITests.release.xcconfig */,
+				000000001070 /* Info.plist */,
+				000000001080 /* Pods-PageDemoUITests.modulemap */,
+				0000000010F0 /* Pods-PageDemoUITests-acknowledgements.markdown */,
+				0000000010E0 /* Pods-PageDemoUITests-acknowledgements.plist */,
+				000000001100 /* Pods-PageDemoUITests-dummy.m */,
+				0000000010C0 /* Pods-PageDemoUITests-frameworks.sh */,
+				0000000010D0 /* Pods-PageDemoUITests-resources.sh */,
+				000000001090 /* Pods-PageDemoUITests-umbrella.h */,
+				000000001060 /* Pods-PageDemoUITests.debug.xcconfig */,
+				000000001050 /* Pods-PageDemoUITests.release.xcconfig */,
 			);
 			name = "Pods-PageDemoUITests";
 			path = "Target Support Files/Pods-PageDemoUITests";
@@ -447,69 +573,78 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		000000000590 /* Headers */ = {
+		000000000720 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0000000005A0 /* Alamofire-umbrella.h in Headers */,
+				000000000730 /* Alamofire-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		000000000760 /* Headers */ = {
+		0000000008F0 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				000000000880 /* FlexLayout-umbrella.h in Headers */,
-				000000000770 /* FlexLayout.h in Headers */,
-				000000000810 /* UIView+Yoga.h in Headers */,
-				000000000780 /* Utils.h in Headers */,
-				000000000790 /* YGEnums.h in Headers */,
-				000000000820 /* YGLayout+Private.h in Headers */,
-				0000000007A0 /* YGLayout.h in Headers */,
-				000000000830 /* YGLayout.h in Headers */,
-				0000000007B0 /* YGMacros.h in Headers */,
-				0000000007C0 /* YGNode.h in Headers */,
-				0000000007D0 /* YGNodePrint.h in Headers */,
-				0000000007E0 /* YGStyle.h in Headers */,
-				0000000007F0 /* Yoga-internal.h in Headers */,
-				000000000800 /* Yoga.h in Headers */,
+				000000000A10 /* FlexLayout-umbrella.h in Headers */,
+				000000000900 /* FlexLayout.h in Headers */,
+				0000000009A0 /* UIView+Yoga.h in Headers */,
+				000000000910 /* Utils.h in Headers */,
+				000000000920 /* YGEnums.h in Headers */,
+				0000000009B0 /* YGLayout+Private.h in Headers */,
+				000000000930 /* YGLayout.h in Headers */,
+				0000000009C0 /* YGLayout.h in Headers */,
+				000000000940 /* YGMacros.h in Headers */,
+				000000000950 /* YGNode.h in Headers */,
+				000000000960 /* YGNodePrint.h in Headers */,
+				000000000970 /* YGStyle.h in Headers */,
+				000000000980 /* Yoga-internal.h in Headers */,
+				000000000990 /* Yoga.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		0000000009B0 /* Headers */ = {
+		000000000C50 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0000000009C0 /* Pods-PageDemo-PageDemo-umbrella.h in Headers */,
+				000000000CB0 /* Kingfisher-umbrella.h in Headers */,
+				000000000C60 /* Kingfisher.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		000000000B10 /* Headers */ = {
+		000000000DE0 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				000000000B20 /* Pods-PageDemoTests-umbrella.h in Headers */,
+				000000000DF0 /* Pods-PageDemo-PageDemo-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		000000000C70 /* Headers */ = {
+		000000000F40 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				000000000C80 /* Pods-PageDemoUITests-umbrella.h in Headers */,
+				000000000F50 /* Pods-PageDemoTests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0000000010A0 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0000000010B0 /* Pods-PageDemoUITests-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		0000000003A0 /* Alamofire */ = {
+		000000000530 /* Alamofire */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 0000000003B0 /* Build configuration list for PBXNativeTarget "Alamofire" */;
+			buildConfigurationList = 000000000540 /* Build configuration list for PBXNativeTarget "Alamofire" */;
 			buildPhases = (
-				0000000003F0 /* Sources */,
-				000000000400 /* Frameworks */,
-				000000000590 /* Headers */,
+				000000000580 /* Sources */,
+				000000000590 /* Frameworks */,
+				000000000720 /* Headers */,
 			);
 			buildRules = (
 			);
@@ -517,16 +652,16 @@
 			);
 			name = Alamofire;
 			productName = Alamofire;
-			productReference = 0000000003E0 /* Alamofire.framework */;
+			productReference = 000000000570 /* Alamofire.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		0000000005F0 /* FlexLayout */ = {
+		000000000780 /* FlexLayout */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 000000000600 /* Build configuration list for PBXNativeTarget "FlexLayout" */;
+			buildConfigurationList = 000000000790 /* Build configuration list for PBXNativeTarget "FlexLayout" */;
 			buildPhases = (
-				000000000640 /* Sources */,
-				000000000650 /* Frameworks */,
-				000000000760 /* Headers */,
+				0000000007D0 /* Sources */,
+				0000000007E0 /* Frameworks */,
+				0000000008F0 /* Headers */,
 			);
 			buildRules = (
 			);
@@ -534,62 +669,80 @@
 			);
 			name = FlexLayout;
 			productName = FlexLayout;
-			productReference = 000000000630 /* FlexLayout.framework */;
+			productReference = 0000000007C0 /* FlexLayout.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		0000000008D0 /* Pods-PageDemo-PageDemo */ = {
+		000000000A60 /* Kingfisher */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 0000000008E0 /* Build configuration list for PBXNativeTarget "Pods-PageDemo-PageDemo" */;
+			buildConfigurationList = 000000000A70 /* Build configuration list for PBXNativeTarget "Kingfisher" */;
 			buildPhases = (
-				000000000920 /* Sources */,
-				000000000930 /* Frameworks */,
-				0000000009B0 /* Headers */,
+				000000000AB0 /* Sources */,
+				000000000AC0 /* Frameworks */,
+				000000000C50 /* Headers */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				000000000D00 /* PBXTargetDependency */,
-				000000000D20 /* PBXTargetDependency */,
+			);
+			name = Kingfisher;
+			productName = Kingfisher;
+			productReference = 000000000AA0 /* Kingfisher.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		000000000D00 /* Pods-PageDemo-PageDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 000000000D10 /* Build configuration list for PBXNativeTarget "Pods-PageDemo-PageDemo" */;
+			buildPhases = (
+				000000000D50 /* Sources */,
+				000000000D60 /* Frameworks */,
+				000000000DE0 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				000000001150 /* PBXTargetDependency */,
+				000000001170 /* PBXTargetDependency */,
+				000000001190 /* PBXTargetDependency */,
 			);
 			name = "Pods-PageDemo-PageDemo";
 			productName = "Pods-PageDemo-PageDemo";
-			productReference = 000000000910 /* Pods_PageDemo_PageDemo.framework */;
+			productReference = 000000000D40 /* Pods_PageDemo_PageDemo.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		000000000A30 /* Pods-PageDemoTests */ = {
+		000000000E60 /* Pods-PageDemoTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 000000000A40 /* Build configuration list for PBXNativeTarget "Pods-PageDemoTests" */;
+			buildConfigurationList = 000000000E70 /* Build configuration list for PBXNativeTarget "Pods-PageDemoTests" */;
 			buildPhases = (
-				000000000A80 /* Sources */,
-				000000000A90 /* Frameworks */,
-				000000000B10 /* Headers */,
+				000000000EB0 /* Sources */,
+				000000000EC0 /* Frameworks */,
+				000000000F40 /* Headers */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				000000000D60 /* PBXTargetDependency */,
+				0000000011D0 /* PBXTargetDependency */,
 			);
 			name = "Pods-PageDemoTests";
 			productName = "Pods-PageDemoTests";
-			productReference = 000000000A70 /* Pods_PageDemoTests.framework */;
+			productReference = 000000000EA0 /* Pods_PageDemoTests.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		000000000B90 /* Pods-PageDemoUITests */ = {
+		000000000FC0 /* Pods-PageDemoUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 000000000BA0 /* Build configuration list for PBXNativeTarget "Pods-PageDemoUITests" */;
+			buildConfigurationList = 000000000FD0 /* Build configuration list for PBXNativeTarget "Pods-PageDemoUITests" */;
 			buildPhases = (
-				000000000BE0 /* Sources */,
-				000000000BF0 /* Frameworks */,
-				000000000C70 /* Headers */,
+				000000001010 /* Sources */,
+				000000001020 /* Frameworks */,
+				0000000010A0 /* Headers */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				000000000D40 /* PBXTargetDependency */,
+				0000000011B0 /* PBXTargetDependency */,
 			);
 			name = "Pods-PageDemoUITests";
 			productName = "Pods-PageDemoUITests";
-			productReference = 000000000BD0 /* Pods_PageDemoUITests.framework */;
+			productReference = 000000001000 /* Pods_PageDemoUITests.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -613,114 +766,152 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				0000000003A0 /* Alamofire */,
-				0000000005F0 /* FlexLayout */,
-				0000000008D0 /* Pods-PageDemo-PageDemo */,
-				000000000A30 /* Pods-PageDemoTests */,
-				000000000B90 /* Pods-PageDemoUITests */,
+				000000000530 /* Alamofire */,
+				000000000780 /* FlexLayout */,
+				000000000A60 /* Kingfisher */,
+				000000000D00 /* Pods-PageDemo-PageDemo */,
+				000000000E60 /* Pods-PageDemoTests */,
+				000000000FC0 /* Pods-PageDemoUITests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
-		0000000003F0 /* Sources */ = {
+		000000000580 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				000000000440 /* AFError.swift in Sources */,
-				0000000005E0 /* Alamofire-dummy.m in Sources */,
-				000000000450 /* Alamofire.swift in Sources */,
-				000000000460 /* DispatchQueue+Alamofire.swift in Sources */,
-				000000000470 /* MultipartFormData.swift in Sources */,
-				000000000480 /* NetworkReachabilityManager.swift in Sources */,
-				000000000490 /* Notifications.swift in Sources */,
-				0000000004A0 /* ParameterEncoding.swift in Sources */,
-				0000000004B0 /* Request.swift in Sources */,
-				0000000004C0 /* Response.swift in Sources */,
-				0000000004D0 /* ResponseSerialization.swift in Sources */,
-				0000000004E0 /* Result.swift in Sources */,
-				0000000004F0 /* ServerTrustPolicy.swift in Sources */,
-				000000000500 /* SessionDelegate.swift in Sources */,
-				000000000510 /* SessionManager.swift in Sources */,
-				000000000520 /* TaskDelegate.swift in Sources */,
-				000000000530 /* Timeline.swift in Sources */,
-				000000000540 /* Validation.swift in Sources */,
+				0000000005D0 /* AFError.swift in Sources */,
+				000000000770 /* Alamofire-dummy.m in Sources */,
+				0000000005E0 /* Alamofire.swift in Sources */,
+				0000000005F0 /* DispatchQueue+Alamofire.swift in Sources */,
+				000000000600 /* MultipartFormData.swift in Sources */,
+				000000000610 /* NetworkReachabilityManager.swift in Sources */,
+				000000000620 /* Notifications.swift in Sources */,
+				000000000630 /* ParameterEncoding.swift in Sources */,
+				000000000640 /* Request.swift in Sources */,
+				000000000650 /* Response.swift in Sources */,
+				000000000660 /* ResponseSerialization.swift in Sources */,
+				000000000670 /* Result.swift in Sources */,
+				000000000680 /* ServerTrustPolicy.swift in Sources */,
+				000000000690 /* SessionDelegate.swift in Sources */,
+				0000000006A0 /* SessionManager.swift in Sources */,
+				0000000006B0 /* TaskDelegate.swift in Sources */,
+				0000000006C0 /* Timeline.swift in Sources */,
+				0000000006D0 /* Validation.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		000000000640 /* Sources */ = {
+		0000000007D0 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				000000000680 /* FlexLayout+Enum.swift in Sources */,
-				000000000690 /* FlexLayout+Private.swift in Sources */,
-				0000000008C0 /* FlexLayout-dummy.m in Sources */,
-				000000000670 /* FlexLayout.swift in Sources */,
-				0000000006B0 /* Percent.swift in Sources */,
-				0000000006A0 /* UIView+FlexLayout.swift in Sources */,
-				000000000730 /* UIView+Yoga.mm in Sources */,
-				0000000006C0 /* Utils.cpp in Sources */,
-				0000000006D0 /* YGEnums.cpp in Sources */,
-				0000000006E0 /* YGLayout.cpp in Sources */,
-				000000000740 /* YGLayout.mm in Sources */,
-				000000000750 /* YGLayoutExtensions.swift in Sources */,
-				0000000006F0 /* YGNode.cpp in Sources */,
-				000000000700 /* YGNodePrint.cpp in Sources */,
-				000000000710 /* YGStyle.cpp in Sources */,
-				000000000720 /* Yoga.cpp in Sources */,
+				000000000810 /* FlexLayout+Enum.swift in Sources */,
+				000000000820 /* FlexLayout+Private.swift in Sources */,
+				000000000A50 /* FlexLayout-dummy.m in Sources */,
+				000000000800 /* FlexLayout.swift in Sources */,
+				000000000840 /* Percent.swift in Sources */,
+				000000000830 /* UIView+FlexLayout.swift in Sources */,
+				0000000008C0 /* UIView+Yoga.mm in Sources */,
+				000000000850 /* Utils.cpp in Sources */,
+				000000000860 /* YGEnums.cpp in Sources */,
+				000000000870 /* YGLayout.cpp in Sources */,
+				0000000008D0 /* YGLayout.mm in Sources */,
+				0000000008E0 /* YGLayoutExtensions.swift in Sources */,
+				000000000880 /* YGNode.cpp in Sources */,
+				000000000890 /* YGNodePrint.cpp in Sources */,
+				0000000008A0 /* YGStyle.cpp in Sources */,
+				0000000008B0 /* Yoga.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		000000000920 /* Sources */ = {
+		000000000AB0 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				000000000A20 /* Pods-PageDemo-PageDemo-dummy.m in Sources */,
+				000000000AE0 /* AnimatedImageView.swift in Sources */,
+				000000000AF0 /* Box.swift in Sources */,
+				000000000B00 /* CacheSerializer.swift in Sources */,
+				000000000B10 /* Filter.swift in Sources */,
+				000000000B20 /* FormatIndicatedCacheSerializer.swift in Sources */,
+				000000000B30 /* Image.swift in Sources */,
+				000000000B40 /* ImageCache.swift in Sources */,
+				000000000B50 /* ImageDownloader.swift in Sources */,
+				000000000B60 /* ImageModifier.swift in Sources */,
+				000000000B70 /* ImagePrefetcher.swift in Sources */,
+				000000000B80 /* ImageProcessor.swift in Sources */,
+				000000000B90 /* ImageTransition.swift in Sources */,
+				000000000BA0 /* ImageView+Kingfisher.swift in Sources */,
+				000000000BB0 /* Indicator.swift in Sources */,
+				000000000CF0 /* Kingfisher-dummy.m in Sources */,
+				000000000BC0 /* Kingfisher.swift in Sources */,
+				000000000BD0 /* KingfisherManager.swift in Sources */,
+				000000000BE0 /* KingfisherOptionsInfo.swift in Sources */,
+				000000000BF0 /* Placeholder.swift in Sources */,
+				000000000C00 /* RequestModifier.swift in Sources */,
+				000000000C10 /* Resource.swift in Sources */,
+				000000000C20 /* String+MD5.swift in Sources */,
+				000000000C30 /* ThreadHelper.swift in Sources */,
+				000000000C40 /* UIButton+Kingfisher.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		000000000A80 /* Sources */ = {
+		000000000D50 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				000000000B80 /* Pods-PageDemoTests-dummy.m in Sources */,
+				000000000E50 /* Pods-PageDemo-PageDemo-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		000000000BE0 /* Sources */ = {
+		000000000EB0 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				000000000CE0 /* Pods-PageDemoUITests-dummy.m in Sources */,
+				000000000FB0 /* Pods-PageDemoTests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		000000001010 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				000000001110 /* Pods-PageDemoUITests-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		000000000D00 /* PBXTargetDependency */ = {
+		000000001150 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = Alamofire;
-			target = 0000000003A0 /* Alamofire */;
-			targetProxy = 000000000CF0 /* PBXContainerItemProxy */;
+			target = 000000000530 /* Alamofire */;
+			targetProxy = 000000001140 /* PBXContainerItemProxy */;
 		};
-		000000000D20 /* PBXTargetDependency */ = {
+		000000001170 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = FlexLayout;
-			target = 0000000005F0 /* FlexLayout */;
-			targetProxy = 000000000D10 /* PBXContainerItemProxy */;
+			target = 000000000780 /* FlexLayout */;
+			targetProxy = 000000001160 /* PBXContainerItemProxy */;
 		};
-		000000000D40 /* PBXTargetDependency */ = {
+		000000001190 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Kingfisher;
+			target = 000000000A60 /* Kingfisher */;
+			targetProxy = 000000001180 /* PBXContainerItemProxy */;
+		};
+		0000000011B0 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = "Pods-PageDemo-PageDemo";
-			target = 0000000008D0 /* Pods-PageDemo-PageDemo */;
-			targetProxy = 000000000D30 /* PBXContainerItemProxy */;
+			target = 000000000D00 /* Pods-PageDemo-PageDemo */;
+			targetProxy = 0000000011A0 /* PBXContainerItemProxy */;
 		};
-		000000000D60 /* PBXTargetDependency */ = {
+		0000000011D0 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = "Pods-PageDemo-PageDemo";
-			target = 0000000008D0 /* Pods-PageDemo-PageDemo */;
-			targetProxy = 000000000D50 /* PBXContainerItemProxy */;
+			target = 000000000D00 /* Pods-PageDemo-PageDemo */;
+			targetProxy = 0000000011C0 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -846,9 +1037,9 @@
 			};
 			name = Release;
 		};
-		0000000003C0 /* Release */ = {
+		000000000550 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 000000000560 /* Alamofire.xcconfig */;
+			baseConfigurationReference = 0000000006F0 /* Alamofire.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -879,9 +1070,9 @@
 			};
 			name = Release;
 		};
-		0000000003D0 /* Debug */ = {
+		000000000560 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 000000000560 /* Alamofire.xcconfig */;
+			baseConfigurationReference = 0000000006F0 /* Alamofire.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -911,9 +1102,9 @@
 			};
 			name = Debug;
 		};
-		000000000610 /* Release */ = {
+		0000000007A0 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 000000000850 /* FlexLayout.xcconfig */;
+			baseConfigurationReference = 0000000009E0 /* FlexLayout.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -944,9 +1135,9 @@
 			};
 			name = Release;
 		};
-		000000000620 /* Debug */ = {
+		0000000007B0 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 000000000850 /* FlexLayout.xcconfig */;
+			baseConfigurationReference = 0000000009E0 /* FlexLayout.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -976,9 +1167,74 @@
 			};
 			name = Debug;
 		};
-		0000000008F0 /* Release */ = {
+		000000000A80 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 000000000960 /* Pods-PageDemo-PageDemo.release.xcconfig */;
+			baseConfigurationReference = 000000000C80 /* Kingfisher.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/Kingfisher/Kingfisher-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Kingfisher/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Kingfisher/Kingfisher.modulemap";
+				PRODUCT_MODULE_NAME = Kingfisher;
+				PRODUCT_NAME = Kingfisher;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		000000000A90 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 000000000C80 /* Kingfisher.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/Kingfisher/Kingfisher-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Kingfisher/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Kingfisher/Kingfisher.modulemap";
+				PRODUCT_MODULE_NAME = Kingfisher;
+				PRODUCT_NAME = Kingfisher;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		000000000D20 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 000000000D90 /* Pods-PageDemo-PageDemo.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CODE_SIGN_IDENTITY = "";
@@ -1011,9 +1267,9 @@
 			};
 			name = Release;
 		};
-		000000000900 /* Debug */ = {
+		000000000D30 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 000000000970 /* Pods-PageDemo-PageDemo.debug.xcconfig */;
+			baseConfigurationReference = 000000000DA0 /* Pods-PageDemo-PageDemo.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CODE_SIGN_IDENTITY = "";
@@ -1046,9 +1302,9 @@
 			};
 			name = Debug;
 		};
-		000000000A50 /* Release */ = {
+		000000000E80 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 000000000AC0 /* Pods-PageDemoTests.release.xcconfig */;
+			baseConfigurationReference = 000000000EF0 /* Pods-PageDemoTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CODE_SIGN_IDENTITY = "";
@@ -1080,9 +1336,9 @@
 			};
 			name = Release;
 		};
-		000000000A60 /* Debug */ = {
+		000000000E90 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 000000000AD0 /* Pods-PageDemoTests.debug.xcconfig */;
+			baseConfigurationReference = 000000000F00 /* Pods-PageDemoTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CODE_SIGN_IDENTITY = "";
@@ -1113,9 +1369,9 @@
 			};
 			name = Debug;
 		};
-		000000000BB0 /* Release */ = {
+		000000000FE0 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 000000000C20 /* Pods-PageDemoUITests.release.xcconfig */;
+			baseConfigurationReference = 000000001050 /* Pods-PageDemoUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CODE_SIGN_IDENTITY = "";
@@ -1147,9 +1403,9 @@
 			};
 			name = Release;
 		};
-		000000000BC0 /* Debug */ = {
+		000000000FF0 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 000000000C30 /* Pods-PageDemoUITests.debug.xcconfig */;
+			baseConfigurationReference = 000000001060 /* Pods-PageDemoUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CODE_SIGN_IDENTITY = "";
@@ -1192,47 +1448,56 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		0000000003B0 /* Build configuration list for PBXNativeTarget "Alamofire" */ = {
+		000000000540 /* Build configuration list for PBXNativeTarget "Alamofire" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				0000000003D0 /* Debug */,
-				0000000003C0 /* Release */,
+				000000000560 /* Debug */,
+				000000000550 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		000000000600 /* Build configuration list for PBXNativeTarget "FlexLayout" */ = {
+		000000000790 /* Build configuration list for PBXNativeTarget "FlexLayout" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				000000000620 /* Debug */,
-				000000000610 /* Release */,
+				0000000007B0 /* Debug */,
+				0000000007A0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		0000000008E0 /* Build configuration list for PBXNativeTarget "Pods-PageDemo-PageDemo" */ = {
+		000000000A70 /* Build configuration list for PBXNativeTarget "Kingfisher" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				000000000900 /* Debug */,
-				0000000008F0 /* Release */,
+				000000000A90 /* Debug */,
+				000000000A80 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		000000000A40 /* Build configuration list for PBXNativeTarget "Pods-PageDemoTests" */ = {
+		000000000D10 /* Build configuration list for PBXNativeTarget "Pods-PageDemo-PageDemo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				000000000A60 /* Debug */,
-				000000000A50 /* Release */,
+				000000000D30 /* Debug */,
+				000000000D20 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		000000000BA0 /* Build configuration list for PBXNativeTarget "Pods-PageDemoUITests" */ = {
+		000000000E70 /* Build configuration list for PBXNativeTarget "Pods-PageDemoTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				000000000BC0 /* Debug */,
-				000000000BB0 /* Release */,
+				000000000E90 /* Debug */,
+				000000000E80 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		000000000FD0 /* Build configuration list for PBXNativeTarget "Pods-PageDemoUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				000000000FF0 /* Debug */,
+				000000000FE0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
