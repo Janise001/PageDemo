@@ -15,7 +15,7 @@ class Banner: UIView,UIScrollViewDelegate {
             for view in self.scrollView.subviews {
                 view.removeFromSuperview()
             }
-            self.scrollView.contentSize.width = self.bounds.width * CGFloat(self.imgUrlArrs.count)
+            self.scrollView.contentSize.width = self.size.width * CGFloat(self.imgUrlArrs.count)
             self.addImagesToScrollView()
             self.pageControl.numberOfPages = self.imgUrlArrs.count
         }
@@ -36,14 +36,18 @@ class Banner: UIView,UIScrollViewDelegate {
         view.currentPageIndicatorTintColor = Color.lightGray
         return view
     }()
+    //宽度
+    var size:CGSize = CGSize.zero
     override init(frame: CGRect) {
         super.init(frame: frame)
+        self.size = frame.size
         self.addSubview(self.scrollView)
         self.scrollView.delegate = self
         self.scrollView.frame = CGRect(x: 0, y: 0, width: frame.width, height: frame.height)
         self.pageControl.frame = CGRect(x: 100, y: 400, width: 0, height: 0)
         self.pageControl.sizeToFit()
-        self.pageControl.frame.origin.x = self.bounds.width/2-self.pageControl.frame.width/2
+        self.pageControl.frame.origin.x = frame.width/2-self.pageControl.frame.width/2
+        self.pageControl.frame.origin.y = frame.height-self.pageControl.frame.height
         self.addSubview(self.pageControl)
         
     }
@@ -55,7 +59,7 @@ class Banner: UIView,UIScrollViewDelegate {
     func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
         if scrollView == self.scrollView {
             let offSetX = scrollView.contentOffset.x
-            self.pageControl.currentPage = Int(offSetX/self.bounds.width)
+            self.pageControl.currentPage = Int(offSetX/self.size.width)
         }
     }
     //添加图片到滚动视图中
@@ -64,12 +68,12 @@ class Banner: UIView,UIScrollViewDelegate {
             for i in 0...self.imgUrlArrs.count-1 {
                 let imageView:UIImageView = {
                     let view = UIImageView()
-                    view.frame.size = self.bounds.size
+                    view.frame.size = self.size
                     return view
                 }()
                 let url = URL(string: self.imgUrlArrs[i])
                 imageView.kf.setImage(with: url)
-                imageView.frame = CGRect(x: CGFloat(i)*self.bounds.width, y: 0, width: self.bounds.width, height: self.bounds.height)
+                imageView.frame = CGRect(x: CGFloat(i)*self.size.width, y: 0, width: self.size.width, height: self.size.height)
                 self.scrollView.addSubview(imageView)
             }
         }

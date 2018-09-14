@@ -30,6 +30,7 @@ class HomeViewController: UIViewController,UIScrollViewDelegate {
                 contentView.button.setTitle(titleStr, for: .normal)
                 contentView.button.addTarget(self, action: #selector(self.pushToController), for: .touchUpInside)
                 self.scrollView.flex.addItem(contentView).width(self.view.bounds.width-10).height(40)
+                contentView.flex.marginTop(10)
             }
         }
     }
@@ -42,7 +43,6 @@ class HomeViewController: UIViewController,UIScrollViewDelegate {
         super.viewDidLayoutSubviews()
         self.scrollView.frame = self.view.bounds
         self.scrollView.flex.layout()
-        self.scrollView.flex.paddingTop(20)
     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

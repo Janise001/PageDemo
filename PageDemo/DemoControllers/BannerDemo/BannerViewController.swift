@@ -10,7 +10,7 @@ import UIKit
 
 class BannerViewController: UIViewController {
 
-    var banner:Banner = Banner()
+    var banner:Banner = Banner(frame: CGRect(x: 20, y: 100, width: 200, height: 400))
     let textField:UITextField = {
         let view = UITextField()
         view.placeholder = "请网络图片地址..."
@@ -29,7 +29,6 @@ class BannerViewController: UIViewController {
     }()
     override func viewDidLoad() {
         super.viewDidLoad()
-        banner = Banner(frame: CGRect(x: 0, y: 100, width: self.view.bounds.width, height: 500))
         banner.imgUrlArrs = ["http://www.4gbizhi.com/uploads/allimg/150316/144Ha0M-0.jpg",
                              "http://b-ssl.duitang.com/uploads/item/201506/23/20150623184608_kj45n.jpeg",
                              "http://img3.duitang.com/uploads/item/201504/06/20150406H2227_nTYsK.thumb.700_0.jpeg"]
