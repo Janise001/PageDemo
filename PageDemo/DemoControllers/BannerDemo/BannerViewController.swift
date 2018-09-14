@@ -10,7 +10,7 @@ import UIKit
 
 class BannerViewController: UIViewController {
 
-    let banner:Banner = Banner()
+    var banner:Banner = Banner()
     let textField:UITextField = {
         let view = UITextField()
         view.placeholder = "请网络图片地址..."
@@ -30,10 +30,11 @@ class BannerViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         banner.imgUrlArrs = []
+        banner = Banner(frame: CGRect(x: 0, y: 100, width: self.view.bounds.width, height: 500))
 //        banner.imgUrlArrs = ["http://www.4gbizhi.com/uploads/allimg/150316/144Ha0M-0.jpg",
 //                             "http://b-ssl.duitang.com/uploads/item/201506/23/20150623184608_kj45n.jpeg",
 //                             "http://img3.duitang.com/uploads/item/201504/06/20150406H2227_nTYsK.thumb.700_0.jpeg"]
-        self.view.addSubview(self.banner.view)
+        self.view.addSubview(self.banner)
         self.view.addSubview(self.textField)
         self.view.addSubview(self.submitButton)
         self.submitButton.addTarget(self, action: #selector(addImages), for: .touchUpInside)
@@ -44,12 +45,10 @@ class BannerViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
-        self.banner.view.frame = CGRect(x: 0, y: 100, width: self.view.bounds.width, height: 500)
         self.textField.frame = CGRect(x: 0, y: 620, width: self.view.bounds.width, height: 30)
-        self.submitButton.frame = CGRect(x: 0, y: 680, width: 0, height: 0)
+        self.submitButton.frame = CGRect(x: 0, y: 650, width: 0, height: 0)
         self.submitButton.sizeToFit()
     }
     @objc func addImages(){
