@@ -15,7 +15,7 @@ class Banner: UIView,UIScrollViewDelegate {
             for view in self.scrollView.subviews {
                 view.removeFromSuperview()
             }
-            self.scrollView.contentSize.width = self.size.width * CGFloat(self.imgUrlArrs.count)
+            self.scrollView.contentSize.width = self.frame.size.width * CGFloat(self.imgUrlArrs.count)
             self.addImagesToScrollView()
             self.pageControl.numberOfPages = self.imgUrlArrs.count
         }
@@ -47,10 +47,15 @@ class Banner: UIView,UIScrollViewDelegate {
     override func layoutSubviews() {
         super.layoutSubviews()
         self.scrollView.frame = CGRect(x: 0, y: 0, width: frame.width, height: frame.height)
+        self.scrollView.contentSize.width = self.frame.size.width * CGFloat(self.imgUrlArrs.count)
+        for view in self.scrollView.subviews {
+            view.removeFromSuperview()
+        }
         self.pageControl.frame = CGRect(x: 100, y: 400, width: 0, height: 0)
         self.pageControl.sizeToFit()
         self.pageControl.frame.origin.x = frame.width/2-self.pageControl.frame.width/2
         self.pageControl.frame.origin.y = frame.height-self.pageControl.frame.height
+        self.addImagesToScrollView()
     }
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
@@ -73,6 +78,7 @@ class Banner: UIView,UIScrollViewDelegate {
                 }()
                 let url = URL(string: self.imgUrlArrs[i])
                 imageView.kf.setImage(with: url)
+                imageView.contentMode = .scaleAspectFit
                 imageView.frame = CGRect(x: CGFloat(i)*self.frame.size.width, y: 0, width: self.frame.size.width, height: self.frame.size.height)
                 self.scrollView.addSubview(imageView)
             }
