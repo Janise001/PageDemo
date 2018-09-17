@@ -37,10 +37,8 @@ class Banner: UIView,UIScrollViewDelegate {
         return view
     }()
     //宽度
-    var size:CGSize = CGSize.zero
     override init(frame: CGRect) {
         super.init(frame: frame)
-        self.size = frame.size
         self.addSubview(self.scrollView)
         self.scrollView.delegate = self
         self.addSubview(self.pageControl)
@@ -61,7 +59,7 @@ class Banner: UIView,UIScrollViewDelegate {
     func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
         if scrollView == self.scrollView {
             let offSetX = scrollView.contentOffset.x
-            self.pageControl.currentPage = Int(offSetX/self.size.width)
+            self.pageControl.currentPage = Int(offSetX/self.frame.size.width)
         }
     }
     //添加图片到滚动视图中
@@ -70,12 +68,12 @@ class Banner: UIView,UIScrollViewDelegate {
             for i in 0...self.imgUrlArrs.count-1 {
                 let imageView:UIImageView = {
                     let view = UIImageView()
-                    view.frame.size = self.size
+                    view.frame.size = self.frame.size
                     return view
                 }()
                 let url = URL(string: self.imgUrlArrs[i])
                 imageView.kf.setImage(with: url)
-                imageView.frame = CGRect(x: CGFloat(i)*self.size.width, y: 0, width: self.size.width, height: self.size.height)
+                imageView.frame = CGRect(x: CGFloat(i)*self.frame.size.width, y: 0, width: self.frame.size.width, height: self.frame.size.height)
                 self.scrollView.addSubview(imageView)
             }
         }
