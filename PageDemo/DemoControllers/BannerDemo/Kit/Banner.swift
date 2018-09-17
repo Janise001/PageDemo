@@ -43,15 +43,17 @@ class Banner: UIView,UIScrollViewDelegate {
         self.size = frame.size
         self.addSubview(self.scrollView)
         self.scrollView.delegate = self
+        self.addSubview(self.pageControl)
+        
+    }
+    override func layoutSubviews() {
+        super.layoutSubviews()
         self.scrollView.frame = CGRect(x: 0, y: 0, width: frame.width, height: frame.height)
         self.pageControl.frame = CGRect(x: 100, y: 400, width: 0, height: 0)
         self.pageControl.sizeToFit()
         self.pageControl.frame.origin.x = frame.width/2-self.pageControl.frame.width/2
         self.pageControl.frame.origin.y = frame.height-self.pageControl.frame.height
-        self.addSubview(self.pageControl)
-        
     }
-    
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }

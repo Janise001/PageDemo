@@ -32,6 +32,8 @@ class BannerViewController: UIViewController {
         banner.imgUrlArrs = ["http://www.4gbizhi.com/uploads/allimg/150316/144Ha0M-0.jpg",
                              "http://b-ssl.duitang.com/uploads/item/201506/23/20150623184608_kj45n.jpeg",
                              "http://img3.duitang.com/uploads/item/201504/06/20150406H2227_nTYsK.thumb.700_0.jpeg"]
+        banner.frame.size.height = 20
+        banner.frame.size.width = 20
         self.view.addSubview(self.banner)
         self.view.addSubview(self.textField)
         self.view.addSubview(self.submitButton)
