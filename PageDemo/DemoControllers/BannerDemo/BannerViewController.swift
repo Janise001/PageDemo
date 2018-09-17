@@ -34,12 +34,27 @@ class BannerViewController: UIViewController {
                              "http://img3.duitang.com/uploads/item/201504/06/20150406H2227_nTYsK.thumb.700_0.jpeg"]
         banner.frame.size.height = 100
         banner.frame.size.width = 100
+        
+
+        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 1, execute: {
+            let time = Date().timeIntervalSince1970
+            for i in 0...1000 {
+                self.banner.frame.size.height += 0.1
+                self.banner.frame.size.width += 0.2
+                self.banner.setNeedsLayout()
+                self.banner.layoutIfNeeded()
+                if i == 1000 {
+                    print(Date().timeIntervalSince1970 - time)
+                }
+            }
+        })
         self.view.addSubview(self.banner)
         self.view.addSubview(self.textField)
         self.view.addSubview(self.submitButton)
         self.submitButton.addTarget(self, action: #selector(addImages), for: .touchUpInside)
         // Do any additional setup after loading the view, typically from a nib.
     }
+
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
