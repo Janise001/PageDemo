@@ -32,22 +32,22 @@ class BannerViewController: UIViewController {
         banner.imgUrlArrs = ["http://b-ssl.duitang.com/uploads/item/201506/23/20150623184608_kj45n.jpeg",
                              "http://www.4gbizhi.com/uploads/allimg/150316/144Ha0M-0.jpg",
                              "http://img3.duitang.com/uploads/item/201504/06/20150406H2227_nTYsK.thumb.700_0.jpeg"]
-        banner.frame.size.height = 100
-        banner.frame.size.width = 100
+        banner.frame.size.height = 400
+        banner.frame.size.width = 200
         
 
-        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 1, execute: {
-            let time = Date().timeIntervalSince1970
-            for i in 0...1000 {
-                self.banner.frame.size.height += 0.1
-                self.banner.frame.size.width += 0.2
-                self.banner.setNeedsLayout()
-                self.banner.layoutIfNeeded()
-                if i == 1000 {
-                    print(Date().timeIntervalSince1970 - time)
-                }
-            }
-        })
+//        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 1, execute: {
+//            let time = Date().timeIntervalSince1970
+//            for i in 0...1000 {
+//                self.banner.frame.size.height += 0.1
+//                self.banner.frame.size.width += 0.2
+//                self.banner.setNeedsLayout()
+//                self.banner.layoutIfNeeded()
+//                if i == 1000 {
+//                    print(Date().timeIntervalSince1970 - time)
+//                }
+//            }
+//        })
         self.view.addSubview(self.banner)
         self.view.addSubview(self.textField)
         self.view.addSubview(self.submitButton)
