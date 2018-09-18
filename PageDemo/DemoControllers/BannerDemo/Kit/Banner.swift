@@ -12,12 +12,14 @@ class Banner: UIView,UIScrollViewDelegate {
     //图片地址数组
     var imgUrlArrs = [String](){
         didSet {
-//            for view in self.scrollView.subviews {
-//                view.removeFromSuperview()
-//            }
+            for view in self.scrollView.subviews {
+                view.removeFromSuperview()
+            }
             self.scrollView.contentSize.width = self.frame.size.width * CGFloat(self.imgUrlArrs.count)
             self.addImagesToScrollView()
             self.pageControl.numberOfPages = self.imgUrlArrs.count
+            self.setNeedsLayout()
+            self.layoutIfNeeded()
         }
     }
     
@@ -72,13 +74,12 @@ class Banner: UIView,UIScrollViewDelegate {
         guard self.imgUrlArrs.count > 0 else {
             return
         }
-        for (i,image) in self.imgUrlArrs.enumerated() {
+        for imageURL in self.imgUrlArrs {
             let imageView = UIImageView()
-            let url = URL(string: image)
+            let url = URL(string: imageURL)
             imageView.kf.setImage(with: url)
             imageView.contentMode = .scaleAspectFit
             self.scrollView.addSubview(imageView)
         }
-        
     }
 }
