@@ -26,6 +26,8 @@ class Banner: UIView,UIScrollViewDelegate {
         let view = UIScrollView()
         view.backgroundColor = Color.blue
         view.isPagingEnabled = true
+        view.showsVerticalScrollIndicator = false
+        view.showsHorizontalScrollIndicator = false
         return view
     }()
     let pageControl:UIPageControl = {
