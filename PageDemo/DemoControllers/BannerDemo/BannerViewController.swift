@@ -7,7 +7,6 @@
 //
 
 import UIKit
-
 class BannerViewController: UIViewController {
 
     var banner:Banner = Banner(frame: CGRect(x: 20, y: 70, width: 0, height: 0))
@@ -109,11 +108,24 @@ class BannerViewController: UIViewController {
             return
         }
         let insertNum = self.addTextField.text == "" ? 0 : Int(self.addTextField.text!)
-        self.banner.imgUrlArrs.insert(url, at: insertNum!)
+        if insertNum! > self.banner.imgUrlArrs.count {
+            self.banner.imgUrlArrs.insert(url, at: self.banner.imgUrlArrs.count)
+//            let alert = UIAlertController(title:"", message: "请输入正确数字", preferredStyle: .alert)
+//            alert.addAction(UIAlertAction(title: "ok", style: .default, handler: nil))
+//            self.present(alert, animated: true, completion: nil)
+        }else {
+            self.banner.imgUrlArrs.insert(url, at: insertNum!)
+        }
     }
     @objc func deleteImage(){
-        let deleteNum = self.deleteTextField.text! == "" ? 0 : Int(self.deleteTextField.text!)
-        self.banner.imgUrlArrs.remove(at: deleteNum!)
+        let deleteNum = self.deleteTextField.text! == "" ? 1 : Int(self.deleteTextField.text!)
+        if deleteNum! > self.banner.imgUrlArrs.count {
+            let alert = UIAlertController(title:"", message: "请输入正确数字", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "ok", style: .default, handler: nil))
+            self.present(alert, animated: true, completion: nil)
+        }else {
+            self.banner.imgUrlArrs.remove(at: (deleteNum!-1))
+        }
     }
 
 }
