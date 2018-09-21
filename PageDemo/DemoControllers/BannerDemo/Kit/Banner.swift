@@ -9,20 +9,26 @@
 import UIKit
 import Kingfisher
 class Banner: UIView,UIScrollViewDelegate {
+    //记录初始设置UIImageView的数量
+    var firstCount:Int = 0
+    //记录变化之后的UIImageView的数量
+    var secondCount:Int = 0
     //图片地址数组
     var imgUrlArrs = [String](){
         didSet {
-            for view in self.scrollView.subviews {
-                view.removeFromSuperview()
-            }
-            self.scrollView.contentSize.width = self.frame.size.width * CGFloat(self.imgUrlArrs.count)
-            self.addImagesToScrollView()
+//            for view in self.scrollView.subviews {
+//                view.removeFromSuperview()
+//            }
+            self.secondCount = self.imgUrlArrs.count
+            self.setImageViewsCount(self.secondCount)
+//            self.scrollView.contentSize.width = self.frame.size.width * CGFloat(self.imgUrlArrs.count)
+//            self.addImagesToScrollView()
             self.pageControl.numberOfPages = self.imgUrlArrs.count
+            
             self.setNeedsLayout()
             self.layoutIfNeeded()
         }
     }
-    
     //滚动视图
     let scrollView:UIScrollView = {
         let view = UIScrollView()
@@ -43,6 +49,7 @@ class Banner: UIView,UIScrollViewDelegate {
     //宽度
     override init(frame: CGRect) {
         super.init(frame: frame)
+        self.firstCount = self.imgUrlArrs.count
         self.addSubview(self.scrollView)
         self.scrollView.delegate = self
         self.addSubview(self.pageControl)
@@ -55,6 +62,10 @@ class Banner: UIView,UIScrollViewDelegate {
         
         for (i,imageView) in self.scrollView.subviews.enumerated() {
             imageView.frame = CGRect(x: CGFloat(i)*self.frame.size.width, y: 0, width: self.frame.size.width, height: self.frame.size.height)
+            let url = URL(string: imgUrlArrs[i])
+            let view = imageView as! UIImageView
+            view.kf.setImage(with: url)
+            view.contentMode = .scaleAspectFit
         }
         self.pageControl.frame = CGRect(x: 100, y: 400, width: 0, height: 0)
         self.pageControl.sizeToFit()
@@ -71,17 +82,36 @@ class Banner: UIView,UIScrollViewDelegate {
             self.pageControl.currentPage = Int(offSetX/self.frame.size.width)
         }
     }
-    //添加图片到滚动视图中
-    func addImagesToScrollView(){
-        guard self.imgUrlArrs.count > 0 else {
-            return
+    //设置图片数量并添加至滚动视图中去
+    func setImageViewsCount(_ count:Int) {
+        //少加
+        if count > self.firstCount {
+            let changCount = count - self.firstCount
+            for i in 0..<changCount {
+                let imageView = UIImageView()
+                self.scrollView.addSubview(imageView)
+            }
+        }else if count < self.firstCount {
+            //多减
+            for (i,imageView) in self.scrollView.subviews.enumerated() {
+                if i > self.firstCount - 2 {
+                    imageView.removeFromSuperview()
+                }
+            }
         }
-        for imageURL in self.imgUrlArrs {
-            let imageView = UIImageView()
-            let url = URL(string: imageURL)
-            imageView.kf.setImage(with: url)
-            imageView.contentMode = .scaleAspectFit
-            self.scrollView.addSubview(imageView)
-        }
+        self.firstCount = self.secondCount
     }
+//    //添加图片到滚动视图中
+//    func addImagesToScrollView(){
+//        guard self.imgUrlArrs.count > 0 else {
+//            return
+//        }
+//        for imageURL in self.imgUrlArrs {
+//            let imageView = UIImageView()
+//            let url = URL(string: imageURL)
+//            imageView.kf.setImage(with: url)
+//            imageView.contentMode = .scaleAspectFit
+//            self.scrollView.addSubview(imageView)
+//        }
+//    }
 }
