@@ -15,8 +15,6 @@ class Banner: UIView,UIScrollViewDelegate {
     var imgUrlArrs = [String](){
         didSet {
             self.setImageViewsCount(self.imgUrlArrs.count)
-            self.pageControl.numberOfPages = self.imgUrlArrs.count
-            
             self.setNeedsLayout()
             self.layoutIfNeeded()
         }
@@ -54,14 +52,11 @@ class Banner: UIView,UIScrollViewDelegate {
         
         for (i,imageView) in self.scrollView.subviews.enumerated() {
             imageView.frame = CGRect(x: CGFloat(i)*self.frame.size.width, y: 0, width: self.frame.size.width, height: self.frame.size.height)
-            let url = URL(string: imgUrlArrs[i])
-            let view = imageView as! UIImageView
-            view.kf.setImage(with: url)
-            view.contentMode = .scaleAspectFit
         }
         self.pageControl.sizeToFit()
         self.pageControl.frame.origin.x = frame.width/2-self.pageControl.frame.width/2
         self.pageControl.frame.origin.y = frame.height-self.pageControl.frame.height
+        self.pageControl.numberOfPages = self.imgUrlArrs.count
     }
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
@@ -85,11 +80,21 @@ class Banner: UIView,UIScrollViewDelegate {
         }else if count < self.firstCount {
             //多减
             for (i,imageView) in self.scrollView.subviews.enumerated() {
-                if i > self.firstCount - 2 {
+                if i > count - 1 {
                     imageView.removeFromSuperview()
                 }
             }
         }
-        self.firstCount = self.imgUrlArrs.count
+        self.firstCount = count
+        self.updateImages()
+    }
+    //更新图片数据
+    func updateImages(){
+        for (i,imageView) in self.scrollView.subviews.enumerated() {
+            let url = URL(string: imgUrlArrs[i])
+            let view = imageView as! UIImageView
+            view.kf.setImage(with: url)
+            view.contentMode = .scaleAspectFit
+        }
     }
 }
