@@ -11,13 +11,10 @@ import Kingfisher
 class Banner: UIView,UIScrollViewDelegate {
     //记录初始设置UIImageView的数量
     var firstCount:Int = 0
-    //记录变化之后的UIImageView的数量
-    var secondCount:Int = 0
     //图片地址数组
     var imgUrlArrs = [String](){
         didSet {
-            self.secondCount = self.imgUrlArrs.count
-            self.setImageViewsCount(self.secondCount)
+            self.setImageViewsCount(self.imgUrlArrs.count)
             self.pageControl.numberOfPages = self.imgUrlArrs.count
             
             self.setNeedsLayout()
@@ -93,6 +90,6 @@ class Banner: UIView,UIScrollViewDelegate {
                 }
             }
         }
-        self.firstCount = self.secondCount
+        self.firstCount = self.imgUrlArrs.count
     }
 }
