@@ -102,11 +102,11 @@ class Banner: UIView,UIScrollViewDelegate {
     }
     //更新图片数据
     func updateImages(){
-        for (i,imageView) in self.scrollView.subviews.enumerated() {
+        for i in 0..<self.imageViewArrs.count {
             let url = URL(string: imgUrlArrs[i])
-            let view = imageView as! UIImageView
-            view.kf.setImage(with: url)
-            view.contentMode = .scaleAspectFit
+            let imageView = self.imageViewArrs[i]
+            imageView.kf.setImage(with: url)
+            imageView.contentMode = .scaleAspectFit
         }
     }
 }
