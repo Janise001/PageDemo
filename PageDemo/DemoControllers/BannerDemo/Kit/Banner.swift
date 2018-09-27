@@ -18,20 +18,20 @@ class Banner: UIView,UIScrollViewDelegate {
     }
     var imageViewArrs = [UIImageView](){
         didSet {
-            if self.scrollView.subviews.count > self.imageViewArrs.count {
-                let changCount = self.scrollView.subviews.count - imageViewArrs.count
-                for (i,imageView) in self.scrollView.subviews.enumerated() {
-                    if i > changCount {
+            self.updateImages()
+            if oldValue.count > self.imageViewArrs.count {
+                oldValue.forEach { (imageView) in
+                    if !self.imageViewArrs.contains(imageView) {
                         imageView.removeFromSuperview()
                     }
                 }
-            }else if self.scrollView.subviews.count < self.imageViewArrs.count {
-                let changCount = imageViewArrs.count - self.scrollView.subviews.count
-                for i in 0..<changCount {
-                    self.scrollView.addSubview(self.imageViewArrs[i])
+            }else if oldValue.count < self.imageViewArrs.count {
+                self.imageViewArrs.forEach { (imageView) in
+                    if !oldValue.contains(imageView) {
+                        self.scrollView.addSubview(imageView)
+                    }
                 }
             }
-            self.updateImages()
             self.setNeedsLayout()
         }
     }
@@ -40,8 +40,8 @@ class Banner: UIView,UIScrollViewDelegate {
         let view = UIScrollView()
         view.backgroundColor = Color.blue
         view.isPagingEnabled = true
-        view.showsVerticalScrollIndicator = false
-        view.showsHorizontalScrollIndicator = false
+//        view.showsVerticalScrollIndicator = false
+//        view.showsHorizontalScrollIndicator = false
         return view
     }()
     let pageControl:UIPageControl = {
@@ -65,7 +65,8 @@ class Banner: UIView,UIScrollViewDelegate {
         self.scrollView.frame = CGRect(x: 0, y: 0, width: frame.width, height: frame.height)
         self.scrollView.contentSize.width = self.frame.size.width * CGFloat(self.imgUrlArrs.count)
         
-        for (i,imageView) in self.scrollView.subviews.enumerated() {
+        for i in 0..<self.imageViewArrs.count {
+            let imageView = self.imageViewArrs[i]
             imageView.frame = CGRect(x: CGFloat(i)*self.frame.size.width, y: 0, width: self.frame.size.width, height: self.frame.size.height)
         }
         self.pageControl.sizeToFit()
