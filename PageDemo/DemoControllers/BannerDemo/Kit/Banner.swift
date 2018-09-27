@@ -9,14 +9,30 @@
 import UIKit
 import Kingfisher
 class Banner: UIView,UIScrollViewDelegate {
-    //记录初始设置UIImageView的数量
-    var firstCount:Int = 0
+    
     //图片地址数组
     var imgUrlArrs = [String](){
         didSet {
-            self.setImageViewsCount(self.imgUrlArrs.count)
+            self.samplifyCount(self.imgUrlArrs)
+        }
+    }
+    var imageViewArrs = [UIImageView](){
+        didSet {
+            if self.scrollView.subviews.count > self.imageViewArrs.count {
+                let changCount = self.scrollView.subviews.count - imageViewArrs.count
+                for (i,imageView) in self.scrollView.subviews.enumerated() {
+                    if i > changCount {
+                        imageView.removeFromSuperview()
+                    }
+                }
+            }else if self.scrollView.subviews.count < self.imageViewArrs.count {
+                let changCount = imageViewArrs.count - self.scrollView.subviews.count
+                for i in 0..<changCount {
+                    self.scrollView.addSubview(self.imageViewArrs[i])
+                }
+            }
+            self.updateImages()
             self.setNeedsLayout()
-            self.layoutIfNeeded()
         }
     }
     //滚动视图
@@ -39,7 +55,6 @@ class Banner: UIView,UIScrollViewDelegate {
     //宽度
     override init(frame: CGRect) {
         super.init(frame: frame)
-        self.firstCount = self.imgUrlArrs.count
         self.addSubview(self.scrollView)
         self.scrollView.delegate = self
         self.addSubview(self.pageControl)
@@ -61,7 +76,7 @@ class Banner: UIView,UIScrollViewDelegate {
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-
+    
     func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
         if scrollView == self.scrollView {
             let offSetX = scrollView.contentOffset.x
@@ -69,24 +84,21 @@ class Banner: UIView,UIScrollViewDelegate {
         }
     }
     //设置图片数量并添加至滚动视图中去
-    func setImageViewsCount(_ count:Int) {
+    func samplifyCount(_ urlArr:[String]) {
         //少加
-        if count > self.firstCount {
-            let changCount = count - self.firstCount
-            for i in 0..<changCount {
+        if urlArr.count > imageViewArrs.count {
+            let changCount = urlArr.count - imageViewArrs.count
+            var changeArr:[UIImageView] = []
+            for _ in 0..<changCount {
                 let imageView = UIImageView()
-                self.scrollView.addSubview(imageView)
+                changeArr.append(imageView)
             }
-        }else if count < self.firstCount {
+            self.imageViewArrs.append(contentsOf: changeArr)
+        }else if urlArr.count < imageViewArrs.count {
             //多减
-            for (i,imageView) in self.scrollView.subviews.enumerated() {
-                if i > count - 1 {
-                    imageView.removeFromSuperview()
-                }
-            }
+            let changeCount = imageViewArrs.count - urlArr.count
+            imageViewArrs.removeLast(changeCount)
         }
-        self.firstCount = count
-        self.updateImages()
     }
     //更新图片数据
     func updateImages(){
