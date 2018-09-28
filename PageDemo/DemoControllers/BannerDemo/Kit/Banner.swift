@@ -9,7 +9,7 @@
 import UIKit
 import Kingfisher
 open class Banner: UIView,UIScrollViewDelegate {
-    //图片地址数组
+    /// 图片地址数组
     public var imgUrlArrs:[String] = [] {
         didSet {imgUrlArrsChanged()}
     }
@@ -17,7 +17,8 @@ open class Banner: UIView,UIScrollViewDelegate {
         didSet {imageViewArrChanged()}
     }
     public var endlessScroll:Bool = false
-    //滚动视图
+
+    /// 滚动视图
     let scrollView:UIScrollView = {
         let view = UIScrollView()
         view.backgroundColor = Color.blue
@@ -32,7 +33,7 @@ open class Banner: UIView,UIScrollViewDelegate {
         view.currentPageIndicatorTintColor = Color.lightGray
         return view
     }()
-    //宽度
+    // MARK: -
     public override init(frame: CGRect) {
         super.init(frame: frame)
         configInit()
@@ -96,7 +97,7 @@ open class Banner: UIView,UIScrollViewDelegate {
         self.updateImages()
         self.setNeedsLayout()
     }
-    //设置图片数量并添加至滚动视图中去
+    /// 设置图片数量并添加至滚动视图中去
     func samplifyImageViewCount(_ urlArr:[String]) {
         let newCount = urlArr.count
         var _imageViewArrs = self.imageViewArrs
@@ -117,7 +118,7 @@ open class Banner: UIView,UIScrollViewDelegate {
         imageView.contentMode = .scaleAspectFill
         return imageView
     }
-    //更新图片数据
+    /// 更新图片数据
     func updateImages() {
         for (offset,imageView) in self.imageViewArrs.enumerated() {
             let url = URL(string: imgUrlArrs[offset])
