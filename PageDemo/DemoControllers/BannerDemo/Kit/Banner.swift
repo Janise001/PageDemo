@@ -8,40 +8,19 @@
 
 import UIKit
 import Kingfisher
-class Banner: UIView,UIScrollViewDelegate {
-    
+open class Banner: UIView,UIScrollViewDelegate {
     //图片地址数组
-    var imgUrlArrs = [String](){
-        didSet {
-            self.samplifyCount(self.imgUrlArrs)
-        }
+    public var imgUrlArrs:[String] = [] {
+        didSet {imgUrlArrsChanged()}
     }
-    private var imageViewArrs = [UIImageView](){
-        didSet {
-            self.updateImages()
-//            if oldValue.count > self.imageViewArrs.count {
-//                oldValue.forEach { (imageView) in
-//                    if !self.imageViewArrs.contains(imageView) {
-//                        imageView.removeFromSuperview()
-//                    }
-//                }
-//            }else if oldValue.count < self.imageViewArrs.count {
-//                self.imageViewArrs.forEach { (imageView) in
-//                    if !oldValue.contains(imageView) {
-//                        self.scrollView.addSubview(imageView)
-//                    }
-//                }
-//            }
-            self.setNeedsLayout()
-        }
+    private var imageViewArrs:[UIImageView] = [] {
+        didSet {imageViewArrChanged()}
     }
     //滚动视图
     let scrollView:UIScrollView = {
         let view = UIScrollView()
         view.backgroundColor = Color.blue
         view.isPagingEnabled = true
-//        view.showsVerticalScrollIndicator = false
-//        view.showsHorizontalScrollIndicator = false
         return view
     }()
     let pageControl:UIPageControl = {
@@ -53,79 +32,82 @@ class Banner: UIView,UIScrollViewDelegate {
         return view
     }()
     //宽度
-    override init(frame: CGRect) {
+    public override init(frame: CGRect) {
         super.init(frame: frame)
-        self.addSubview(self.scrollView)
-        self.scrollView.delegate = self
-        self.addSubview(self.pageControl)
-        
+        configInit()
     }
-    override func layoutSubviews() {
+    public required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    func configInit() {
+        addChildView()
+        self.scrollView.delegate = self
+    }
+    func addChildView() {
+        self.addSubview(self.scrollView)
+        self.addSubview(self.pageControl)
+    }
+    // MARK: -
+    open override func layoutSubviews() {
         super.layoutSubviews()
+        updateScrollViewLayout()
+        updatePageControlLayout()
+    }
+    func updateScrollViewLayout() {
         self.scrollView.frame = CGRect(x: 0, y: 0, width: frame.width, height: frame.height)
         self.scrollView.contentSize.width = self.frame.size.width * CGFloat(self.imgUrlArrs.count)
-        
-        for i in 0..<self.imageViewArrs.count {
-            let imageView = self.imageViewArrs[i]
-            imageView.frame = CGRect(x: CGFloat(i)*self.frame.size.width, y: 0, width: self.frame.size.width, height: self.frame.size.height)
+        _ = self.imageViewArrs.reduce(0) { (last, imageView) -> CGFloat in
+            imageView.frame.size = self.frame.size
+            imageView.frame.origin.y = 0
+            imageView.frame.origin.x = last
+            return imageView.frame.maxX
         }
+    }
+    func updatePageControlLayout() {
         self.pageControl.sizeToFit()
         self.pageControl.frame.origin.x = frame.width/2-self.pageControl.frame.width/2
         self.pageControl.frame.origin.y = frame.height-self.pageControl.frame.height
+    }
+    // MARK: -
+    public func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
+        let offSetX = scrollView.contentOffset.x
+        self.pageControl.currentPage = Int(offSetX/self.frame.size.width)
+    }
+    // MARK: -
+    func imgUrlArrsChanged() {
+        samplifyImageViewCount(imgUrlArrs)
+    }
+    func imageViewArrChanged() {
         self.pageControl.numberOfPages = self.imgUrlArrs.count
-    }
-    required init?(coder aDecoder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
-    
-    func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
-        if scrollView == self.scrollView {
-            let offSetX = scrollView.contentOffset.x
-            self.pageControl.currentPage = Int(offSetX/self.frame.size.width)
-        }
+        self.updateImages()
+        self.setNeedsLayout()
     }
     //设置图片数量并添加至滚动视图中去
-    func samplifyCount(_ urlArr:[String]) {
-        var subviews:[UIImageView] = []
-        self.scrollView.subviews.forEach { (view) in
-            if view.isKind(of: UIImageView.self) {
-                subviews.append(view as! UIImageView)
-            }
+    func samplifyImageViewCount(_ urlArr:[String]) {
+        let newCount = urlArr.count
+        var _imageViewArrs = self.imageViewArrs
+        while _imageViewArrs.count < newCount {
+            let imageView = createImageView()
+            _imageViewArrs.append(imageView)
+            self.scrollView.addSubview(imageView)
         }
-        //少加
-        if urlArr.count > imageViewArrs.count {
-            let changCount = urlArr.count - imageViewArrs.count
-            var changeArr:[UIImageView] = []
-            for _ in 0..<changCount {
-                let imageView = UIImageView()
-                changeArr.append(imageView)
-                self.scrollView.addSubview(imageView)
-            }
-            self.imageViewArrs.append(contentsOf: changeArr)
-            imageViewArrs.forEach { (imageView) in
-                if !subviews.contains(imageView) {
-                    self.scrollView.addSubview(imageView)
-                }
-            }
-        }else if urlArr.count < imageViewArrs.count {
-            //多减
-            let changeCount = imageViewArrs.count - urlArr.count
-            for _ in 0..<changeCount {
-                let imageView = imageViewArrs.last
-                imageViewArrs.removeLast()
-                if subviews.contains(imageView!) {
-                    imageView?.removeFromSuperview()
-                }
-            }
+        while _imageViewArrs.count > newCount {
+            let last = _imageViewArrs.removeLast()
+            last.removeFromSuperview()
         }
+        self.imageViewArrs = _imageViewArrs
+    }
+    func createImageView() -> UIImageView {
+        let imageView = UIImageView()
+        imageView.clipsToBounds = true
+        imageView.contentMode = .scaleAspectFill
+        return imageView
     }
     //更新图片数据
-    func updateImages(){
-        for i in 0..<self.imageViewArrs.count {
-            let url = URL(string: imgUrlArrs[i])
-            let imageView = self.imageViewArrs[i]
+    func updateImages() {
+        for (offset,imageView) in self.imageViewArrs.enumerated() {
+            let url = URL(string: imgUrlArrs[offset])
             imageView.kf.setImage(with: url)
-            imageView.contentMode = .scaleAspectFit
         }
     }
 }
