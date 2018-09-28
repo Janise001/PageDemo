@@ -16,6 +16,7 @@ open class Banner: UIView,UIScrollViewDelegate {
     private var imageViewArrs:[UIImageView] = [] {
         didSet {imageViewArrChanged()}
     }
+    public var endlessScroll:Bool = false
     //滚动视图
     let scrollView:UIScrollView = {
         let view = UIScrollView()
@@ -71,7 +72,20 @@ open class Banner: UIView,UIScrollViewDelegate {
     // MARK: -
     public func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
         let offSetX = scrollView.contentOffset.x
-        self.pageControl.currentPage = Int(offSetX/self.frame.size.width)
+        let currentPage = Int(offSetX/self.frame.size.width)
+        self.pageControl.currentPage = currentPage
+        print(currentPage+1)
+    }
+    //从最后一个轮播至第一个控件
+    func scrollToFirst(_ scrollView:UIScrollView){
+        if self.endlessScroll {
+            guard self.imgUrlArrs.count != 0 else{
+                return
+            }
+            let firstItem = (self.endlessScroll == true) ? ((self.imgUrlArrs.count-1)/2) : 0
+            let indexPath = IndexPath(item: firstItem, section: 0)
+            scrollView.scroll
+        }
     }
     // MARK: -
     func imgUrlArrsChanged() {
