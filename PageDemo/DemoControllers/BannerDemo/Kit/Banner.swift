@@ -16,22 +16,22 @@ class Banner: UIView,UIScrollViewDelegate {
             self.samplifyCount(self.imgUrlArrs)
         }
     }
-    var imageViewArrs = [UIImageView](){
+    private var imageViewArrs = [UIImageView](){
         didSet {
             self.updateImages()
-            if oldValue.count > self.imageViewArrs.count {
-                oldValue.forEach { (imageView) in
-                    if !self.imageViewArrs.contains(imageView) {
-                        imageView.removeFromSuperview()
-                    }
-                }
-            }else if oldValue.count < self.imageViewArrs.count {
-                self.imageViewArrs.forEach { (imageView) in
-                    if !oldValue.contains(imageView) {
-                        self.scrollView.addSubview(imageView)
-                    }
-                }
-            }
+//            if oldValue.count > self.imageViewArrs.count {
+//                oldValue.forEach { (imageView) in
+//                    if !self.imageViewArrs.contains(imageView) {
+//                        imageView.removeFromSuperview()
+//                    }
+//                }
+//            }else if oldValue.count < self.imageViewArrs.count {
+//                self.imageViewArrs.forEach { (imageView) in
+//                    if !oldValue.contains(imageView) {
+//                        self.scrollView.addSubview(imageView)
+//                    }
+//                }
+//            }
             self.setNeedsLayout()
         }
     }
@@ -86,6 +86,12 @@ class Banner: UIView,UIScrollViewDelegate {
     }
     //设置图片数量并添加至滚动视图中去
     func samplifyCount(_ urlArr:[String]) {
+        var subviews:[UIImageView] = []
+        self.scrollView.subviews.forEach { (view) in
+            if view.isKind(of: UIImageView.self) {
+                subviews.append(view as! UIImageView)
+            }
+        }
         //少加
         if urlArr.count > imageViewArrs.count {
             let changCount = urlArr.count - imageViewArrs.count
@@ -93,12 +99,24 @@ class Banner: UIView,UIScrollViewDelegate {
             for _ in 0..<changCount {
                 let imageView = UIImageView()
                 changeArr.append(imageView)
+                self.scrollView.addSubview(imageView)
             }
             self.imageViewArrs.append(contentsOf: changeArr)
+            imageViewArrs.forEach { (imageView) in
+                if !subviews.contains(imageView) {
+                    self.scrollView.addSubview(imageView)
+                }
+            }
         }else if urlArr.count < imageViewArrs.count {
             //多减
             let changeCount = imageViewArrs.count - urlArr.count
-            imageViewArrs.removeLast(changeCount)
+            for _ in 0..<changeCount {
+                let imageView = imageViewArrs.last
+                imageViewArrs.removeLast()
+                if subviews.contains(imageView!) {
+                    imageView?.removeFromSuperview()
+                }
+            }
         }
     }
     //更新图片数据
