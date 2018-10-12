@@ -16,7 +16,12 @@ open class Banner: UIView,UIScrollViewDelegate {
     private var imageViewArrs:[UIImageView] = [] {
         didSet {imageViewArrChanged()}
     }
-    public var endlessScroll:Bool = false
+    public var endlessScroll:Bool = false {
+        didSet {
+            let imageView = createImageView()
+            self.scrollView.addSubview(imageView)
+        }
+    }
 
     /// 滚动视图
     let scrollView:UIScrollView = {
@@ -57,7 +62,7 @@ open class Banner: UIView,UIScrollViewDelegate {
     }
     func updateScrollViewLayout() {
         self.scrollView.frame = CGRect(x: 0, y: 0, width: frame.width, height: frame.height)
-        self.scrollView.contentSize.width = self.frame.size.width * CGFloat(self.imgUrlArrs.count)
+        self.scrollView.contentSize.width = self.frame.size.width * CGFloat(self.imgUrlArrs.count+1)
         _ = self.imageViewArrs.reduce(0) { (last, imageView) -> CGFloat in
             imageView.frame.size = self.frame.size
             imageView.frame.origin.y = 0
@@ -72,22 +77,17 @@ open class Banner: UIView,UIScrollViewDelegate {
     }
     // MARK: -
     public func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
+        let index = scrollView.contentOffset.x/self.frame.size.width
         let offSetX = scrollView.contentOffset.x
-        let currentPage = Int(offSetX/self.frame.size.width)
-        self.pageControl.currentPage = currentPage
-        print(currentPage+1)
-    }
-    //从最后一个轮播至第一个控件
-    func scrollToFirst(_ scrollView:UIScrollView){
-        if self.endlessScroll {
-            guard self.imgUrlArrs.count != 0 else{
-                return
-            }
-            let firstItem = (self.endlessScroll == true) ? ((self.imgUrlArrs.count-1)/2) : 0
-            let indexPath = IndexPath(item: firstItem, section: 0)
-            scrollView.scroll
+        print(offSetX)
+        if offSetX > 0 && Int(index) > (self.imgUrlArrs.count-1) {   //right
+            self.pageControl.currentPage = 0
+            scrollView.contentOffset.x = 0
+        }else {
+            self.pageControl.currentPage = Int(index)
         }
     }
+    
     // MARK: -
     func imgUrlArrsChanged() {
         samplifyImageViewCount(imgUrlArrs)
@@ -99,7 +99,7 @@ open class Banner: UIView,UIScrollViewDelegate {
     }
     /// 设置图片数量并添加至滚动视图中去
     func samplifyImageViewCount(_ urlArr:[String]) {
-        let newCount = urlArr.count
+        let newCount = urlArr.count+1
         var _imageViewArrs = self.imageViewArrs
         while _imageViewArrs.count < newCount {
             let imageView = createImageView()
@@ -121,8 +121,13 @@ open class Banner: UIView,UIScrollViewDelegate {
     /// 更新图片数据
     func updateImages() {
         for (offset,imageView) in self.imageViewArrs.enumerated() {
-            let url = URL(string: imgUrlArrs[offset])
-            imageView.kf.setImage(with: url)
+            if offset > imgUrlArrs.count-1 {
+                let url = URL(string: imgUrlArrs[0])
+                imageView.kf.setImage(with: url)
+            }else {
+                let url = URL(string: imgUrlArrs[offset])
+                imageView.kf.setImage(with: url)
+            }
         }
     }
 }
