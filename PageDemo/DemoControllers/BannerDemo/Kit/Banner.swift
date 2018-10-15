@@ -62,7 +62,8 @@ open class Banner: UIView,UIScrollViewDelegate {
     }
     func updateScrollViewLayout() {
         self.scrollView.frame = CGRect(x: 0, y: 0, width: frame.width, height: frame.height)
-        self.scrollView.contentSize.width = self.frame.size.width * CGFloat(self.imgUrlArrs.count+1)
+        self.scrollView.contentSize.width = self.frame.size.width * CGFloat(self.imgUrlArrs.count+2)
+        self.scrollView.contentOffset.x = self.frame.size.width
         _ = self.imageViewArrs.reduce(0) { (last, imageView) -> CGFloat in
             imageView.frame.size = self.frame.size
             imageView.frame.origin.y = 0
@@ -79,12 +80,15 @@ open class Banner: UIView,UIScrollViewDelegate {
     public func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
         let index = scrollView.contentOffset.x/self.frame.size.width
         let offSetX = scrollView.contentOffset.x
-        print(offSetX)
-        if offSetX > 0 && Int(index) > (self.imgUrlArrs.count-1) {   //right
+        if offSetX == 0 {
+            self.pageControl.currentPage = self.imgUrlArrs.count-1
+            scrollView.contentOffset.x = self.frame.size.width * CGFloat(self.imgUrlArrs.count)
+        }
+        if offSetX == self.frame.size.width * CGFloat(self.imgUrlArrs.count+1) {   //right
             self.pageControl.currentPage = 0
-            scrollView.contentOffset.x = 0
-        }else {
-            self.pageControl.currentPage = Int(index)
+            scrollView.contentOffset.x = self.frame.size.width
+        }else if offSetX > 0 && offSetX < self.frame.size.width * CGFloat(self.imgUrlArrs.count+1) {
+            self.pageControl.currentPage = Int(index)-1
         }
     }
     
@@ -99,7 +103,7 @@ open class Banner: UIView,UIScrollViewDelegate {
     }
     /// 设置图片数量并添加至滚动视图中去
     func samplifyImageViewCount(_ urlArr:[String]) {
-        let newCount = urlArr.count+1
+        let newCount = urlArr.count+2
         var _imageViewArrs = self.imageViewArrs
         while _imageViewArrs.count < newCount {
             let imageView = createImageView()
@@ -121,11 +125,14 @@ open class Banner: UIView,UIScrollViewDelegate {
     /// 更新图片数据
     func updateImages() {
         for (offset,imageView) in self.imageViewArrs.enumerated() {
-            if offset > imgUrlArrs.count-1 {
-                let url = URL(string: imgUrlArrs[0])
+            if offset == 0 {
+                let url = URL(string: imgUrlArrs[imgUrlArrs.count-1])
+                imageView.kf.setImage(with: url)
+            }else if offset <= imgUrlArrs.count {
+                let url = URL(string: imgUrlArrs[offset-1])
                 imageView.kf.setImage(with: url)
             }else {
-                let url = URL(string: imgUrlArrs[offset])
+                let url = URL(string: imgUrlArrs[0])
                 imageView.kf.setImage(with: url)
             }
         }
