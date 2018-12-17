@@ -22,7 +22,9 @@ open class Banner: UIView,UIScrollViewDelegate {
             self.scrollView.addSubview(imageView)
         }
     }
-
+    var width:CGFloat {
+        return self.frame.size.width
+    }
     /// 滚动视图
     let scrollView:UIScrollView = {
         let view = UIScrollView()
@@ -62,8 +64,8 @@ open class Banner: UIView,UIScrollViewDelegate {
     }
     func updateScrollViewLayout() {
         self.scrollView.frame = CGRect(x: 0, y: 0, width: frame.width, height: frame.height)
-        self.scrollView.contentSize.width = self.frame.size.width * CGFloat(self.imgUrlArrs.count+2)
-        self.scrollView.contentOffset.x = self.frame.size.width
+        self.scrollView.contentSize.width = width * CGFloat(self.imgUrlArrs.count+2)
+        self.scrollView.contentOffset.x = width
         _ = self.imageViewArrs.reduce(0) { (last, imageView) -> CGFloat in
             imageView.frame.size = self.frame.size
             imageView.frame.origin.y = 0
@@ -78,16 +80,16 @@ open class Banner: UIView,UIScrollViewDelegate {
     }
     // MARK: -
     public func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
-        let index = scrollView.contentOffset.x/self.frame.size.width
+        let index = scrollView.contentOffset.x/width
         let offSetX = scrollView.contentOffset.x
         if offSetX == 0 {
             self.pageControl.currentPage = self.imgUrlArrs.count-1
-            scrollView.contentOffset.x = self.frame.size.width * CGFloat(self.imgUrlArrs.count)
+            scrollView.contentOffset.x = width * CGFloat(self.imgUrlArrs.count)
         }
-        if offSetX == self.frame.size.width * CGFloat(self.imgUrlArrs.count+1) {   //right
+        if offSetX == width * CGFloat(self.imgUrlArrs.count+1) {   //right
             self.pageControl.currentPage = 0
-            scrollView.contentOffset.x = self.frame.size.width
-        }else if offSetX > 0 && offSetX < self.frame.size.width * CGFloat(self.imgUrlArrs.count+1) {
+            scrollView.contentOffset.x = width
+        }else if offSetX > 0 && offSetX < width * CGFloat(self.imgUrlArrs.count+1) {
             self.pageControl.currentPage = Int(index)-1
         }
     }

@@ -1,7 +1,7 @@
 //
 //  BannerViewController.swift
 //  BannerApp
-//
+//  轮播控件
 //  Created by 吴丽娟 on 2018/9/13.
 //  Copyright © 2018年 Janise. All rights reserved.
 //
@@ -63,8 +63,6 @@ class BannerViewController: UIViewController {
         "https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=1263410211,1482917137&fm=26&gp=0.jpg"]
         banner.frame.size.height = 400
         banner.frame.size.width = 200
-        
-
 //        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 1, execute: {
 //            let time = Date().timeIntervalSince1970
 //            for i in 0...1000 {

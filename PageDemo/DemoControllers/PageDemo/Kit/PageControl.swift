@@ -47,7 +47,7 @@ open class PageControl: UIControl {
         }
     }
     open var currentPageIndicatorSize:CGSize = CGSize(width: 7, height: 7) {
-        didSet{
+        didSet {
             self.pageLayer.currentPageIndicatorSize = self.currentPageIndicatorSize
             self.pageLayer.setNeedsDisplay()
         }

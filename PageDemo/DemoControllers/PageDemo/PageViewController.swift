@@ -1,7 +1,7 @@
 //
 //  PageViewController.swift
 //  PageDemo
-//
+//  分页demo
 //  Created by Janise·Wu on 2018/8/7.
 //  Copyright © 2018年 Janise·Wu. All rights reserved.
 //

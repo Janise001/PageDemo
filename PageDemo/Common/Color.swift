@@ -28,4 +28,6 @@ public struct Color {
     public static var lightGray = UIColor.lightGray
     
     public static var darkGray = UIColor.darkGray
+    
+    public static var clear = UIColor.clear
 }

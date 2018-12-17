@@ -16,6 +16,10 @@
 		104154BB214A6D0F00FD793B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 104154BA214A6D0F00FD793B /* ContentView.swift */; };
 		106F9C45213CCA7900BADE5F /* PageControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 106F9C44213CCA7900BADE5F /* PageControl.swift */; };
 		106F9C48213CCF0800BADE5F /* LocalAuthentication.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 106F9C47213CCF0800BADE5F /* LocalAuthentication.framework */; };
+		107B631D21C355540059DE64 /* GradientColorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 107B631C21C355540059DE64 /* GradientColorViewController.swift */; };
+		107B631F21C356AD0059DE64 /* PublicConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 107B631E21C356AD0059DE64 /* PublicConstant.swift */; };
+		10B73DD621C73C3B00BE8023 /* UppercaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10B73DD521C73C3B00BE8023 /* UppercaseViewController.swift */; };
+		10B73DD921C7478400BE8023 /* UppercaseKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10B73DD821C7478400BE8023 /* UppercaseKit.swift */; };
 		3D47BC92211924750093147F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D47BC91211924750093147F /* AppDelegate.swift */; };
 		3D47BC94211924750093147F /* PageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D47BC93211924750093147F /* PageViewController.swift */; };
 		3D47BC97211924750093147F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3D47BC95211924750093147F /* Main.storyboard */; };
@@ -58,6 +62,10 @@
 		104154BA214A6D0F00FD793B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		106F9C44213CCA7900BADE5F /* PageControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageControl.swift; sourceTree = "<group>"; };
 		106F9C47213CCF0800BADE5F /* LocalAuthentication.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = LocalAuthentication.framework; path = System/Library/Frameworks/LocalAuthentication.framework; sourceTree = SDKROOT; };
+		107B631C21C355540059DE64 /* GradientColorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientColorViewController.swift; sourceTree = "<group>"; };
+		107B631E21C356AD0059DE64 /* PublicConstant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PublicConstant.swift; sourceTree = "<group>"; };
+		10B73DD521C73C3B00BE8023 /* UppercaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UppercaseViewController.swift; sourceTree = "<group>"; };
+		10B73DD821C7478400BE8023 /* UppercaseKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UppercaseKit.swift; sourceTree = "<group>"; };
 		232A45BDCC9B0D9600818011 /* Pods_PageDemoUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PageDemoUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3D47BC8E211924750093147F /* PageDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PageDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3D47BC91211924750093147F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -150,6 +158,7 @@
 			isa = PBXGroup;
 			children = (
 				104154B5214A6A5300FD793B /* Color.swift */,
+				107B631E21C356AD0059DE64 /* PublicConstant.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -157,6 +166,8 @@
 		104154B7214A6B2600FD793B /* DemoControllers */ = {
 			isa = PBXGroup;
 			children = (
+				10B73DD421C73C0A00BE8023 /* UppercaseDemo */,
+				107B631B21C355070059DE64 /* GradientColorDemo */,
 				103E86DF214B4AD700337825 /* BannerDemo */,
 				104154B8214A6B6700FD793B /* PageDemo */,
 			);
@@ -190,6 +201,31 @@
 				232A45BDCC9B0D9600818011 /* Pods_PageDemoUITests.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		107B631B21C355070059DE64 /* GradientColorDemo */ = {
+			isa = PBXGroup;
+			children = (
+				107B631C21C355540059DE64 /* GradientColorViewController.swift */,
+			);
+			path = GradientColorDemo;
+			sourceTree = "<group>";
+		};
+		10B73DD421C73C0A00BE8023 /* UppercaseDemo */ = {
+			isa = PBXGroup;
+			children = (
+				10B73DD721C7456C00BE8023 /* Kit */,
+				10B73DD521C73C3B00BE8023 /* UppercaseViewController.swift */,
+			);
+			path = UppercaseDemo;
+			sourceTree = "<group>";
+		};
+		10B73DD721C7456C00BE8023 /* Kit */ = {
+			isa = PBXGroup;
+			children = (
+				10B73DD821C7478400BE8023 /* UppercaseKit.swift */,
+			);
+			path = Kit;
 			sourceTree = "<group>";
 		};
 		20259ED96E70D125A7B7B391 /* Pods */ = {
@@ -483,12 +519,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				107B631F21C356AD0059DE64 /* PublicConstant.swift in Sources */,
 				103E86E4214B4B1600337825 /* BannerViewController.swift in Sources */,
+				10B73DD621C73C3B00BE8023 /* UppercaseViewController.swift in Sources */,
 				3D47BCC1211924D10093147F /* PageLayer.swift in Sources */,
 				3D47BC94211924750093147F /* PageViewController.swift in Sources */,
+				107B631D21C355540059DE64 /* GradientColorViewController.swift in Sources */,
 				103E86E2214B4B0100337825 /* Banner.swift in Sources */,
 				104154BB214A6D0F00FD793B /* ContentView.swift in Sources */,
 				104154B6214A6A5300FD793B /* Color.swift in Sources */,
+				10B73DD921C7478400BE8023 /* UppercaseKit.swift in Sources */,
 				106F9C45213CCA7900BADE5F /* PageControl.swift in Sources */,
 				3D47BC92211924750093147F /* AppDelegate.swift in Sources */,
 				104154B0214A66E500FD793B /* AppDelegate+WindowsViewController.swift in Sources */,
