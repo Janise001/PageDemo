@@ -1,7 +1,7 @@
 //
 //  UppercaseKit.swift
 //  PageDemo
-//  将数字价格转换为大写价格文字
+//  将数字价格转换为大写价格文字（未添加Price，此处暂不严格要求转换展示）
 //  Created by 吴丽娟 on 2018/12/17.
 //  Copyright © 2018年 Janise·Wu. All rights reserved.
 //

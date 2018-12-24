@@ -14,7 +14,9 @@ class HomeViewController: UIViewController,UIScrollViewDelegate {
     let dir:[String:UIViewController] = ["2018.09.13 写一个banner,class Banner:UIView 抛出属性 var imageUrlArray:[String] = []":BannerViewController(),
                                          "2018.08.03 继承自UIControl,内部不能通过创建UIView的方式实现，通过CALayer实现":PageViewController(),
                                          "2018.12.14 CAGradientLayer颜色渐变设置":GradientColorViewController(),
-                                         "2018.12.17 输入金额展示大写文字":UppercaseViewController()]
+                                         "2018.12.17 输入金额展示大写文字":UppercaseViewController(),
+                                         "2018.12.20 手机号码缓存展示":CacheDataListController(),
+                                         "2018.12.24 视频获取方式：1.录制视频并展示浏览2.系统相册拍摄并浏览":TakeVedioTypeControllerViewController()]
     let flexView:UIView = UIView()
     override func viewDidLoad() {
         super.viewDidLoad()

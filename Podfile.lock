@@ -1,17 +1,27 @@
 PODS:
   - Alamofire (4.7.2)
   - FlexLayout (1.3.9)
+  - IQKeyboardManagerSwift (6.0.3)
   - Kingfisher (4.9.0)
+  - RxCocoa (4.1.2):
+    - RxSwift (~> 4.0)
+  - RxSwift (4.1.2)
 
 DEPENDENCIES:
   - Alamofire
   - FlexLayout
+  - IQKeyboardManagerSwift
   - Kingfisher (from `https://github.com/onevcat/Kingfisher`)
+  - RxCocoa
+  - RxSwift
 
 SPEC REPOS:
-  https://github.com/CocoaPods/Specs.git:
+  https://github.com/cocoapods/specs.git:
     - Alamofire
     - FlexLayout
+    - IQKeyboardManagerSwift
+    - RxCocoa
+    - RxSwift
 
 EXTERNAL SOURCES:
   Kingfisher:
@@ -25,8 +35,11 @@ CHECKOUT OPTIONS:
 SPEC CHECKSUMS:
   Alamofire: e4fa87002c137ba2d8d634d2c51fabcda0d5c223
   FlexLayout: dbe4b2da72ee63d7145cf32bb5bfba375aeeb9e6
+  IQKeyboardManagerSwift: 04e8679f85e496bb2c474eeb9284052f1b3c391c
   Kingfisher: 64539b51826b778206daa6ed815d12653caa69dd
+  RxCocoa: d88ba0f1f6abf040011a9eb4b539324fc426843a
+  RxSwift: e49536837d9901277638493ea537394d4b55f570
 
-PODFILE CHECKSUM: b2c2879795b384f30d008070be3b93d5559d34ff
+PODFILE CHECKSUM: 670d5294bd9795c1c5d278807d78a538fb4d4e14
 
-COCOAPODS: 1.5.0
+COCOAPODS: 1.5.3

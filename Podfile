@@ -9,9 +9,11 @@ install! 'cocoapods', :deterministic_uuids => false
 abstract_target 'PageDemo' do
     
     pod 'FlexLayout'
-   
+   pod 'RxSwift'
+   pod 'RxCocoa'
    pod 'Alamofire'
    pod 'Kingfisher', :git => 'https://github.com/onevcat/Kingfisher'
+   pod 'IQKeyboardManagerSwift'
     
     target:'PageDemo' do
         target 'PageDemoUITests' do
