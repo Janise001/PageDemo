@@ -15,8 +15,13 @@
 		104154B4214A677400FD793B /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 104154B3214A677400FD793B /* HomeViewController.swift */; };
 		104154B6214A6A5300FD793B /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 104154B5214A6A5300FD793B /* Color.swift */; };
 		104154BB214A6D0F00FD793B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 104154BA214A6D0F00FD793B /* ContentView.swift */; };
+		10611D3521D1D5930042070D /* TakeAppVideoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10611D3421D1D5930042070D /* TakeAppVideoController.swift */; };
+		10611D3721D1D9230042070D /* VideoTopToolView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10611D3621D1D9230042070D /* VideoTopToolView.swift */; };
+		10611D3921D1D93A0042070D /* VideoBottomToolView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10611D3821D1D93A0042070D /* VideoBottomToolView.swift */; };
+		10611D3C21D223FE0042070D /* ToolController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10611D3B21D223FE0042070D /* ToolController.swift */; };
 		106F9C45213CCA7900BADE5F /* PageControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 106F9C44213CCA7900BADE5F /* PageControl.swift */; };
 		106F9C48213CCF0800BADE5F /* LocalAuthentication.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 106F9C47213CCF0800BADE5F /* LocalAuthentication.framework */; };
+		10763FD721D36655002913D3 /* ReplayVideoToolView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10763FD621D36655002913D3 /* ReplayVideoToolView.swift */; };
 		1076459421C8880B0014DD1F /* CacheDataListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1076459321C8880B0014DD1F /* CacheDataListController.swift */; };
 		1076459721C8D8500014DD1F /* MatchingListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1076459621C8D8500014DD1F /* MatchingListController.swift */; };
 		1076459921C8D9910014DD1F /* MatchingListCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1076459821C8D9910014DD1F /* MatchingListCellTableViewCell.swift */; };
@@ -67,8 +72,13 @@
 		104154B3214A677400FD793B /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		104154B5214A6A5300FD793B /* Color.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		104154BA214A6D0F00FD793B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		10611D3421D1D5930042070D /* TakeAppVideoController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TakeAppVideoController.swift; sourceTree = "<group>"; };
+		10611D3621D1D9230042070D /* VideoTopToolView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoTopToolView.swift; sourceTree = "<group>"; };
+		10611D3821D1D93A0042070D /* VideoBottomToolView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoBottomToolView.swift; sourceTree = "<group>"; };
+		10611D3B21D223FE0042070D /* ToolController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToolController.swift; sourceTree = "<group>"; };
 		106F9C44213CCA7900BADE5F /* PageControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageControl.swift; sourceTree = "<group>"; };
 		106F9C47213CCF0800BADE5F /* LocalAuthentication.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = LocalAuthentication.framework; path = System/Library/Frameworks/LocalAuthentication.framework; sourceTree = SDKROOT; };
+		10763FD621D36655002913D3 /* ReplayVideoToolView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReplayVideoToolView.swift; sourceTree = "<group>"; };
 		1076459321C8880B0014DD1F /* CacheDataListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CacheDataListController.swift; sourceTree = "<group>"; };
 		1076459621C8D8500014DD1F /* MatchingListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchingListController.swift; sourceTree = "<group>"; };
 		1076459821C8D9910014DD1F /* MatchingListCellTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchingListCellTableViewCell.swift; sourceTree = "<group>"; };
@@ -205,6 +215,24 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		10611D3321D1D5430042070D /* Kit */ = {
+			isa = PBXGroup;
+			children = (
+				10611D3621D1D9230042070D /* VideoTopToolView.swift */,
+				10611D3821D1D93A0042070D /* VideoBottomToolView.swift */,
+				10763FD621D36655002913D3 /* ReplayVideoToolView.swift */,
+			);
+			path = Kit;
+			sourceTree = "<group>";
+		};
+		10611D3A21D223EA0042070D /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+				10611D3B21D223FE0042070D /* ToolController.swift */,
+			);
+			path = Tools;
+			sourceTree = "<group>";
+		};
 		106F9C46213CCF0800BADE5F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -247,7 +275,10 @@
 		10A5D9A221D0E86C00D8237B /* TakeVedioDemo */ = {
 			isa = PBXGroup;
 			children = (
+				10611D3A21D223EA0042070D /* Tools */,
+				10611D3321D1D5430042070D /* Kit */,
 				10A5D9A321D0E8FB00D8237B /* TakeVedioTypeControllerViewController.swift */,
+				10611D3421D1D5930042070D /* TakeAppVideoController.swift */,
 			);
 			path = TakeVedioDemo;
 			sourceTree = "<group>";
@@ -569,13 +600,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				1076459921C8D9910014DD1F /* MatchingListCellTableViewCell.swift in Sources */,
+				10611D3721D1D9230042070D /* VideoTopToolView.swift in Sources */,
 				107B631F21C356AD0059DE64 /* PublicConstant.swift in Sources */,
 				103E86E4214B4B1600337825 /* BannerViewController.swift in Sources */,
 				1076459721C8D8500014DD1F /* MatchingListController.swift in Sources */,
 				10B73DD621C73C3B00BE8023 /* UppercaseViewController.swift in Sources */,
+				10611D3C21D223FE0042070D /* ToolController.swift in Sources */,
 				3D47BCC1211924D10093147F /* PageLayer.swift in Sources */,
 				3D47BC94211924750093147F /* PageViewController.swift in Sources */,
+				10763FD721D36655002913D3 /* ReplayVideoToolView.swift in Sources */,
 				107B631D21C355540059DE64 /* GradientColorViewController.swift in Sources */,
+				10611D3921D1D93A0042070D /* VideoBottomToolView.swift in Sources */,
 				103E86E2214B4B0100337825 /* Banner.swift in Sources */,
 				104154BB214A6D0F00FD793B /* ContentView.swift in Sources */,
 				1076459421C8880B0014DD1F /* CacheDataListController.swift in Sources */,
@@ -584,6 +619,7 @@
 				10B73DD921C7478400BE8023 /* UppercaseKit.swift in Sources */,
 				106F9C45213CCA7900BADE5F /* PageControl.swift in Sources */,
 				3D47BC92211924750093147F /* AppDelegate.swift in Sources */,
+				10611D3521D1D5930042070D /* TakeAppVideoController.swift in Sources */,
 				104154B0214A66E500FD793B /* AppDelegate+WindowsViewController.swift in Sources */,
 				104154B4214A677400FD793B /* HomeViewController.swift in Sources */,
 				10A5D9A421D0E8FB00D8237B /* TakeVedioTypeControllerViewController.swift in Sources */,
