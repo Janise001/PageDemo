@@ -30,7 +30,7 @@
 	<key>NSMicrophoneUsageDescription</key>
 	<string>app需要使用设备麦克风，是否允许？</string>
 	<key>NSPhotoLibraryUsageDescription</key>
-	<string>app需要访问您的相册，是否允许？</string>
+	<string>app需要访问设备相册，是否允许？</string>
 	<key>UIMainStoryboardFile</key>
 	<string>Main</string>
 	<key>UISupportedInterfaceOrientations</key>

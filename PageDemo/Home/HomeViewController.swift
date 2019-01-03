@@ -16,7 +16,8 @@ class HomeViewController: UIViewController,UIScrollViewDelegate {
                                          "2018.12.14 CAGradientLayer颜色渐变设置":GradientColorViewController(),
                                          "2018.12.17 输入金额展示大写文字":UppercaseViewController(),
                                          "2018.12.20 手机号码缓存展示":CacheDataListController(),
-                                         "2018.12.24 视频获取方式：1.录制视频并展示浏览2.系统相册拍摄并浏览":TakeVedioTypeControllerViewController()]
+                                         "2018.12.24 视频获取方式：1.录制视频并展示浏览2.系统相册拍摄并浏览3.王者荣耀录屏ReplayKit模仿":TakeVedioTypeViewController(),
+                                         "2019.01.02 语音录制播放":TakeAudioViewController()]
     let flexView:UIView = UIView()
     override func viewDidLoad() {
         super.viewDidLoad()

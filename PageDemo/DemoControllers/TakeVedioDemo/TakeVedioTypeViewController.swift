@@ -1,5 +1,5 @@
 //
-//  TakeVedioTypeControllerViewController.swift
+//  TakeVedioTypeViewController.swift
 //  PageDemo
 //  视频获取类型选择
 //  Created by 吴丽娟 on 2018/12/24.
@@ -9,7 +9,7 @@
 import UIKit
 import MobileCoreServices
 import ReplayKit
-class TakeVedioTypeControllerViewController: UIViewController,UIImagePickerControllerDelegate,UINavigationControllerDelegate,RPPreviewViewControllerDelegate {
+class TakeVedioTypeViewController: UIViewController,UIImagePickerControllerDelegate,UINavigationControllerDelegate,RPPreviewViewControllerDelegate {
 
     /// 本地获取视频
     lazy var systemAlbumVideoBtn: UIButton = {
@@ -116,8 +116,8 @@ class TakeVedioTypeControllerViewController: UIViewController,UIImagePickerContr
         self.navigationController?.pushViewController(viewCon, animated: true)
     }
 }
-extension TakeVedioTypeControllerViewController {
-    // Janise:  开始录制屏幕
+extension TakeVedioTypeViewController {
+    // Janise:  开始录制屏幕（考虑问题，可否像android那样在录屏时不将ReplayVideoToolView视图作为屏幕的一部分录制）
     @objc func startRecordingScreen(_ toolView: ReplayVideoToolView) {
         // 检测设备是否支持录屏功能
         if RPScreenRecorder.shared().isAvailable && systemVersionAvaliable()  {
@@ -155,7 +155,7 @@ extension TakeVedioTypeControllerViewController {
                 toolView.actionButton.isSelected = true
             }
         }else {
-            //正式编写时需将两种提示分开展示，权限与版本两个不可t合二为一
+            //正式编写时需将两种提示分开展示，权限与版本两个不可合二为一
             let alert = UIAlertController(title: "提示", message: "请先授予app录屏权限，系统版本低于9.0不支持录屏功能，请升级版本后使用该功能", preferredStyle: .alert)
             self.present(alert, animated: true, completion: nil)
         }

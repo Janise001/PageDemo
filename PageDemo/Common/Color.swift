@@ -12,7 +12,7 @@ public struct Color {
     public static var tinColor = UIColor(red: 128/255, green: 162/255, blue: 231/255, alpha: 1)
 
     public static var viewColor = UIColor(red: 235/255, green: 235/255, blue: 235/255, alpha: 1)
-    
+    public static var viewBackgroundColor = UIColor(red: 225/255, green: 227/255, blue: 230/255, alpha: 1)
     public static var white = UIColor.white
     
     public static var red = UIColor.red
@@ -30,4 +30,6 @@ public struct Color {
     public static var darkGray = UIColor.darkGray
     
     public static var clear = UIColor.clear
+    
+    public static var green = UIColor.green
 }
