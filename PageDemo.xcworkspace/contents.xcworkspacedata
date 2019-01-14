@@ -2,9 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:/Users/janise/Documents/Demand/XCodeWorkSpace/PageDemo/PageDemo/DemoControllers/TakeAudioDemo/Tools/MessageTableViewCell.swift">
-   </FileRef>
-   <FileRef
       location = "group:PageDemo.xcodeproj">
    </FileRef>
    <FileRef

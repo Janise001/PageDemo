@@ -155,9 +155,9 @@ extension TakeVedioTypeViewController {
                 toolView.actionButton.isSelected = true
             }
         }else {
-            //正式编写时需将两种提示分开展示，权限与版本两个不可合二为一
-            let alert = UIAlertController(title: "提示", message: "请先授予app录屏权限，系统版本低于9.0不支持录屏功能，请升级版本后使用该功能", preferredStyle: .alert)
-            self.present(alert, animated: true, completion: nil)
+//            //正式编写时需将两种提示分开展示，权限与版本两个不可合二为一
+//            let alert = UIAlertController(title: "提示", message: "请先授予app录屏权限，系统版本低于9.0不支持录屏功能，请升级版本后使用该功能", preferredStyle: .alert)
+//            self.present(alert, animated: true, completion: nil)
         }
     }
     func previewControllerDidFinish(_ previewController: RPPreviewViewController) {
@@ -166,8 +166,7 @@ extension TakeVedioTypeViewController {
     }
     /// 判断系统版本是否可以使用录屏功能,系统版本需要再9.0以上才可使用录屏功能
     func systemVersionAvaliable() -> Bool {
-        let version = UIDevice.current.systemVersion
-        if (Double(version) ?? 0.0) >= Double(9.0) {
+        if #available(iOS 9.0, *) {
             return true
         }
         return false

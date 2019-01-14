@@ -33,6 +33,12 @@ class MessageTableViewCell: UITableViewCell {
         return imageView
     }()
 
+    /// 时间显示
+    var timeShowLabel: UILabel = {
+        let label = UILabel()
+//        label.text
+        return label
+    }()
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

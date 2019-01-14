@@ -43,7 +43,6 @@ class MessageTableViewController: UITableView,UITableViewDelegate,UITableViewDat
                                                UIImage(named: "audio_play_2"),
                                                UIImage(named: "audio_play_3")] as? [UIImage]
         self.playImageView?.animationDuration = 1
-        self.playImageView?.animationRepeatCount = 5
         self.playImageView?.startAnimating()
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

@@ -12,13 +12,12 @@ import Foundation
 class TakeAudioViewController: UIViewController {
     /// 底部视频录制按钮视图
     var audioView: AudioView?
-    
     /// 话筒视图
     var pressView: LongPressView?
-    
     /// 撤销视图
     var cancelView: RemoveAwayView?
-    
+    /// 录制时间较短提示
+    var shortTimeView: ShortTimeView?
     /// 信息列表
     var messageList: MessageTableViewController = MessageTableViewController()
     /// 音频会话
@@ -29,6 +28,10 @@ class TakeAudioViewController: UIViewController {
     var status: CurrentStatus = .end
     /// 保存路径
     var url:URL?
+    /// 计时器(设置计时器排除2秒以内文件，只保存大于2秒的音频文件)
+    var timer: Timer?
+    /// 秒数
+    var seconds: Int = 0
     override func viewDidLoad() {
         super.viewDidLoad()
         self.tabBarController?.tabBar.isHidden = true
@@ -73,24 +76,36 @@ class TakeAudioViewController: UIViewController {
             self.fileOutput = try AVAudioRecorder(url: fileUrl, settings: recordSetting)
             self.fileOutput!.prepareToRecord()
             self.fileOutput!.record()
+            self.seconds = 0
+            self.timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(startTimer), userInfo: nil, repeats: true)
         }catch {
             print("开启失败\(error.localizedDescription)")
         }
     }
     /// 停止录音
     func stop() {
-        if let recorder = self.fileOutput {
-            //如有需求必要此处加上录音状态判断,无论在不在录音状态都停止录音
-            //            if recorder.isRecording {
-            //
-            //            }else {
-            //
-            //            }
-            self.fileOutput!.stop()
-            //此处重置,文件名称为日期显示，每次新建文件需要更新
-            self.fileOutput = nil
+        self.stopTimer()
+        guard var recorder = self.fileOutput else {
+            return
         }
-        
+        //如有需求必要此处加上录音状态判断,无论在不在录音状态都停止录音
+        //            if recorder.isRecording {
+        //
+        //            }else {
+        //
+        //            }
+        self.fileOutput!.stop()
+        //此处重置,文件名称为日期显示，每次新建文件需要更新
+        self.fileOutput = nil
+        if self.seconds < 2 {
+            deleteFileFromPath(self.url ?? URL(fileURLWithPath: ""))
+            self.shortTimeView = ShortTimeView(frame: CGRect(x: self.view.bounds.width/2-90, y: self.view.bounds.height/2-115, width: 180, height: 230))
+            self.view.addSubview(self.shortTimeView!)
+            //设置两秒钟后隐藏该视图
+//            DispatchQueue.main.asyncAfter(deadline: 2, execute: {
+//                self.shortTimeView?.isHidden = true
+//                })
+        }
     }
     /// 设置录音事件
     func setAudioFunction() {
@@ -104,6 +119,15 @@ class TakeAudioViewController: UIViewController {
         self.audioView!.audioBtn.addTarget(self, action: #selector(audioTouchUpInside), for: .touchUpInside)
         // 从区域以外滑动至区域以内事件
         self.audioView!.audioBtn.addTarget(self, action: #selector(audioTouchDragEnter), for: .touchDragEnter)
+    }
+    /// 开始计时
+    @objc func startTimer() {
+        self.seconds += 1
+    }
+    /// 停止计时
+    func stopTimer() {
+        self.timer?.invalidate()
+        self.timer = nil
     }
     /// 长时间按下按钮->展示录音view
     @objc func audioTouchDown() {
