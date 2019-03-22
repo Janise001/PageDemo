@@ -4,17 +4,20 @@ platform :ios, '9.0'
 use_frameworks!
 #Framework
 
-install! 'cocoapods', :deterministic_uuids => false
+#install! 'cocoapods', :deterministic_uuids => false
 
-abstract_target 'PageDemo' do
+target 'PageDemo' do
     
-    pod 'FlexLayout'
+   pod 'FlexLayout'
    pod 'RxSwift'
    pod 'RxCocoa'
    pod 'Alamofire'
    pod 'Kingfisher', :git => 'https://github.com/onevcat/Kingfisher'
    pod 'IQKeyboardManagerSwift'
-    
+   pod 'ZFPlayer'
+   pod 'FDFullscreenPopGesture'
+   pod 'MJRefresh'
+   
     target:'PageDemo' do
         target 'PageDemoUITests' do
             inherit! :search_paths

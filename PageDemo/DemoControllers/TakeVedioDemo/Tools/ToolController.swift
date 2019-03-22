@@ -49,6 +49,10 @@ func playTheVideo(_ url: URL, controller: UIViewController) {
     playerController.player = player
     controller.present(playerController, animated: true, completion: { playerController.player?.play() })
 }
+func playVideoByZFPlayer(_ url: URL, controller: UIViewController) {
+//    let player = ZFFullScreenViewController()
+    
+}
 /// 音频操作
 ///
 /// - start: 开始录制音频

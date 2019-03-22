@@ -9,6 +9,7 @@
 import UIKit
 import MobileCoreServices
 import ReplayKit
+import ZFPlayer
 class TakeVedioTypeViewController: UIViewController,UIImagePickerControllerDelegate,UINavigationControllerDelegate,RPPreviewViewControllerDelegate {
 
     /// 本地获取视频
@@ -44,6 +45,17 @@ class TakeVedioTypeViewController: UIViewController,UIImagePickerControllerDeleg
         button.clipsToBounds = true
         return button
     }()
+    /// zf
+    lazy var zfplayerBtn: UIButton = {
+        let button = UIButton()
+        button.setTitle("zf", for: .normal)
+        button.setTitleColor(Color.white, for: .normal)
+        button.backgroundColor = Color.tinColor
+        button.contentEdgeInsets = UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10)
+        button.layer.cornerRadius = 5.0
+        button.clipsToBounds = true
+        return button
+    }()
     /// 计时器
     var time: Timer?
     override func viewDidLoad() {
@@ -52,9 +64,11 @@ class TakeVedioTypeViewController: UIViewController,UIImagePickerControllerDeleg
         self.view.addSubview(self.systemAlbumVideoBtn)
         self.view.addSubview(self.takeAppVideoBtn)
         self.view.addSubview(self.takeScreenVideoBtn)
+        self.view.addSubview(self.zfplayerBtn)
         self.systemAlbumVideoBtn.addTarget(self, action: #selector(getSystemVideo), for: .touchUpInside)
         self.takeAppVideoBtn.addTarget(self, action: #selector(takeAppVideo), for: .touchUpInside)
         self.takeScreenVideoBtn.addTarget(self, action: #selector(takeScreenVideo), for: .touchUpInside)
+        self.zfplayerBtn.addTarget(self, action: #selector(zfplay), for: .touchUpInside)
     }
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
@@ -64,6 +78,8 @@ class TakeVedioTypeViewController: UIViewController,UIImagePickerControllerDeleg
         self.takeAppVideoBtn.sizeToFit()
         self.takeScreenVideoBtn.frame = CGRect(x: 20, y: 260, width: self.view.bounds.width-40, height: 0)
         self.takeScreenVideoBtn.sizeToFit()
+        self.zfplayerBtn.frame = CGRect(x: 20, y: 340, width: self.view.bounds.width-40, height: 0)
+        self.zfplayerBtn.sizeToFit()
         
     }
     /// 展示录屏工具栏视图
@@ -114,6 +130,12 @@ class TakeVedioTypeViewController: UIViewController,UIImagePickerControllerDeleg
     @objc func takeAppVideo() {
         let viewCon = TakeAppVideoController()
         self.navigationController?.pushViewController(viewCon, animated: true)
+    }
+    
+    /// zfplay
+    @objc func zfplay() {
+        
+        let zfplayer = ZFPlayerController(playerManager: ZFPlayerMediaPlayback, containerView: <#T##UIView#>)
     }
 }
 extension TakeVedioTypeViewController {

@@ -238,8 +238,12 @@ class TakeAppVideoController: UIViewController,AVCaptureFileOutputRecordingDeleg
     /// 确认按钮方法
     @objc func sureFun() {
         guard let url = self.fileOutPath else { return }
+        //使用AVPlayerViewController播放视频
         playTheVideo(url,controller: self)
-        saveVideoToAlbum(url)
+//        saveVideoToAlbum(url)
+        //使用ZFPlayer播放视频
+        
+        
     }
     /// 视图中时间变化
     @objc func changeTime() {
